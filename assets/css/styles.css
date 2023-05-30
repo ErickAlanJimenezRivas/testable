@@ -1,7 +1,3 @@
-body{
-    font-family: 'Inter', sans-serif;
-}
-
 :root {
     --dark-60: #131313;
     --dark-40: #767474;
@@ -15,7 +11,7 @@ body{
     --alert: #FAB95B;
   }
 
-  .title1{
+.title1{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     font-size: 48px;
@@ -80,7 +76,7 @@ body{
 }
 
 .w-table{
-    min-width: 1026px;
+    min-width: 1050px;
 }
 
 .w-table-2{
