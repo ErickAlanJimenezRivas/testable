@@ -286,7 +286,7 @@
   </section>
 
   <section>
-    <div class="flex flex-wrap mx-auto w-body px-2 pt-14">
+    <div class="flex mx-auto w-body px-2 pt-14">
       <div class="w-4/5">
         <div class="flex flex-col">
           <div class="flex">
@@ -318,7 +318,7 @@
                     placeholder="Search projects" required>
                 </div>
               </form>
-              <!-- Filter by dropdown -->
+              <!-- Filter dropdown -->
               <div class="mr-2">
               <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
                 <button data-dropdown-toggle="dropdown" aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open"  style="border-color:var(--dark-30); color: var(--dark-60);"
@@ -970,7 +970,7 @@
       </div>
       <!-- side info -->
       <div class="w-1/5">
-        <div style="border-color: var(--dark-30);" class="w-table-2 border rounded-md p-4">
+        <div style="border-color: var(--dark-30); background: var(--white);" class="border rounded-md p-4">
           <div class="flex">
             <img class="mr-2" src="/assets/images/virtual-coin.svg" alt="">
             <p class="boldBody">0 Credits</p>
@@ -987,7 +987,7 @@
           </div>
         </div>
 
-        <div class="w-table-2 border rounded-md my-6 p-4" style="border-color: var(--dark-30);">
+        <div class="border rounded-md my-6 p-4" style="border-color: var(--dark-30); background: var(--white);">
           <p class="mb-4 boldBody">Live studies</p>
           <div class="flex mb-2">
             <p class="w-5/6 boldBody">TYSKS-01</p>
@@ -1013,7 +1013,7 @@
           <a href="#" class="flex justify-center smallTextBold" style="color: var(--blue-primary);">View all (5)</a>
         </div>
 
-        <div class="w-table-2 rounded-md mb-6 p-5" style="background: var(--dark-20);">
+        <div class="rounded-md mb-6 p-5" style="background: var(--dark-20);">
           <p class="mb-2 boldBody" style="color: var(--dark-60);">What's new in version 2.5?</p>
           <p class="bodyText" style="color: var(--dark-60);">Check out the new dashboard view. Pages now load faster</p>
           <img class="my-4" src="/assets/images/side-img-card.svg" alt="">
