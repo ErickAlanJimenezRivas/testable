@@ -14,6 +14,8 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   <!-- CDN flowbite -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  <!-- CDN remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -43,48 +45,34 @@
             <img class="hidden h-8 w-auto lg:block" src="./assets/images/logo.svg" alt="Your Company">
           </div>
           <!-- Testable dropdown -->
-          <div class="ml-6">
-            <div class="flex items-center mr-5">
-              <div>
-                <p class="boldBody pr-2" style="color:var(--dark-60)">Testable</p>
-              </div>
-              <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                <div>
-                  <button aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                      stroke-width="2" stroke="currentColor"
-                      class=" w-3 h-3 origin-center motion-safe:transition duration-500 ease-in-out"
-                      :class="{ 'rotate-180': open }">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                  </button>
-                </div>
-                <div role="region" tabindex="-1" x-cloak x-show="open"
-                  class="absolute left-0 z-10 mt-4 w-max origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                  <a href="#" class="flex items-center px-6 pt-6 pb-2 boldBody" style="color:var(--dark-60)"
-                    role="menuitem" tabindex="-1">
-                    <img class="h-4 w-4 mr-1.5" src="./assets/images/mini-logo.svg" alt="database">
-                    Testable
-                  </a>
-                  <p class="preText px-12" style="color: var(--dark-60);">Build experiments</p>
-                  <a href="#" class="flex items-center px-6 py-2 boldBody" style="color:var(--dark-60)" role="menuitem"
-                    tabindex="-1">
-                    <img class="h-4 w-4 mr-1.5" src="./assets/images/minds-img.svg" alt="coin">
-                    Minds
-                  </a>
-                  <p class="preText px-12" style="color: var(--dark-60);">Recruit participants</p>
-                  <a href="#" class="flex items-center px-6 py-2 boldBody" style="color:var(--dark-60)" role="menuitem"
-                    tabindex="-1">
-                    <img class="h-4 w-4 mr-1.5" src="./assets/images/mini-logo-b.svg" alt="wallet">
-                    Class
-                  </a>
-                  <p class="preText px-12 pb-6" style="color: var(--dark-60);">Delight students</p>
-                </div>
-              </div>
+          <div>
+            <button id="dropdownButton" data-dropdown-toggle="dropdownDivider"
+              class=" smallTextBold text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              Testable
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <!-- Dropdown -->
+            <div id="dropdownDivider" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+              <ul class="boldBody text-black" aria-labelledby="dropdownButton">
+                <li class="flex pt-4">
+                  <img src="./assets/images/mini-logo.svg" alt="">
+                  <a href="#" class="block pl-3">Testable</a>
+                </li>
+                <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
+                <li class="flex">
+                  <img src="./assets/images/minds-img.svg" alt="">
+                  <a href="#" class="block pl-3">Minds</a>
+                </li>
+                <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
+                <li class="flex">
+                  <img src="./assets/images/mini-logo-b.svg" alt="">
+                  <a href="#" class="blockpl-3 pl-3">Class</a>
+                </li>
+                <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
+              </ul>
             </div>
             <div>
-              <p class="preText" style="color:var(--dark-40)">Build experiments</p>
+              <p class="preText px-4" style="color: var(--dark-40);">Premium</p>
             </div>
           </div>
         </div>
@@ -93,41 +81,36 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex">
               <a href="#"
-                class="text-black hover:bg-black  hover:text-white hover:font-semibold rounded-md px-3 py-2 bodyText">Dashboard</a>
-              <a href="#"
-                class="text-black hover:bg-black hover:text-white hover:font-semibold rounded-md px-3 py-2 bodyText">Community</a>
-              <a href="#"
-                class="text-black hover:bg-black hover:text-white hover:font-semibold rounded-md px-3 py-2 bodyText">Templates</a>
+                class="text-black hover:bg-black  hover:text-white rounded-md px-3 py-2 bodyText">Dashboard</a>
+              <a href="#" class="text-black hover:bg-black hover:text-white rounded-md px-3 py-2 bodyText">Community</a>
+              <a href="#" class="text-black hover:bg-black hover:text-white rounded-md px-3 py-2 bodyText">Templates</a>
             </div>
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
           <!-- Help dropdown -->
-          <div class="flex items-center mr-5">
-            <div>
-              <p class="bodyText mr-2" style="color:var(--dark-60)">Help</p>
-            </div>
-            <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                <button aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor"
-                    class=" w-3 h-3 origin-center motion-safe:transition duration-500 ease-in-out"
-                    :class="{ 'rotate-180': open }">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </button>
-                <div role="region" tabindex="-1" x-cloak x-show="open" class="absolute z-10 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"role="menuitem" tabindex="-1">
-                  Help
-                </a>
-                <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)" role="menuitem"tabindex="-1">
-                  Help
-                </a>
-                <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)" role="menuitem" tabindex="-1">
-                  Help
-                </a>
-              </div>
+          <div>
+            <button id="dropdownHelpButton" data-dropdown-toggle="dropdownHelp"
+              class=" bodyText text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              Help
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <!-- Dropdown -->
+            <div id="dropdownHelp" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+              <ul class="bodyText text-black" aria-labelledby="dropdownHelpButton">
+                <li class="flex py-4">
+                  <i class="ri-question-line pr-3"></i>
+                  <a href="#" class="block">Help</a>
+                </li>
+                <li class="flex pb-4">
+                  <i class="ri-question-line pr-3"></i>
+                  <a href="#" class="block">Help</a>
+                </li>
+                <li class="flex pb-4">
+                  <i class="ri-question-line pr-3"></i>
+                  <a href="#" class="block">Help</a>
+                </li>
+              </ul>
             </div>
           </div>
           <button type="button" class="mr-4" style="color:var(--dark-60)">
@@ -147,50 +130,57 @@
               </button>
             </div>
           </div>
-          <div class="pl-1.5">
-            <p class="mb-[-2px] smallTextBold" style="color:var(--dark-60)">Marie Bernard</p>
-            <p class="preText" style="color:var(--dark-40)">Premium</p>
-          </div>
-          <div class="pb-3" x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
+
+          <div>
+            <button id="dropdownDividerButton" data-dropdown-toggle="dropdownProfile"
+              class=" smallTextBold text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              Marie Bernard
+              <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div id="dropdownProfile"
+              class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+              <ul class="bodyText text-black" aria-labelledby="dropdownDividerButton">
+                <li class="flex py-4">
+                  <i class="ri-database-2-line pr-3"></i>
+                  <a href="#" class="block">750mb free</a>
+                </li>
+                <li class="flex pb-4">
+                  <i class="ri-coin-line pr-3"></i>
+                  <a href="#" class="block">750mb free</a>
+                </li>
+                <li class="flex pb-4">
+                  <i class="ri-wallet-line pr-3"></i>
+                  <a href="#" class="block">750mb free</a>
+                </li>
+              </ul>
+              <div class="">
+                <ul class="text-black" aria-labelledby="dropdownDividerButton">
+                  <li class="flex py-4">
+
+                    <a href="#" class="block">Profile</a>
+                  </li>
+                  <li class="flex pb-4">
+
+                    <a href="#" class="block">Admin</a>
+                  </li>
+                  <li class="flex pb-4">
+
+                    <a href="#" class="block">Invoices</a>
+                  </li>
+                  <li class="flex pb-4">
+
+                    <a href="#" class="block">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <div>
-              <button aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke-width="2" stroke="currentColor"
-                  class="w-4 h-4 mt-1.5 ml-0.5 origin-center motion-safe:transition duration-500 ease-in-out"
-                  :class="{ 'rotate-180': open }">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-              </button>
-            </div>
-            <div role="region" tabindex="-1" x-cloak x-show="open"
-              class="absolute right-0 z-10 mt-2 w-max origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-              <a href="#" class="flex items-center px-6 pb-2 pt-6 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">
-                <img class="h-4 w-4 mr-1.5" src="./assets/images/database-2-line.svg" alt="database">
-                750mb free
-              </a>
-              <a href="#" class="flex items-center px-6 pb-2 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">
-                <img class="h-4 w-4 mr-1.5" src="./assets/images/coin-line.svg" alt="coin">
-                310 credits
-              </a>
-              <a href="#" class="flex items-center px-6 pb-2 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">
-                <img class="h-4 w-4 mr-1.5" src="./assets/images/wallet-line.svg" alt="wallet">
-                $10.00
-              </a>
-              <p href="#" class="border-b-2 border-gray-200 mx-4 my-2"></p>
-              <a href="#" class="flex items-center px-6 py-2 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">Profile</a>
-              <a href="#" class="flex items-center px-6 pb-2 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">Admin</a>
-              <a href="#" class="flex items-center px-6 pb-2 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">Invoices</a>
-              <a href="#" class="flex items-center px-6 pb-6 smallText" style="color:var(--dark-60)" role="menuitem"
-                tabindex="-1">Logout</a>
+              <p class="preText px-4" style="color: var(--dark-40);">Premium</p>
             </div>
           </div>
+
+
         </div>
       </div>
     </div>
@@ -319,51 +309,57 @@
               </form>
               <!-- Filter dropdown -->
               <div class="mr-2">
-              <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                <button data-dropdown-toggle="dropdown" aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open"  style="border-color:var(--dark-30); color: var(--dark-60);"
-                        class="h-11 w-max bg-white border rounded-md bodyText px-4 text-center inline-flex items-center" type="button">
-                        Filter by
-                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                    class=" w-4 h-4 ml-2 origin-center motion-safe:transition duration-500 ease-in-out":class="{ 'rotate-180': open }">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                  </svg>
-                </button>
-                <div role="region" tabindex="-1" x-cloak x-show="open" class="absolute rigth-20 z-10 w-max  rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                  role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                  <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"role="menuitem" tabindex="-1">
-                    Filter
-                  </a>
-                  <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)" role="menuitem"tabindex="-1">
-                    Filter
-                  </a>
-                  <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)" role="menuitem" tabindex="-1">
-                    Filter
-                  </a>
+                <div>
+                  <button id="dropdownFilterButton" data-dropdown-toggle="dropdownFilter"
+                    class="bodyText py-2.5 rounded-md border bg-white hover:bg-gray-200 text-black bg-white px-4 text-center inline-flex items-center"
+                    type="button">
+                    Filter by
+                    <i class="ri-arrow-down-s-line"></i>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownFilter" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownFilterButton">
+                      <li class="flex py-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Filte by</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Filter by</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Filter by</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
               </div>
               <!-- Sort by dropdown -->
               <div class="mr-2">
-                <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                  <button data-dropdown-toggle="dropdown" aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open"  style="border-color:var(--dark-30); color: var(--dark-60);"
-                          class="h-11 w-max bg-white border rounded-md bodyText px-4 text-center inline-flex items-center" type="button">
-                          Sort by
-                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                      class=" w-4 h-4 ml-2 origin-center motion-safe:transition duration-500 ease-in-out":class="{ 'rotate-180': open }">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
+                <div>
+                  <button id="dropdownSortButton" data-dropdown-toggle="dropdownSort"
+                    class="bodyText py-2.5 rounded-md border bg-white hover:bg-gray-200 text-black bg-white px-4 text-center inline-flex items-center"
+                    type="button">
+                    Sort by
+                    <i class="ri-arrow-down-s-line"></i>
                   </button>
-                  <div role="region" tabindex="-1" x-cloak x-show="open" class="absolute rigth-20 z-10 w-max  rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                    <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"role="menuitem" tabindex="-1">
-                      Sort
-                    </a>
-                    <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)" role="menuitem"tabindex="-1">
-                      Sort
-                    </a>
-                    <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)" role="menuitem" tabindex="-1">
-                      Sort
-                    </a>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownSort" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownSortButton">
+                      <li class="flex py-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Sort by</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Sort by</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-question-line pr-3"></i>
+                        <a href="#" class="block">Sort by</a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -422,97 +418,91 @@
                   </div>
                   <p class="smallTextBold mr-2">5</p>
                   <!-- Share Dropdown -->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button x-bind:aria-expanded="open" x-on:click="open = ! open" type="button"
-                        class="h-6 w-14 text-white bg-blue-600 hover:bg-blue-700 font-medium rounded text-sm px-2">Share</button>
-                    </div>
-
-                    <div role="region" tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-25 z-10 mt-2 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-1.svg" alt="database">
-                        Clone and share
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-2.svg" alt="coin">
-                        Invite to project
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-3.svg" alt="wallet">
-                        Send to support
-                      </a>
+                  <div>
+                    <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                      style="background-color: var(--blue-primary);"
+                      class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                      type="button">
+                      Share
+                    </button>
+                    <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                      <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                        <li class="flex py-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <!-- Button rounded-list dropdown -->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button
-                        class="mt-2 inline-flex items-center text-sm font-medium text-center text-gray-900 rounded-md hover:text-gray-400"
-                        x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-
-                    <div tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-30 z-10 w-max rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pb-2 pt-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-1.svg" alt="database">
-                        Launch Editor
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="coin">
-                        Rename
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-4 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="wallet">
-                        Duplicate
-                      </a>
-                      <p href="#" class="border mx-4" style="color: var(--dark-20);"></p>
-                      <a href="#" class="flex items-center px-6 pt-4 pb-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-3.svg" alt="wallet">
-                        Delete
-                      </a>
+                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
+                    type="button">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                      </path>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownDots"
+                    class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4">
+                        <i class="ri-rocket-2-line pr-3"></i>
+                        <a href="#" class="block">Launch Editor</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Rename</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Duplicate</a>
+                      </li>
+                    </ul>
+                    <div class="">
+                      <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                        <li class="flex py-4">
+                          <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                          <a href="#" class="block" style="color: var(--error);">Delete</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
-                <div class="flex py-2 px-4">
-                  <div class="w-2/6 flex items-center">
-                    <p class="preText" style="color: var(--dark-40);">Collect data</p>
-                    <button type="button"
-                      class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
-                      style="color: var(--dark-60); border-color: var(--dark-60);">
-                      <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
-                    <button type="button"
-                      class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
-                      style="color: var(--error); border-color: var(--error);">
-                      Mind</button>
-                  </div>
-                  <div class="w-4/6 flex justify-end items-center">
-                    <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
-                      style="background-color: var(--dark-20);">In progress</button>
-                    <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
-                      style="background-color: var(--dark-20);">Tag2</button>
-                    <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
-                      style="background-color: var(--dark-20);">Another tag</button>
-                    <p class="rounded-full border px-1 py-0.5 preTextB" style="border-color: var(--dark-30);">+3</p>
-                  </div>
+              <div class="flex py-2 px-4">
+                <div class="w-2/6 flex items-center">
+                  <p class="preText" style="color: var(--dark-40);">Collect data</p>
+                  <button type="button"
+                    class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
+                    style="color: var(--dark-60); border-color: var(--dark-60);">
+                    <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
+                  <button type="button"
+                    class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
+                    style="color: var(--error); border-color: var(--error);">
+                    Mind</button>
                 </div>
+                <div class="w-4/6 flex justify-end items-center">
+                  <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
+                    style="background-color: var(--dark-20);">In progress</button>
+                  <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
+                    style="background-color: var(--dark-20);">Tag2</button>
+                  <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
+                    style="background-color: var(--dark-20);">Another tag</button>
+                  <p class="rounded-full border px-1 py-0.5 preTextB" style="border-color: var(--dark-30);">+3</p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="flex pt-10 w-table">
@@ -562,70 +552,66 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                   <p class="smallTextBold mr-2">5</p>
-                  <!-- Share Dropdown -->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button x-bind:aria-expanded="open" x-on:click="open = ! open" type="button"
-                        class="h-6 w-14 text-white bg-blue-600 hover:bg-blue-700 font-medium rounded text-sm px-2">Share</button>
-                    </div>
-                    <div role="region" tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-25 z-10 mt-2 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-1.svg" alt="database">
-                        Clone and share
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-2.svg" alt="coin">
-                        Invite to project
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-3.svg" alt="wallet">
-                        Send to support
-                      </a>
+                   <!-- Share Dropdown -->
+                   <div>
+                    <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                      style="background-color: var(--blue-primary);"
+                      class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                      type="button">
+                      Share
+                    </button>
+                    <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                      <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                        <li class="flex py-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <!-- Button rounded-list dropdown-->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button
-                        class="mt-2 inline-flex items-center text-sm font-medium text-center text-gray-900 rounded-md hover:text-gray-400"
-                        x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-30 z-10 w-max rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pb-2 pt-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-1.svg" alt="database">
-                        Launch Editor
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="coin">
-                        Rename
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-4 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="wallet">
-                        Duplicate
-                      </a>
-                      <p href="#" class="border mx-4" style="color: var(--dark-20);"></p>
-                      <a href="#" class="flex items-center px-6 pt-4 pb-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-3.svg" alt="wallet">
-                        Delete
-                      </a>
+                  <!-- Button rounded-list dropdown -->
+                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
+                    type="button">
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                      </path>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownDots"
+                    class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4">
+                        <i class="ri-rocket-2-line pr-3"></i>
+                        <a href="#" class="block">Launch Editor</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Rename</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Duplicate</a>
+                      </li>
+                    </ul>
+                    <div class="">
+                      <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                        <li class="flex py-4">
+                          <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                          <a href="#" class="block" style="color: var(--error);">Delete</a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -703,76 +689,68 @@
                   </div>
                   <p class="smallTextBold mr-2">5</p>
 
-                 <!-- Share Dropdown -->
-
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button x-bind:aria-expanded="open" x-on:click="open = ! open" type="button"
-                        class="h-6 w-14 text-white bg-blue-600 hover:bg-blue-700 font-medium rounded text-sm px-2">Share</button>
-                    </div>
-
-                    <div role="region" tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-25 z-10 mt-2 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-1.svg" alt="database">
-                        Clone and share
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-2.svg" alt="coin">
-                        Invite to project
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-3.svg" alt="wallet">
-                        Send to support
-                      </a>
-                    </div>
+                <!-- Share Dropdown -->
+                <div>
+                  <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                    style="background-color: var(--blue-primary);"
+                    class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                    type="button">
+                    Share
+                  </button>
+                  <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                      <li class="flex py-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                    </ul>
                   </div>
-
-                  <!-- Button rounded-list dropdown -->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button
-                        class="mt-2 inline-flex items-center text-sm font-medium text-center text-gray-900 rounded-md hover:text-gray-400"
-                        x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-
-                    <div tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-30 z-10 w-max rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pb-2 pt-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-1.svg" alt="database">
-                        Launch Editor
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="coin">
-                        Rename
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-4 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="wallet">
-                        Duplicate
-                      </a>
-                      <p href="#" class="border mx-4" style="color: var(--dark-20);"></p>
-                      <a href="#" class="flex items-center px-6 pt-4 pb-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-3.svg" alt="wallet">
-                        Delete
-                      </a>
-                    </div>
+                </div>
+                <!-- Button rounded-list dropdown -->
+                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
+                  type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownDots"
+                  class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                  <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                    <li class="flex py-4">
+                      <i class="ri-rocket-2-line pr-3"></i>
+                      <a href="#" class="block">Launch Editor</a>
+                    </li>
+                    <li class="flex pb-4">
+                      <i class="ri-pencil-line pr-3"></i>
+                      <a href="#" class="block">Rename</a>
+                    </li>
+                    <li class="flex pb-4">
+                      <i class="ri-pencil-line pr-3"></i>
+                      <a href="#" class="block">Duplicate</a>
+                    </li>
+                  </ul>
+                  <div class="">
+                    <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4">
+                        <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                        <a href="#" class="block" style="color: var(--error);">Delete</a>
+                      </li>
+                    </ul>
                   </div>
+                </div>
                 </div>
               </div>
 
@@ -808,8 +786,8 @@
               <div class="flex py-2 px-4">
                 <div class="w-2/6 flex">
                   <div class="flex items-center">
-                    <input aria-describedby="helper-checkbox-text" type="checkbox" value=""
-                      class="w-4 h-4 rounded style=" border-color: var(--dark-40);"">
+                    <input aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 rounded"
+                      style=" border-color: var(--dark-40);">
                   </div>
                   <img class="px-4" src="./assets/images/project-img-4.svg" alt="">
                   <div class="flex flex-col justify-center">
@@ -849,72 +827,68 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                   <p class="smallTextBold mr-2">5</p>
-                  <!-- Share dropdown -->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button x-bind:aria-expanded="open" x-on:click="open = ! open" type="button"
-                        class="h-6 w-14 text-white bg-blue-600 hover:bg-blue-700 font-medium rounded text-sm px-2">Share</button>
-                    </div>
-                    <div role="region" tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-25 z-10 mt-2 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-1.svg" alt="database">
-                        Clone and share
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-2.svg" alt="coin">
-                        Invite to project
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/share-img-3.svg" alt="wallet">
-                        Send to support
-                      </a>
-                    </div>
+                 <!-- Share Dropdown -->
+                 <div>
+                  <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                    style="background-color: var(--blue-primary);"
+                    class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                    type="button">
+                    Share
+                  </button>
+                  <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                      <li class="flex py-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                      <li class="flex pb-4">
+                        <i class="ri-stackshare-line pr-3"></i>
+                        <a href="#" class="block">Share</a>
+                      </li>
+                    </ul>
                   </div>
-                  <!-- Button rounded-list dropdown-->
-                  <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-                    <div>
-                      <button
-                        class="mt-2 inline-flex items-center text-sm font-medium text-center text-gray-900 rounded-md hover:text-gray-400"
-                        x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
-                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                    <div tabindex="-1" x-cloak x-show="open"
-                      class="absolute right-30 z-10 w-max rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-                      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                      <a href="#" class="flex items-center px-6 pb-2 pt-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-1.svg" alt="database">
-                        Launch Editor
-                      </a>
-                      <a href="#" class="flex items-center px-6 py-2 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="coin">
-                        Rename
-                      </a>
-                      <a href="#" class="flex items-center px-6 pt-2 pb-4 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-2.svg" alt="wallet">
-                        Duplicate
-                      </a>
-                      <p href="#" class="border mx-4" style="color: var(--dark-20);"></p>
-                      <a href="#" class="flex items-center px-6 pt-4 pb-6 smallText" style="color:var(--dark-60)"
-                        role="menuitem" tabindex="-1">
-                        <img class="h-4 w-4 mr-1.5" src="./assets/images/list-img-3.svg" alt="wallet">
-                        Delete
-                      </a>
-                    </div>
+                </div>
+                <!-- Button rounded-list dropdown -->
+                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                  class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
+                  type="button">
+                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                    </path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div id="dropdownDots"
+                  class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                  <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                    <li class="flex py-4">
+                      <i class="ri-rocket-2-line pr-3"></i>
+                      <a href="#" class="block">Launch Editor</a>
+                    </li>
+                    <li class="flex pb-4">
+                      <i class="ri-pencil-line pr-3"></i>
+                      <a href="#" class="block">Rename</a>
+                    </li>
+                    <li class="flex pb-4">
+                      <i class="ri-pencil-line pr-3"></i>
+                      <a href="#" class="block">Duplicate</a>
+                    </li>
+                  </ul>
+                  <div class="">
+                    <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4">
+                        <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                        <a href="#" class="block" style="color: var(--error);">Delete</a>
+                      </li>
+                    </ul>
                   </div>
+                </div>
                 </div>
               </div>
               <div class="flex py-2 px-4">
@@ -965,27 +939,27 @@
         <div class="border rounded-md my-6 p-4" style="border-color: var(--dark-30); background: var(--white);">
           <p class="mb-4 boldBody">Live studies</p>
           <div class="flex mb-2">
-            <p class="w-5/6 boldBody">TYSKS-01</p>
+            <p class="w-5/6 smallTextBold">TYSKS-01</p>
             <p class="w-1/6 smallText" style="color: var(--dark-40);">28/50</p>
           </div>
           <div class="mb-6 pr-8 progressBar rounded-full h-1.5" style="background-color: var(--dark-20);">
             <div class="h-1.5 rounded-full" style="width: 40%; background-color: var(--blue-primary);"></div>
           </div>
           <div class="flex mb-2">
-            <p class="w-5/6 boldBody">TYSFS-02</p>
+            <p class="w-5/6 smallTextBold">TYSFS-02</p>
             <p class="w-1/6 smallText" style="color: var(--dark-40);">35/50</p>
           </div>
           <div class="mb-6 pr-8 progressBar rounded-full h-1.5" style="background-color: var(--dark-20);">
             <div class="h-1.5 rounded-full" style="width: 60%; background-color: var(--blue-primary);"></div>
           </div>
           <div class="flex mb-2">
-            <p class="w-5/6 boldBody">ARER3-01</p>
+            <p class="w-5/6 smallTextBold">ARER3-01</p>
             <p class="w-1/6 smallText" style="color: var(--dark-40);">13/50</p>
           </div>
           <div class="mb-6 pr-8 progressBar rounded-full h-1.5" style="background-color: var(--dark-20);">
             <div class="h-1.5 rounded-full" style="width: 25%; background-color: var(--blue-primary);"></div>
           </div>
-          <a href="#" class="flex justify-center smallTextBold" style="color: var(--blue-primary);">View all (5)</a>
+          <a href="#" class="flex justify-center boldBody" style="color: var(--blue-primary);">View all (5)</a>
         </div>
 
         <div class="rounded-md mb-6 p-5" style="background: var(--dark-20);">
@@ -1001,6 +975,46 @@
     </div>
     </div>
   </section>
+
+
+  <!-- Dropdown menu -->
+
+  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+    class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
+    type="button">
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div id="dropdownDots" class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+    <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+      <li class="flex py-4">
+        <i class="ri-rocket-2-line pr-3"></i>
+        <a href="#" class="block">Launch Editor</a>
+      </li>
+      <li class="flex pb-4">
+        <i class="ri-pencil-line pr-3"></i>
+        <a href="#" class="block">Rename</a>
+      </li>
+      <li class="flex pb-4">
+        <i class="ri-pencil-line pr-3"></i>
+        <a href="#" class="block">Duplicate</a>
+      </li>
+    </ul>
+    <div class="">
+      <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+        <li class="flex py-4">
+          <img src="./assets/images/list-img-3.svg" alt="">
+          <a href="#" class="block" style="color: var(--error);">Delete</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
 </html>
