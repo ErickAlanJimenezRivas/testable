@@ -102,13 +102,12 @@
           </div>
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <!-- Help dropdown (For the future) -->
+          <!-- Help dropdown -->
           <div class="flex items-center mr-5">
             <div>
               <p class="bodyText mr-2" style="color:var(--dark-60)">Help</p>
             </div>
             <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
-              <div>
                 <button aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open" type="button">
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor"
@@ -117,6 +116,17 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                   </svg>
                 </button>
+                <div role="region" tabindex="-1" x-cloak x-show="open" class="absolute z-10 w-max rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                <a href="#" class="flex items-center px-6 pt-6 pb-2 bodyText" style="color:var(--dark-60)"role="menuitem" tabindex="-1">
+                  Help
+                </a>
+                <a href="#" class="flex items-center px-6 py-2 bodyText" style="color:var(--dark-60)" role="menuitem"tabindex="-1">
+                  Help
+                </a>
+                <a href="#" class="flex items-center px-6 pt-2 pb-6 bodyText" style="color:var(--dark-60)" role="menuitem" tabindex="-1">
+                  Help
+                </a>
               </div>
             </div>
           </div>
@@ -308,6 +318,7 @@
                     placeholder="Search projects" required>
                 </div>
               </form>
+              <!-- Filter by dropdown -->
               <div class="mr-2">
               <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
                 <button data-dropdown-toggle="dropdown" aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open"  style="border-color:var(--dark-30); color: var(--dark-60);"
@@ -332,6 +343,7 @@
                 </div>
               </div>
               </div>
+              <!-- Sort by dropdown -->
               <div class="mr-2">
                 <div x-data="{ open: false }" @click.outside="open = false" @keyup.escape.window="open = false">
                   <button data-dropdown-toggle="dropdown" aria-controls="topic-1" x-bind:aria-expanded="open" x-on:click="open = ! open"  style="border-color:var(--dark-30); color: var(--dark-60);"
