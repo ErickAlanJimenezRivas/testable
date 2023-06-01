@@ -47,28 +47,29 @@
           <!-- Testable dropdown -->
           <div>
             <button id="dropdownButton" data-dropdown-toggle="dropdownDivider"
-              class=" smallTextBold text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              class=" smallTextBold text-black bg-white px-4 hover:text-gray-500 text-center inline-flex items-center"
+              type="button">
               Testable
               <i class="ri-arrow-down-s-line"></i>
             </button>
             <!-- Dropdown -->
             <div id="dropdownDivider" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
               <ul class="boldBody text-black" aria-labelledby="dropdownButton">
-                <li class="flex pt-4">
+                <li class="flex pt-4 hover:text-gray-500">
                   <img src="./assets/images/mini-logo.svg" alt="">
                   <a href="#" class="block pl-3">Testable</a>
                 </li>
                 <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
-                <li class="flex">
+                <li class="flex hover:text-gray-500">
                   <img src="./assets/images/minds-img.svg" alt="">
                   <a href="#" class="block pl-3">Minds</a>
                 </li>
-                <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
-                <li class="flex">
+                <a href="#" class="block preText pl-7 pb-4">Recruit participants</a>
+                <li class="flex hover:text-gray-500">
                   <img src="./assets/images/mini-logo-b.svg" alt="">
                   <a href="#" class="blockpl-3 pl-3">Class</a>
                 </li>
-                <a href="#" class="block preText pl-7 pb-4">Build experiments</a>
+                <a href="#" class="block preText pl-7 pb-4">Delight students</a>
               </ul>
             </div>
             <div>
@@ -91,22 +92,23 @@
           <!-- Help dropdown -->
           <div>
             <button id="dropdownHelpButton" data-dropdown-toggle="dropdownHelp"
-              class=" bodyText text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              class=" bodyText text-black bg-white px-4 hover:text-gray-500 text-center inline-flex items-center"
+              type="button">
               Help
               <i class="ri-arrow-down-s-line"></i>
             </button>
             <!-- Dropdown -->
             <div id="dropdownHelp" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
               <ul class="bodyText text-black" aria-labelledby="dropdownHelpButton">
-                <li class="flex py-4">
+                <li class="flex py-4 hover:text-gray-500">
                   <i class="ri-question-line pr-3"></i>
                   <a href="#" class="block">Help</a>
                 </li>
-                <li class="flex pb-4">
+                <li class="flex pb-4 hover:text-gray-500">
                   <i class="ri-question-line pr-3"></i>
                   <a href="#" class="block">Help</a>
                 </li>
-                <li class="flex pb-4">
+                <li class="flex pb-4 hover:text-gray-500">
                   <i class="ri-question-line pr-3"></i>
                   <a href="#" class="block">Help</a>
                 </li>
@@ -133,7 +135,8 @@
 
           <div>
             <button id="dropdownDividerButton" data-dropdown-toggle="dropdownProfile"
-              class=" smallTextBold text-black bg-white px-4  text-center inline-flex items-center" type="button">
+              class=" smallTextBold text-black bg-white px-4 text-center inline-flex items-center hover:text-gray-500"
+              type="button">
               Marie Bernard
               <i class="ri-arrow-down-s-line"></i>
             </button>
@@ -141,35 +144,32 @@
             <div id="dropdownProfile"
               class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
               <ul class="bodyText text-black" aria-labelledby="dropdownDividerButton">
-                <li class="flex py-4">
+                <li class="flex py-4 hover:text-gray-500">
                   <i class="ri-database-2-line pr-3"></i>
                   <a href="#" class="block">750mb free</a>
                 </li>
-                <li class="flex pb-4">
+                <li class="flex pb-4 hover:text-gray-500">
                   <i class="ri-coin-line pr-3"></i>
-                  <a href="#" class="block">750mb free</a>
+                  <a href="#" class="block">310 credits</a>
                 </li>
-                <li class="flex pb-4">
+                <li class="flex pb-4 hover:text-gray-500">
                   <i class="ri-wallet-line pr-3"></i>
-                  <a href="#" class="block">750mb free</a>
+                  <a href="#" class="block">$10.00</a>
                 </li>
               </ul>
               <div class="">
                 <ul class="text-black" aria-labelledby="dropdownDividerButton">
                   <li class="flex py-4">
 
-                    <a href="#" class="block">Profile</a>
+                    <a href="#" class="block hover:text-gray-500">Profile</a>
                   </li>
-                  <li class="flex pb-4">
-
+                  <li class="flex pb-4 hover:text-gray-500">
                     <a href="#" class="block">Admin</a>
                   </li>
-                  <li class="flex pb-4">
-
+                  <li class="flex pb-4 hover:text-gray-500">
                     <a href="#" class="block">Invoices</a>
                   </li>
-                  <li class="flex pb-4">
-
+                  <li class="flex pb-4 hover:text-gray-500">
                     <a href="#" class="block">Logout</a>
                   </li>
                 </ul>
@@ -214,60 +214,64 @@
       </div>
       <!-- cards -->
       <div class="mx-10 pb-10 flex flex-wrap justify-between">
-        <div class="h-[25rem] w-[18.75rem]">
-          <img class="" src="./assets/images/card-img-1.svg" alt="Scratch">
-          <div class="rounded-b-lg bg-white">
-            <div class="flex justify-between py-6 px-8">
-              <p class="bodyText" style="color:var(--dark-60)">From Scratch</p>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                </svg>
-              </button>
-            </div>
+
+        <div class="w-[18.75rem] w-max rounded-lg bg-white overflow-hidden">
+          <div class="h-[20rem] px-9 py-6" style="background-color: #4359F1;">
+            <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg" alt="Scratch">
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="bodyText" style="color:var(--dark-60)">From Scratch</p>
+            <button class="transition transform hover:translate-x-1 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="h-[25rem] w-[18.75rem]">
-          <img class="" src="./assets/images/card-img-2.svg" alt="Scratch">
-          <div class="rounded-b-lg bg-white">
-            <div class="flex justify-between py-6 px-8">
-              <p class="bodyText" style="color:var(--dark-60)">Natural Languaje</p>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                </svg>
-              </button>
-            </div>
+
+        <div class="w-[18.75rem] w-max rounded-lg bg-white overflow-hidden">
+          <div class="h-[20rem] px-9 py-6" style="background-color: #FF7168;">
+            <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="bodyText" style="color:var(--dark-60)">Natural Languaje</p>
+            <button class="transition transform hover:translate-x-1 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="h-[25rem] w-[18.75rem]">
-          <img class="" src="./assets/images/card-img-3.svg" alt="Scratch">
-          <div class="rounded-b-lg bg-white">
-            <div class="flex justify-between py-6 px-8">
-              <p class="bodyText" style="color:var(--dark-60)">Template from Library</p>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                </svg>
-              </button>
-            </div>
+
+        <div class="w-[18.75rem] rounded-lg bg-white overflow-hidden">
+          <div class="h-[20rem] px-9 py-6" style="background-color: #FFA466;">
+            <img class="w-full object-cover" src="./assets/images/card-img-template.svg" alt="Scratch">
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="bodyText" style="color:var(--dark-60)">Template from Library</p>
+            <button class="transition transform hover:translate-x-1 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
           </div>
         </div>
-        <div class="h-[25rem] w-[18.75rem]">
-          <img class="" src="./assets/images/card-img-4.svg" alt="Scratch">
-          <div class="rounded-b-lg bg-white">
-            <div class="flex justify-between py-6 px-8">
-              <p class="bodyText" style="color:var(--dark-60)">Community templates</p>
-              <button>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                </svg>
-              </button>
-            </div>
+
+        <div class="w-[18.75rem] rounded-lg bg-white overflow-hidden">
+          <div class="h-[20rem] px-9 py-6" style="background-color: #6445F1;">
+            <img class="w-full object-cover" src="./assets/images/card-img-community.svg" alt="Scratch">
+          </div>
+          <div class="flex justify-between p-6">
+            <p class="bodyText" style="color:var(--dark-60)">Community templates</p>
+            <button class="transition transform hover:translate-x-1 ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -275,8 +279,8 @@
   </section>
 
   <section>
-    <div class="flex mx-auto w-body px-2 pt-14">
-      <div class="w-4/5">
+    <div class="flex-none lg:flex mx-auto w-body px-2 pt-14">
+      <div class="w-min pb-4 md:w-4/5">
         <div class="flex flex-col">
           <div class="flex">
             <img class="pr-3" src="./assets/images/file-list.svg" alt="">
@@ -286,7 +290,7 @@
           <div class="flex pt-7">
             <div class="w-2/5">
               <button style="border-color:var(--dark-30); color: var(--dark-60);" type="button"
-                class="h-11 bg-white border rounded-md px-5 py-2.5 mr-2 mb-2 bodyText">
+                class="h-11 bg-white border rounded-md px-5 py-2.5 mr-2 mb-2 bodyText hover:bg-gray-200">
                 Select all
               </button>
             </div>
@@ -365,7 +369,7 @@
               </div>
               <div>
                 <button type="button" style="background:var(--blue-primary); color: var(--white);"
-                  class="h-11 w-max rounded-md bodyText px-5">Create project</button>
+                  class="h-11 w-max rounded-md bodyText px-5 hover:bg-gray-200">Create project</button>
               </div>
             </div>
           </div>
@@ -381,7 +385,8 @@
                   </div>
                   <img class="px-4" src="./assets/images/project-img-1.svg" alt="">
                   <div class="flex flex-col justify-center">
-                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody">Reading the Mind in the
+                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody hover:underline">Reading
+                      the Mind in the
                       Eyes</label>
                     <div class="flex">
                       <p class="preText" style="color: var(--dark-40);">Created om Oct 12&nbsp</p>
@@ -390,7 +395,7 @@
                   </div>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
-                  <img class="w-4 h-4 mr-2" src="./assets/images/line-chart-line.svg" alt="">
+                  <i class="ri-line-chart-line mr-2"></i>
                   <p class="smallText mr-2" style="color: var(--dark-60);">Results</p>
                   <p class="smallTextBold mr-2" style="color: var(--dark-60);">45</p>
                   <p class="preText mr-4" style="color: var(--dark-40);">+4</p>
@@ -427,15 +432,15 @@
                     </button>
                     <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
                       <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
-                        <li class="flex py-4">
+                        <li class="flex py-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
-                        <li class="flex pb-4">
+                        <li class="flex pb-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
-                        <li class="flex pb-4">
+                        <li class="flex pb-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
@@ -457,22 +462,22 @@
                   <div id="dropdownDots"
                     class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
                     <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
-                      <li class="flex py-4">
+                      <li class="flex py-4 hover:text-gray-500">
                         <i class="ri-rocket-2-line pr-3"></i>
                         <a href="#" class="block">Launch Editor</a>
                       </li>
-                      <li class="flex pb-4">
+                      <li class="flex pb-4 hover:text-gray-500">
                         <i class="ri-pencil-line pr-3"></i>
                         <a href="#" class="block">Rename</a>
                       </li>
-                      <li class="flex pb-4">
+                      <li class="flex pb-4 hover:text-gray-500">
                         <i class="ri-pencil-line pr-3"></i>
                         <a href="#" class="block">Duplicate</a>
                       </li>
                     </ul>
                     <div class="">
                       <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
-                        <li class="flex py-4">
+                        <li class="flex py-4 hover:text-red-200">
                           <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
                           <a href="#" class="block" style="color: var(--error);">Delete</a>
                         </li>
@@ -482,18 +487,21 @@
                 </div>
               </div>
               <div class="flex py-2 px-4">
-                <div class="w-2/6 flex items-center">
-                  <p class="preText" style="color: var(--dark-40);">Collect data</p>
+                <div class="w-2/6 flex flex-wrap items-center">
+                  <p class="preText mr-4" style="color: var(--dark-40);">Collect data</p>
                   <button type="button"
-                    class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
+                    class="flex items-center mr-1 h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-gray-200"
                     style="color: var(--dark-60); border-color: var(--dark-60);">
-                    <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
+                    <i class="ri-file-copy-2-line mr-1"></i>
+                    tstbl.co/609-786
+                  </button>
                   <button type="button"
-                    class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
-                    style="color: var(--error); border-color: var(--error);">
-                    Mind</button>
+                    class="h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-red-100"
+                    style="color: var(--pink-primary); border-color: var(--pink-primary);">
+                    Mind
+                  </button>
                 </div>
-                <div class="w-4/6 flex justify-end items-center">
+                <div class="w-4/6 flex flex-wrap justify-end items-center">
                   <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
                     style="background-color: var(--dark-20);">In progress</button>
                   <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
@@ -516,7 +524,8 @@
                   </div>
                   <img class="px-4" src="./assets/images/project-img-2.svg" alt="">
                   <div class="flex flex-col justify-center">
-                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody">Reading the Mind in the
+                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody hover:underline">Reading
+                      the Mind in the
                       Eyes</label>
                     <div class="flex">
                       <p class="preText" style="color: var(--dark-40);">Created om Oct 12&nbsp</p>
@@ -525,7 +534,7 @@
                   </div>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
-                  <img class="w-4 h-4 mr-2" src="./assets/images/line-chart-line.svg" alt="">
+                  <i class="ri-line-chart-line mr-2"></i>
                   <p class="smallText mr-2" style="color: var(--dark-60);">Results</p>
                   <p class="smallTextBold mr-2" style="color: var(--dark-60);">45</p>
                   <p class="preText mr-4" style="color: var(--dark-40);">+4</p>
@@ -552,8 +561,8 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                   <p class="smallTextBold mr-2">5</p>
-                   <!-- Share Dropdown -->
-                   <div>
+                  <!-- Share Dropdown -->
+                  <div>
                     <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
                       style="background-color: var(--blue-primary);"
                       class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
@@ -562,15 +571,15 @@
                     </button>
                     <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
                       <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
-                        <li class="flex py-4">
+                        <li class="flex py-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
-                        <li class="flex pb-4">
+                        <li class="flex pb-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
-                        <li class="flex pb-4">
+                        <li class="flex pb-4 hover:text-gray-500">
                           <i class="ri-stackshare-line pr-3"></i>
                           <a href="#" class="block">Share</a>
                         </li>
@@ -592,22 +601,22 @@
                   <div id="dropdownDots"
                     class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
                     <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
-                      <li class="flex py-4">
+                      <li class="flex py-4 hover:text-gray-500">
                         <i class="ri-rocket-2-line pr-3"></i>
                         <a href="#" class="block">Launch Editor</a>
                       </li>
-                      <li class="flex pb-4">
+                      <li class="flex pb-4 hover:text-gray-500">
                         <i class="ri-pencil-line pr-3"></i>
                         <a href="#" class="block">Rename</a>
                       </li>
-                      <li class="flex pb-4">
+                      <li class="flex pb-4 hover:text-gray-500">
                         <i class="ri-pencil-line pr-3"></i>
                         <a href="#" class="block">Duplicate</a>
                       </li>
                     </ul>
                     <div class="">
                       <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
-                        <li class="flex py-4">
+                        <li class="flex py-4 hover:text-red-200">
                           <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
                           <a href="#" class="block" style="color: var(--error);">Delete</a>
                         </li>
@@ -617,16 +626,19 @@
                 </div>
               </div>
               <div class="flex py-2 px-4">
-                <div class="w-2/6 flex items-center">
-                  <p class="preText" style="color: var(--dark-40);">Collect data</p>
+                <div class="w-2/6 flex flex-wrap items-center">
+                  <p class="preText mr-4" style="color: var(--dark-40);">Collect data</p>
                   <button type="button"
-                    class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
+                    class="flex items-center mr-1 h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-gray-200"
                     style="color: var(--dark-60); border-color: var(--dark-60);">
-                    <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
+                    <i class="ri-file-copy-2-line mr-1"></i>
+                    tstbl.co/609-786
+                  </button>
                   <button type="button"
-                    class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
-                    style="color: var(--error); border-color: var(--error);">
-                    Mind</button>
+                    class="h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-red-100"
+                    style="color: var(--pink-primary); border-color: var(--pink-primary);">
+                    Mind
+                  </button>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
                   <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
@@ -651,7 +663,8 @@
                   </div>
                   <img class="px-4" src="./assets/images/project-img-3.svg" alt="">
                   <div class="flex flex-col justify-center">
-                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody">Reading the Mind in the
+                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody hover:underline">Reading
+                      the Mind in the
                       Eyes</label>
                     <div class="flex">
                       <p class="preText" style="color: var(--dark-40);">Created om Oct 12&nbsp</p>
@@ -660,7 +673,7 @@
                   </div>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
-                  <img class="w-4 h-4 mr-2" src="./assets/images/line-chart-line.svg" alt="">
+                  <i class="ri-line-chart-line mr-2"></i>
                   <p class="smallText mr-2" style="color: var(--dark-60);">Results</p>
                   <p class="smallTextBold mr-2" style="color: var(--dark-60);">45</p>
                   <p class="preText mr-4" style="color: var(--dark-40);">+4</p>
@@ -689,82 +702,85 @@
                   </div>
                   <p class="smallTextBold mr-2">5</p>
 
-                <!-- Share Dropdown -->
-                <div>
-                  <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                    style="background-color: var(--blue-primary);"
-                    class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                  <!-- Share Dropdown -->
+                  <div>
+                    <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                      style="background-color: var(--blue-primary);"
+                      class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                      type="button">
+                      Share
+                    </button>
+                    <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                      <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                        <li class="flex py-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Button rounded-list dropdown -->
+                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
                     type="button">
-                    Share
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                      </path>
+                    </svg>
                   </button>
-                  <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                    <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
-                      <li class="flex py-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownDots"
+                    class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4 hover:text-gray-500">
+                        <i class="ri-rocket-2-line pr-3"></i>
+                        <a href="#" class="block">Launch Editor</a>
                       </li>
-                      <li class="flex pb-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
+                      <li class="flex pb-4 hover:text-gray-500">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Rename</a>
                       </li>
-                      <li class="flex pb-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Button rounded-list dropdown -->
-                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                  class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
-                  type="button">
-                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                    </path>
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownDots"
-                  class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
-                  <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
-                    <li class="flex py-4">
-                      <i class="ri-rocket-2-line pr-3"></i>
-                      <a href="#" class="block">Launch Editor</a>
-                    </li>
-                    <li class="flex pb-4">
-                      <i class="ri-pencil-line pr-3"></i>
-                      <a href="#" class="block">Rename</a>
-                    </li>
-                    <li class="flex pb-4">
-                      <i class="ri-pencil-line pr-3"></i>
-                      <a href="#" class="block">Duplicate</a>
-                    </li>
-                  </ul>
-                  <div class="">
-                    <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
-                      <li class="flex py-4">
-                        <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
-                        <a href="#" class="block" style="color: var(--error);">Delete</a>
+                      <li class="flex pb-4 hover:text-gray-500">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Duplicate</a>
                       </li>
                     </ul>
+                    <div class="">
+                      <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                        <li class="flex py-4 hover:text-red-200">
+                          <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                          <a href="#" class="block" style="color: var(--error);">Delete</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
 
               <div class="flex py-2 px-4">
-                <div class="w-2/6 flex items-center">
-                  <p class="preText" style="color: var(--dark-40);">Collect data</p>
+                <div class="w-2/6 flex flex-wrap items-center">
+                  <p class="preText mr-4" style="color: var(--dark-40);">Collect data</p>
                   <button type="button"
-                    class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
+                    class="flex items-center mr-1 h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-gray-200"
                     style="color: var(--dark-60); border-color: var(--dark-60);">
-                    <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
+                    <i class="ri-file-copy-2-line mr-1"></i>
+                    tstbl.co/609-786
+                  </button>
                   <button type="button"
-                    class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
-                    style="color: var(--error); border-color: var(--error);">
-                    Mind</button>
+                    class="h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-red-100"
+                    style="color: var(--pink-primary); border-color: var(--pink-primary);">
+                    Mind
+                  </button>
                 </div>
 
                 <div class="w-4/6 flex justify-end items-center">
@@ -791,7 +807,8 @@
                   </div>
                   <img class="px-4" src="./assets/images/project-img-4.svg" alt="">
                   <div class="flex flex-col justify-center">
-                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody">Reading the Mind in the
+                    <label for="helper-checkbox" style="color: var(--dark-60);" class="boldBody hover:underline">Reading
+                      the Mind in the
                       Eyes</label>
                     <div class="flex">
                       <p class="preText" style="color: var(--dark-40);">Created om Oct 12&nbsp</p>
@@ -800,7 +817,7 @@
                   </div>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
-                  <img class="w-4 h-4 mr-2" src="./assets/images/line-chart-line.svg" alt="">
+                  <i class="ri-line-chart-line mr-2"></i>
                   <p class="smallText mr-2" style="color: var(--dark-60);">Results</p>
                   <p class="smallTextBold mr-2" style="color: var(--dark-60);">45</p>
                   <p class="preText mr-4" style="color: var(--dark-40);">+4</p>
@@ -827,81 +844,84 @@
                     <div class="tooltip-arrow" data-popper-arrow></div>
                   </div>
                   <p class="smallTextBold mr-2">5</p>
-                 <!-- Share Dropdown -->
-                 <div>
-                  <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                    style="background-color: var(--blue-primary);"
-                    class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                  <!-- Share Dropdown -->
+                  <div>
+                    <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
+                      style="background-color: var(--blue-primary);"
+                      class=" smallText rounded-md text-white px-2 py-0.5 text-center inline-flex items-center"
+                      type="button">
+                      Share
+                    </button>
+                    <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
+                      <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
+                        <li class="flex py-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                        <li class="flex pb-4 hover:text-gray-500">
+                          <i class="ri-stackshare-line pr-3"></i>
+                          <a href="#" class="block">Share</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Button rounded-list dropdown -->
+                  <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
+                    class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
                     type="button">
-                    Share
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
+                      </path>
+                    </svg>
                   </button>
-                  <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                    <ul class="bodyText text-black" aria-labelledby="dropdownShareButton">
-                      <li class="flex py-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownDots"
+                    class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
+                    <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
+                      <li class="flex py-4 hover:text-gray-500">
+                        <i class="ri-rocket-2-line pr-3"></i>
+                        <a href="#" class="block">Launch Editor</a>
                       </li>
-                      <li class="flex pb-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
+                      <li class="flex pb-4 hover:text-gray-500">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Rename</a>
                       </li>
-                      <li class="flex pb-4">
-                        <i class="ri-stackshare-line pr-3"></i>
-                        <a href="#" class="block">Share</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- Button rounded-list dropdown -->
-                <button id="dropdownMenuIconButton" data-dropdown-toggle="dropdownDots"
-                  class="inline-flex items-center p-2 text-sm font-medium text-center text-black rounded-lg hover:text-gray-500"
-                  type="button">
-                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">
-                    </path>
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div id="dropdownDots"
-                  class="py-2 px-6 z-10 hidden bg-white divide-y divide-gray-200 rounded-lg shadow w-max">
-                  <ul class="bodyText text-black" aria-labelledby="dropdownMenuIconButton">
-                    <li class="flex py-4">
-                      <i class="ri-rocket-2-line pr-3"></i>
-                      <a href="#" class="block">Launch Editor</a>
-                    </li>
-                    <li class="flex pb-4">
-                      <i class="ri-pencil-line pr-3"></i>
-                      <a href="#" class="block">Rename</a>
-                    </li>
-                    <li class="flex pb-4">
-                      <i class="ri-pencil-line pr-3"></i>
-                      <a href="#" class="block">Duplicate</a>
-                    </li>
-                  </ul>
-                  <div class="">
-                    <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
-                      <li class="flex py-4">
-                        <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
-                        <a href="#" class="block" style="color: var(--error);">Delete</a>
+                      <li class="flex pb-4 hover:text-gray-500">
+                        <i class="ri-pencil-line pr-3"></i>
+                        <a href="#" class="block">Duplicate</a>
                       </li>
                     </ul>
+                    <div class="">
+                      <ul class="text-black" aria-labelledby="dropdownMenuIconButton">
+                        <li class="flex py-4 hover:text-red-200">
+                          <img src="./assets/images/list-img-3.svg" alt="" class="pr-3">
+                          <a href="#" class="block" style="color: var(--error);">Delete</a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
               <div class="flex py-2 px-4">
-                <div class="w-2/6 flex items-center">
-                  <p class="preText" style="color: var(--dark-40);">Collect data</p>
+                <div class="w-2/6 flex flex-wrap items-center">
+                  <p class="preText mr-4" style="color: var(--dark-40);">Collect data</p>
                   <button type="button"
-                    class="mr-1 ml-4 h-8 w-max px-2 flex justify-center items-center border rounded-md smallText"
+                    class="flex items-center mr-1 h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-gray-200"
                     style="color: var(--dark-60); border-color: var(--dark-60);">
-                    <img class="pr-1" src="./assets/images/file-line.svg" alt="">tstbl.co/609-786</button>
+                    <i class="ri-file-copy-2-line mr-1"></i>
+                    tstbl.co/609-786
+                  </button>
                   <button type="button"
-                    class="h-8 w-max p-2 flex items-center justify-center border rounded-md smallTextBold"
-                    style="color: var(--error); border-color: var(--error);">
-                    Mind</button>
+                    class="h-max w-max px-2 py-1.5  border rounded-md smallText bg-white hover:bg-red-100"
+                    style="color: var(--pink-primary); border-color: var(--pink-primary);">
+                    Mind
+                  </button>
                 </div>
                 <div class="w-4/6 flex justify-end items-center">
                   <button type="button" class="my-2 px-2.5 py-1 rounded-full text-center mr-2 cursor-default preText"
@@ -918,7 +938,7 @@
         </div>
       </div>
       <!-- side info -->
-      <div class="w-1/5">
+      <div class="lg:w-1/5 sm:w-3/5 md:w-2/5">
         <div style="border-color: var(--dark-30); background: var(--white);" class="border rounded-md p-4">
           <div class="flex">
             <img class="mr-2" src="./assets/images/virtual-coin.svg" alt="">
@@ -973,7 +993,7 @@
         </div>
       </div>
     </div>
-    </div>
+
   </section>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
