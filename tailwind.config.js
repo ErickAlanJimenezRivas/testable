@@ -51,7 +51,8 @@ module.exports = {
     },
     maxWidth: {
       'w-body': '90rem',
-      'w-table': '63.75rem',
+      'w-table': '57.5rem',
+      'w-sideInfo': '19.25rem',
     },
     fontFamily: {
       'Inter': ['Inter'],
