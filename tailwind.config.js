@@ -53,6 +53,7 @@ module.exports = {
       'w-body': '90rem',
       'w-table': '57.5rem',
       'w-sideInfo': '19.25rem',
+      'w-modalCard': '16.5rem',
     },
     fontFamily: {
       'Inter': ['Inter'],

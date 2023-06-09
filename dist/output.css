@@ -542,6 +542,10 @@ video {
   visibility: hidden;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -563,8 +567,16 @@ video {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .col-span-5 {
@@ -620,6 +632,10 @@ video {
   margin-left: 0.75rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -638,10 +654,6 @@ video {
 
 .mr-4 {
   margin-right: 1rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
 }
 
 .mt-10 {
@@ -709,6 +721,14 @@ video {
   height: max-content;
 }
 
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
 .w-1\/5 {
   width: 20%;
 }
@@ -772,6 +792,10 @@ video {
 
 .max-w-w-table {
   max-width: 57.5rem;
+}
+
+.max-w-w-modalCard {
+  max-width: 16.5rem;
 }
 
 .flex-auto {
@@ -869,12 +893,6 @@ video {
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -901,6 +919,14 @@ video {
   overflow: hidden;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -921,6 +947,11 @@ video {
   border-width: 1px;
 }
 
+.border-blue-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(29 109 236 / var(--tw-border-opacity));
+}
+
 .border-dark-20 {
   --tw-border-opacity: 1;
   border-color: rgb(244 244 244 / var(--tw-border-opacity));
@@ -931,11 +962,6 @@ video {
   border-color: rgb(220 220 220 / var(--tw-border-opacity));
 }
 
-.border-dark-40 {
-  --tw-border-opacity: 1;
-  border-color: rgb(118 116 116 / var(--tw-border-opacity));
-}
-
 .border-dark-60 {
   --tw-border-opacity: 1;
   border-color: rgb(19 19 19 / var(--tw-border-opacity));
@@ -944,11 +970,6 @@ video {
 .border-pink-primary {
   --tw-border-opacity: 1;
   border-color: rgb(239 53 94 / var(--tw-border-opacity));
-}
-
-.border-blue-primary {
-  --tw-border-opacity: 1;
-  border-color: rgb(29 109 236 / var(--tw-border-opacity));
 }
 
 .bg-blue-primary {
@@ -991,6 +1012,10 @@ video {
      object-fit: cover;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -1011,8 +1036,8 @@ video {
   padding: 1.5rem;
 }
 
-.p-0 {
-  padding: 0px;
+.p-10 {
+  padding: 2.5rem;
 }
 
 .px-1 {
@@ -1160,10 +1185,6 @@ video {
   padding-top: 1rem;
 }
 
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1204,6 +1225,11 @@ video {
 
 .text-title3 {
   font-size: 2rem;
+  font-weight: 700;
+}
+
+.text-title2 {
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -1261,6 +1287,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-dark-30 {
+  --tw-shadow-color: #DCDCDC;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1291,11 +1322,6 @@ video {
 .hover\:bg-dark-20:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 244 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-dark-60:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(19 19 19 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-primary:hover {
@@ -1362,12 +1388,28 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:inset-0 {
+    inset: 0px;
+  }
+
   .md\:col-end-7 {
     grid-column-end: 7;
   }
 
+  .md\:flex {
+    display: flex;
+  }
+
   .md\:grid {
     display: grid;
+  }
+
+  .md\:w-auto {
+    width: auto;
+  }
+
+  .md\:grid-flow-col {
+    grid-auto-flow: column;
   }
 
   .md\:grid-cols-1 {
@@ -1376,6 +1418,18 @@ video {
 
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 }
 
