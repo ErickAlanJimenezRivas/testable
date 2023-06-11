@@ -92,17 +92,14 @@
           </svg>
         </button>
         <!-- Profile dropdown -->
-        <div class="relative ml-3">
-          <div>
-            <button class="flex text-smallText " aria-expanded="false" aria-haspopup="true">
-              <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="./assets/images/profile.svg" alt="profile">
-            </button>
-          </div>
+        <div class="relative ml-1.5 md:ml-3">
+          <button class="text-smallText " aria-expanded="false" aria-haspopup="true">
+            <img class="h-8 w-8 rounded-full" src="./assets/images/profile.svg" alt="profile">
+          </button>
         </div>
         <div>
           <button id="dropdownProfileButton" data-dropdown-toggle="dropdownProfile"
-            class=" text-smallTextBold text-dark-60 bg-white pl-4 text-center inline-flex items-center hover:text-gray-500" type="button">Marie Bernard
+            class=" text-smallTextBold text-dark-60 bg-white pl-1.5 md:pl-4 text-center inline-flex items-center hover:text-gray-500" type="button">Marie Bernard
             <i class="ri-arrow-down-s-line"></i>
           </button>
           <!-- Dropdown menu -->
@@ -140,17 +137,17 @@
             </div>
           </div>
           <div>
-            <p class="text-preText text-dark-40 px-4">Premium</p>
+            <p class="text-preText text-dark-40 pl-1.5 md:pl-4">Premium</p>
           </div>
         </div>
       </div>
       <!-- Button Mobile & mode Mobile -->
       <div class="items-center justify-between hidden w-full md:flex md:w-auto order-last md:order-1" id="navbar-cta">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white lg:ml-40">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white lg:ml-40 space-y-2 md:space-y-0">
         <li>
           <a href="#" class="border border-blue-primary text-blue-primary block rounded-full px-3 py-1 text-bodyText">Dashboard</a>
         </li>
-        <li class="px-2.5">
+        <li class="px-0 md:px-2.5">
           <a href="#" class=" block text-dark-60 hover:border hover:border-dark-30 rounded-full px-3 py-1 text-bodyText">Community</a>
         </li>
         <li>
