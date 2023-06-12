@@ -197,7 +197,7 @@
             <h3 class="text-white text-title3">Let's Get started</h3>
           </div>
         <!-- Button show/Hide -->
-          <div x-data="{ state: false }" class="flex bg-dark-60 items-center rounded-md border border-white p-2 w-max">
+          <div x-data="{ state: false }" class="flex bg-dark-60 items-center rounded-md border border-white p-2 w-max h-max">
             <button x-text="state ? 'Show' : 'Hide'" x-on:click="state = !state" id="accordion-started-heading-1" type="button" class="mr-1 p-0 text-preText text-white" 
             data-accordion-target="#accordion-started-body-1" aria-expanded="true" aria-controls="accordion-started-body-1">
             </button>
@@ -289,7 +289,7 @@
           <!-- Projects buttons -->
           <div class="lg:grid-rows-1 grid grid-cols-3 py-7 space-y-2 sm:space-y-0">
             <div class="col-span-5">
-              <button class="border border-dark-30 text-dark-60 px-5 py-2.5 rounded-md hover:bg-dark-20" type="button"
+              <button class="border border-dark-30 text-dark-60 py-3 px-4 w-max h-max rounded-md hover:bg-dark-20" type="button"
                 class="bg-white text-bodyText ">
                 Select all
               </button>
@@ -306,15 +306,13 @@
                         clip-rule="evenodd"></path>
                     </svg>
                   </div>
-                  <input type="text"
-                    class="bg-white border border-dark-30 rounded-md block w-48 pl-10 p-2.5 text-bodyText"
+                  <input type="text" class="bg-white border border-dark-30 rounded-md block py-3 pl-10 w-max h-max text-bodyText"
                     placeholder="Search projects" required>
                 </div>
               </form>
               <!-- Filter dropdown -->
               <div class="mr-2">
-                
-                  <button id="dropdownFilterButton" data-dropdown-toggle="dropdownFilter" class="text-bodyText py-2.5 rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 px-4 text-center inline-flex items-center" type="button">Filter by
+                  <button id="dropdownFilterButton" data-dropdown-toggle="dropdownFilter" class="text-bodyText rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 py-3 px-4 w-max h-max" type="button">Filter by
                     <i class="ri-arrow-down-s-line"></i>
                   </button>
                   <!-- Dropdown menu -->
@@ -338,9 +336,8 @@
               </div>
               <!-- Sort by dropdown -->
               <div class="mr-2">
-                
                   <button id="dropdownSortButton" data-dropdown-toggle="dropdownSort"
-                    class="text-bodyText py-2.5 rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 px-4 text-center inline-flex items-center"
+                    class="text-bodyText rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 py-3 px-4 w-max h-max"
                     type="button">
                     Sort by
                     <i class="ri-arrow-down-s-line"></i>
@@ -366,7 +363,7 @@
               </div>
               <!-- Button Modal Create Project -->
               <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" class="block md:w-auto text-white bg-blue-primary hover:bg-blue-800 rounded-md text-bodyText p-2.5 text-center" type="button">Create project</button>
+                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" class="block text-white bg-blue-primary hover:bg-blue-800 rounded-md text-bodyText py-3 px-4 w-max h-max" type="button">Create project</button>
               </div>
               <!-- Modal Create Project -->
               <div id="createProject-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
