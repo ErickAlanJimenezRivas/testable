@@ -1449,6 +1449,10 @@ video {
     display: none;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:items-stretch {
     align-items: stretch;
   }
