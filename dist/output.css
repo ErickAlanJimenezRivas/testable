@@ -1533,6 +1533,10 @@ video {
     flex-wrap: nowrap;
   }
 
+  .md\:justify-normal {
+    justify-content: normal;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
