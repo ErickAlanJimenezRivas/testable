@@ -28,36 +28,50 @@
         </div>
         <!-- button Testable dropdown -->
         <div>
-          <button id="dropdownButtonTestable" data-dropdown-toggle="dropdownDivider"
-            class="text-boldBody text-dark-60 bg-white px-4 hover:text-gray-500 text-center inline-flex items-center"
-            type="button">
-            Testable
-            <i class="ri-arrow-down-s-line ml-2"></i>
-          </button>
-          <!-- Dropdown -->
-          <div id="dropdownDivider" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-            <ul class="text-boldBody text-dark-60" aria-labelledby="dropdownButtonTestable">
-              <li class="flex pt-4 hover:text-gray-500">
-                <img src="./assets/images/mini-logo.svg" alt="">
-                <a href="#" class="block pl-3">Testable</a>
-              </li>
-              <a href="#" class="block text-smallText pl-7 pb-4">Build experiments</a>
-              <li class="flex hover:text-gray-500">
-                <img src="./assets/images/minds-img.svg" alt="">
-                <a href="./minds.html" class="block pl-3">Minds</a>
-              </li>
-              <a href="#" class="block text-smallText pl-7 pb-4">Recruit participants</a>
-              <li class="flex hover:text-gray-500">
-                <img src="./assets/images/mini-logo-b.svg" alt="">
-                <a href="#" class="blockpl-3 pl-3">Class</a>
-              </li>
-              <a href="#" class="block text-smallText pl-7 pb-4">Delight students</a>
-            </ul>
+          <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-boldBody text-dark-60 bg-white px-4 hover:text-gray-500 text-center inline-flex items-center" type="button">Testable <i class="ri-arrow-down-s-line ml-2"></i></button>
+          <!-- Dropdown menu -->
+          <div id="dropdownHelper"
+              class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max ">
+              <ul class="p-3 space-y-1" aria-labelledby="dropdownHelperButton">
+                  <li>
+                      <div class="flex p-2 rounded hover:bg-gray-100 ">
+                          <div class="flex items-center h-5">
+                              <img src="./assets/images/mini-logo.svg" alt="">
+                          </div>
+                          <div class="ml-2 text-sm">
+                              <a href="#" class="text-boldBody text-dark-60">Testable</a>
+                              <p class="text-smallText text-dark-60">Build experiments</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="flex p-2 rounded hover:bg-gray-100 ">
+                          <div class="flex items-center h-5">
+                              <img src="./assets/images/minds-img.svg" alt="">
+                          </div>
+                          <div class="ml-2 text-sm">
+                              <a href="./minds.html" class="text-boldBody text-dark-60">Minds</a>
+                              <p class="text-smallText text-dark-60">Recruit participants</p>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <div class="flex p-2 rounded hover:bg-gray-100 ">
+                          <div class="flex items-center h-5">
+                              <img src="./assets/images/mini-logo-b.svg" alt="">
+                          </div>
+                          <div class="ml-2 text-sm">
+                              <a href="#" class="text-boldBody text-dark-60">Class</a>
+                              <p class="text-smallText text-dark-60">Delight students</p>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
           </div>
           <div>
-            <p class="text-preText text-dark-40 px-4">Premium</p>
+              <p class="text-preText text-dark-40 pl-4">Premium</p>
           </div>
-        </div>
+      </div>
       </div>
       <!-- Button help, notification & profile -->
       <div class="contents inset-y-0 right-0 sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 order-2 md:order-last">
@@ -153,19 +167,16 @@
               <i class="ri-arrow-down-s-line"></i>
             </button>
             <!-- Dropdown -->
-            <div id="dropdownHelp" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-              <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownHelpButton">
-                <li class="flex py-4 hover:text-gray-500">
-                  <i class="ri-question-line pr-3"></i>
-                  <a href="#" class="block">Help</a>
+            <div id="dropdownHelp" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+              <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownHelpButton">
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-question-line pr-2"></i>Help</a>
                 </li>
-                <li class="flex pb-4 hover:text-gray-500">
-                  <i class="ri-question-line pr-3"></i>
-                  <a href="#" class="block">Help</a>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-question-line pr-2"></i>Help</a>
                 </li>
-                <li class="flex pb-4 hover:text-gray-500">
-                  <i class="ri-question-line pr-3"></i>
-                  <a href="#" class="block">Help</a>
+                <li>
+                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-question-line pr-2"></i>Help</a>
                 </li>
               </ul>
             </div>
@@ -279,7 +290,7 @@
           </div>
           <!-- Projects buttons -->
           <div class="lg:grid-rows-1 grid grid-cols-3 py-7 space-y-2 sm:space-y-0">
-            <div class="col-span-5">
+            <div class="col-span-5 md:space-x-1 ">
               <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20">Select all</button>
               <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20"><i class="ri-stack-line"></i></button>
               <button type="button" class="btn btn-secondary-large-error hover:bg-red-200"><i class="ri-delete-bin-line"></i></button>
@@ -289,11 +300,8 @@
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-6 h-6 text-dark-40" fill="currentColor" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"></path>
+                    <svg aria-hidden="true" class="w-6 h-6 text-dark-40" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                     </svg>
                   </div>
                   <input type="text" class="bg-white border border-dark-30 rounded-md block py-2 pl-10 w-max h-max text-bodyText" placeholder="Search projects" required>
@@ -840,7 +848,7 @@
                         <div id="dropdownDots-1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                           <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-1">
                               <li>
-                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                               </li>
                               <li>
                                   <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
@@ -1251,7 +1259,7 @@
                       <div id="dropdownDots-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                         <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-2">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
@@ -1662,7 +1670,7 @@
                       <div id="dropdownDots-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                         <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-3">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
@@ -2073,7 +2081,7 @@
                       <div id="dropdownDots-4" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                         <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-4">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
