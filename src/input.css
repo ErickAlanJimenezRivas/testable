@@ -2,3 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.btn{
+    @apply rounded-md h-max w-max;
+}
+
+.btn-rounded-large-borderWhite{
+    @apply text-smallText text-dark-60 bg-white border border-white py-2.5 px-3.5;
+}
+
+.btn-rounded-large-borderGray{
+    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-2.5 px-3.5;
+}
+
+.btn-primary-large-blue{
+    @apply text-smallText text-white bg-blue-primary py-2.5 px-3.5;
+}
+
+.btn-primary-medium-blue{
+    @apply text-smallText text-white bg-blue-primary py-1.5 px-2.5;
+}
+
+.btn-primary-small-blue{
+    @apply text-preText text-white bg-blue-primary py-1 px-2;
+}
+
+.btn-primary-large-pink{
+    @apply text-smallText text-white bg-pink-primary py-2.5 px-3.5;
+}
+
+.btn-primary-medium-pink{
+    @apply text-smallText text-white bg-pink-primary py-1.5 px-2.5;
+}
+
+.btn-primary-small-pink{
+    @apply text-preText text-white bg-pink-primary py-1 px-2;
+}
+
+.btn-secondary-large-borderGray{
+    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-2.5 px-3.5;
+}
+
+.btn-secondary-large-error{
+    @apply text-smallText text-error bg-white border border-error py-2.5 px-3.5;
+}
+
+.btn-secondary-medium-borderGray{
+    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-1.5 px-2.5;
+}
+
+.btn-secondary-small-borderGray{
+    @apply text-preText text-dark-60 bg-white border border-dark-30 py-1 px-2;
+}
+
+.btn-secondary-large-borderPink{
+    @apply text-smallText text-pink-primary bg-white border border-pink-primary py-2.5 px-3.5;
+}
+
+.btn-secondary-medium-borderPink{
+    @apply text-smallText text-pink-primary bg-white border border-pink-primary py-1.5 px-2.5;
+}
+
+.btn-secondary-small-borderPink{
+    @apply text-preText text-pink-primary bg-white border border-pink-primary py-1 px-2;
+}
+
+.btn-secondary-large-dark{
+    @apply text-smallText text-white bg-dark-60 border border-dark-30  py-2.5 px-3.5;
+}
+
+.btn-secondary-medium-dark{
+    @apply text-smallText text-white bg-dark-60 border border-dark-30  py-1.5 px-2.5;
+}
+
+.btn-secondary-small-dark{
+    @apply text-preText text-white bg-dark-60 border border-dark-30  py-1 px-2;
+}
+
+.btn-rounded{
+    @apply rounded-full h-max w-max;
+}
+
+.btn-rounded-large-blue{
+    @apply text-smallText text-blue-primary bg-white border border-blue-primary py-2.5 px-3.5;
+}
+
+.btn-rounded-medium-blue{
+    @apply text-smallText text-blue-primary bg-white border border-blue-primary py-1.5 px-2.5;
+}
+
+.btn-rounded-small-blue{
+    @apply text-preText text-blue-primary bg-white border border-blue-primary py-1 px-2;
+}
+
+.btn-rounded-large-pink{
+    @apply text-smallText text-pink-primary bg-white border border-pink-primary  py-2.5 px-3.5;
+}
+
+.btn-rounded-medium-pink{
+    @apply text-smallText text-pink-primary bg-white border border-pink-primary  py-1.5 px-2.5;
+}
+
+.btn-rounded-small-pink{
+    @apply text-preText text-pink-primary bg-white border border-pink-primary  py-1 px-2;
+}
+
+.btn-rounded-large{
+    @apply bg-white border border-dark-30 py-2 px-3;
+}
+
+.btn-rounded-medium{
+    @apply bg-white border border-dark-30 py-1 px-2;
+}
+
+.btn-rounded-small{
+    @apply bg-white border border-dark-30 py-0.5 px-1.5;
+}

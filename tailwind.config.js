@@ -35,6 +35,7 @@ module.exports = {
       }],
     },
     colors: {
+      'white': '#ffffff',
       'dark-60': '#131313',
       'dark-40': '#767474',
       'dark-30': '#DCDCDC',

@@ -32,7 +32,7 @@
             class="text-boldBody text-dark-60 bg-white px-4 hover:text-gray-500 text-center inline-flex items-center"
             type="button">
             Testable
-            <i class="ri-arrow-down-s-line"></i>
+            <i class="ri-arrow-down-s-line ml-2"></i>
           </button>
           <!-- Dropdown -->
           <div id="dropdownDivider" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
@@ -101,7 +101,7 @@
         <div>
           <button id="dropdownProfileButton" data-dropdown-toggle="dropdownProfile"
             class=" text-smallTextBold text-dark-60 bg-white pl-1.5 md:pl-4 text-center inline-flex items-center hover:text-gray-500" type="button">Marie Bernard
-            <i class="ri-arrow-down-s-line"></i>
+            <i class="ri-arrow-down-s-line ml-2"></i>
           </button>
           <!-- Dropdown menu -->
           <div id="dropdownProfile"
@@ -146,13 +146,14 @@
       <div class="items-center justify-between hidden w-full md:flex md:w-auto order-last md:order-1" id="navbar-cta">
       <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white lg:ml-40 space-y-2 md:space-y-0">
         <li>
-          <a href="#" class="border border-blue-primary text-blue-primary block rounded-full px-3 py-1 text-bodyText">Dashboard</a>
+          <!-- <a href="#" class="border border-blue-primary text-blue-primary block rounded-full px-3 py-1 text-bodyText">Dashboard</a> -->
+          <button type="button" class="btn-rounded btn-rounded-large-blue">Dashboard</button>
         </li>
         <li class="px-0 md:px-2.5">
-          <a href="#" class=" block text-dark-60 hover:border hover:border-dark-30 rounded-full px-3 py-1 text-bodyText">Community</a>
+          <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30">Community</button>
         </li>
         <li>
-          <a href="#" class="block text-dark-60 hover:border hover:border-dark-30 rounded-full px-3 py-1 text-bodyText">Templates</a>
+          <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30">Templates</button>
         </li>
         <li>
           <div>
@@ -192,25 +193,23 @@
   <section class="bg-dark-60 font-Inter">
     <div class="mx-auto max-w-7xl px-9 xl:px-0">
       <div id="accordion-started" data-accordion="started" class="mx-auto max-w-7xl px-9 xl:px-0">
-        <div class="flex justify-between pt-10 pb-7">
+        <div class="flex justify-between items-center pt-10 pb-7">
           <div>
             <h3 class="text-white text-title3">Let's Get started</h3>
           </div>
         <!-- Button show/Hide -->
-          <div x-data="{ state: false }" class="flex bg-dark-60 items-center rounded-md border border-white p-2 w-max h-max">
+          <div x-data="{ state: false }" class="btn btn-secondary-medium-dark">
             <button x-text="state ? 'Show' : 'Hide'" x-on:click="state = !state" id="accordion-started-heading-1" type="button" class="mr-1 p-0 text-preText text-white" 
             data-accordion-target="#accordion-started-body-1" aria-expanded="true" aria-controls="accordion-started-body-1">
             </button>
-            <svg class="w-5 h-5 text-white p-0":class="{'rotate-180': state}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </div>
         </div>
         <!-- cards show/Hide -->
         <div id="accordion-started-body-1" class="hidden" aria-labelledby="accordion-started-heading-1">
           <div class=" pb-10 flex flex-wrap justify-center md:justify-between">
             <div class="w-max rounded-md bg-white overflow-hidden mb-4">
-              <div class="h-max px-9 py-6 bg-blue-secondary">
-                <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+              <div class="h-max px-4 py-6 bg-blue-secondary">
+                <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg" alt="Scratch">
               </div>
               <div class="flex justify-between p-6">
                 <p class="text-bodyText text-dark-60 ">From Scratch</p>
@@ -223,7 +222,7 @@
               </div>
             </div>
             <div class="w-max rounded-md bg-white overflow-hidden mb-4">
-              <div class="h-max px-9 py-6 bg-pink-secondary">
+              <div class="h-max px-4 py-6 bg-pink-secondary">
                 <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
               </div>
               <div class="flex justify-between p-6">
@@ -237,8 +236,8 @@
               </div>
             </div>
             <div class="w-max rounded-md bg-white overflow-hidden mb-4">
-              <div class="h-max px-9 py-6 bg-yellow-primary">
-                <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+              <div class="h-max px-4 py-6 bg-yellow-primary">
+                <img class="w-full object-cover" src="./assets/images/card-img-template.svg" alt="Scratch">
               </div>
               <div class="flex justify-between p-6">
                 <p class="text-bodyText text-dark-60">Template from Library</p>
@@ -251,8 +250,8 @@
               </div>
             </div>
             <div class="w-max rounded-md bg-white overflow-hidden mb-4">
-              <div class="h-max px-9 py-6 bg-purple-primary">
-                <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+              <div class="h-max px-4 py-6 bg-purple-primary">
+                <img class="w-full object-cover" src="./assets/images/card-img-community.svg" alt="Scratch">
               </div>
               <div class="flex justify-between p-6">
                 <p class="text-bodyText text-dark-60">Community templates</p>
@@ -289,81 +288,108 @@
           <!-- Projects buttons -->
           <div class="lg:grid-rows-1 grid grid-cols-3 py-7 space-y-2 sm:space-y-0">
             <div class="col-span-5">
-              <button class="border border-dark-30 text-dark-60 py-3 px-4 w-max h-max rounded-md hover:bg-dark-20" type="button"
-                class="bg-white text-bodyText ">
-                Select all
-              </button>
+              <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20">Select all</button>
+              <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20"><i class="ri-stack-line"></i></button>
+              <button type="button" class="btn btn-secondary-large-error hover:bg-red-200"><i class="ri-delete-bin-line"></i></button>
             </div>
             <div class="flex flex-wrap md:col-end-7 space-y-2 sm:space-y-0">
               <form class="mr-2">
                 <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                   <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg aria-hidden="true" class="w-5 h-5 text-dark-40" fill="currentColor" viewBox="0 0 20 20"
+                    <svg aria-hidden="true" class="w-6 h-6 text-dark-40" fill="currentColor" viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd"
                         d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                         clip-rule="evenodd"></path>
                     </svg>
                   </div>
-                  <input type="text" class="bg-white border border-dark-30 rounded-md block py-3 pl-10 w-max h-max text-bodyText"
-                    placeholder="Search projects" required>
+                  <input type="text" class="bg-white border border-dark-30 rounded-md block py-2 pl-10 w-max h-max text-bodyText" placeholder="Search projects" required>
                 </div>
               </form>
               <!-- Filter dropdown -->
               <div class="mr-2">
-                  <button id="dropdownFilterButton" data-dropdown-toggle="dropdownFilter" class="text-bodyText rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 py-3 px-4 w-max h-max" type="button">Filter by
-                    <i class="ri-arrow-down-s-line"></i>
-                  </button>
-                  <!-- Dropdown menu -->
-                  <div id="dropdownFilter" class="py-2 px-6 z-10 hidden bg-white rounded-md shadow w-max">
-                    <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownFilterButton">
-                      <li class="flex py-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Filte by</a>
-                      </li>
-                      <li class="flex pb-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Filter by</a>
-                      </li>
-                      <li class="flex pb-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Filter by</a>
-                      </li>
-                    </ul>
+                <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom"
+                  class="btn btn-secondary-large-borderGray hover:bg-dark-20 inline-flex items-center" type="button">Filter by <svg
+                    class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg></button>
+              
+                <!-- Dropdown menu -->
+                <div id="dropdownSearch" class="z-10 hidden bg-white rounded-md shadow w-60 ">
+                  <div class="p-3">
+                    <label for="input-group-search" class="sr-only">Search</label>
+                    <div class="relative">
+                      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                      </div>
+                      <input type="text" id="input-group-search"
+                        class="block w-full p-2 pl-10 text-bodyText text-dark-60 border border-dark-30 rounded-md bg-dark-20"
+                        placeholder="Search">
+                    </div>
                   </div>
-                
+                  <ul class="h-max px-3 pb-3 overflow-y-auto text-bodyText text-dark-60" aria-labelledby="dropdownSearchButton">
+                    <li>
+                      <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                        <input id="checkbox-item-1" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                        <label for="checkbox-item-1" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">October</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                        <input checked id="checkbox-item-2" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                        <label for="checkbox-item-2" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">English only</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                        <input checked id="checkbox-item-3" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                        <label for="checkbox-item-3" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">Completed</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              
               </div>
               <!-- Sort by dropdown -->
               <div class="mr-2">
-                  <button id="dropdownSortButton" data-dropdown-toggle="dropdownSort"
-                    class="text-bodyText rounded-md border border-dark-30 bg-white hover:bg-dark-20 text-dark-60 py-3 px-4 w-max h-max"
-                    type="button">
-                    Sort by
-                    <i class="ri-arrow-down-s-line"></i>
-                  </button>
-                  <!-- Dropdown menu -->
-                  <div id="dropdownSort" class="py-2 px-6 z-10 hidden bg-white rounded-md shadow w-max">
-                    <ul class="text-bodyText text-black" aria-labelledby="dropdownSortButton">
-                      <li class="flex py-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Sort by</a>
-                      </li>
-                      <li class="flex pb-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Sort by</a>
-                      </li>
-                      <li class="flex pb-4">
-                        <i class="ri-question-line pr-3"></i>
-                        <a href="#" class="block">Sort by</a>
-                      </li>
-                    </ul>
-                  </div>
-                
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                  class="btn btn-secondary-large-borderGray hover:bg-dark-20 inline-flex items-center" type="button">Sort by<svg
+                    class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                  <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownDefaultButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Earnings</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Sign
+                        out</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- Button Modal Create Project -->
               <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" class="block text-white bg-blue-primary hover:bg-blue-800 rounded-md text-bodyText py-3 px-4 w-max h-max" type="button">Create project</button>
+                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" type="button" class="btn btn-primary-large-blue hover:bg-blue-secondary">Create project</button>
               </div>
               <!-- Modal Create Project -->
               <div id="createProject-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -371,16 +397,19 @@
                     <!-- Modal content -->
                     <div class="relative bg-white rounded-md shadow p-10">
                         <!-- Modal header -->
-                        <div class="flex items-center justify-between pb-10">
-                            <p class="text-dark-60 text-title2">
-                              Create Project
-                            </p>
-                        </div>
+                        <div class="flex items-start justify-between mb-10">
+                          <p class="text-title3 text-dark-60">Create Project</p>
+                          <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="createProject-modal">
+                              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                              </svg>
+                          </button>
+                      </div>
                         <!-- Modal body -->
                         <div class="grid grid-flow-row md:grid-flow-col space-x-4">
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-9 py-6 bg-blue-secondary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+                            <div class="h-max px-4 py-6 bg-blue-secondary">
+                              <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg" alt="Scratch">
                             </div>
                             <div class="flex justify-between p-6 ">
                               <p class="text-bodyText text-dark-60 ">From Scratch</p>
@@ -393,7 +422,7 @@
                             </div>
                           </div>
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-9 py-6 bg-pink-secondary">
+                            <div class="h-max px-4 py-6 bg-pink-secondary">
                               <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
                             </div>
                             <div class="flex justify-between p-6">
@@ -407,8 +436,8 @@
                             </div>
                           </div>
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-9 py-6 bg-yellow-primary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+                            <div class="h-max px-4 py-6 bg-yellow-primary">
+                              <img class="w-full object-cover" src="./assets/images/card-img-template.svg" alt="Scratch">
                             </div>
                             <div class="flex justify-between p-6">
                               <p class="text-bodyText text-dark-60">Template from Library</p>
@@ -421,8 +450,8 @@
                             </div>
                           </div>
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-9 py-6 bg-purple-primary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
+                            <div class="h-max px-4 py-6 bg-purple-primary">
+                              <img class="w-full object-cover" src="./assets/images/card-img-community.svg" alt="Scratch">
                             </div>
                             <div class="flex justify-between p-6">
                               <p class="text-bodyText text-dark-60">Community templates</p>
@@ -463,14 +492,308 @@
                           </div>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
-                          <i class="ri-line-chart-line mr-2"></i>
-                          <p class="text-smallText mr-2 text-dark-60">Results</p>
-                          <p class="text-smallTextBold mr-2 text-dark-60">45</p>
-                          <p class="text-preText mr-4 text-dark-40">+4</p>
-                          <div class="border h-10 mr-4 text-dark-30"></div>
-                      <!-- Show tooltip -->
+                          <!-- Buttons Modal results -->
+                          <button data-modal-target="modalResults-1" data-modal-toggle="modalResults-1" class="btn btn-secondary-large-borderGray" type="button"><i class="ri-line-chart-line"></i> Results
+                      <span class="text-smallTextBold text-dark-60 ml-2">45</span>
+                      <span class="text-preText text-dark-40">+4</span>
+                          </button>
+                          <!-- Main modal -->
+                          <div id="modalResults-1" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                      <div class="relative w-full max-w-4xl max-h-full">
+                          <!-- Modal content -->
+                          <div class="relative bg-white rounded-lg shadow">
+                              <!-- Modal header -->
+                              <div class="flex items-start justify-between p-4">
+                                  <p class="text-title3 text-dark-60">Results</p>
+                                  <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="modalResults-1">
+                                      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </button>
+                              </div>
+                              <!-- Modal content -->
+                                  <div class="p-6 space-y-10">
+                                  <div class="space-y-4">
+                                      <p class="text-boldBody">Fieldwork Insights</p>
+                                      <div class="flex flex-row flex-wrap justify-between">
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Total</p>
+                                              <p class="block text-boldBody text-dark-60">4</p>
+                                              <p class="block text-preText text-dark-40">Participants</p>
+                                          </div>
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Sampled</p>
+                                              <p class="block text-boldBody text-dark-60">1</p>
+                                              <p class="block text-preText text-dark-40">Country</p>
+                                          </div>
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Completion</p>
+                                              <p class="block text-boldBody text-dark-60">80%</p>
+                                              <p class="block text-preText text-dark-40">Rate</p>
+                                          </div>
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Mean Duration</p>
+                                              <p class="block text-boldBody text-dark-60">18s</p>
+                                              <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                          </div>
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Mean RT</p>
+                                              <p class="block text-boldBody text-dark-60">1272ms</p>
+                                              <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                          </div>
+                                          <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                              <p class="block text-preText text-dark-40">Mean Accuracy</p>
+                                              <p class="block text-boldBody text-dark-60">20%</p>
+                                              <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div>
+                                      <div class="flex items-center justify-between">
+                                          <p class="text-boldBody">Result files</p>
+                                          <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                      </div>
+                                          <div class="relative overflow-x-auto">
+                                              <table class="w-full text-left bg-white">
+                                                  <thead class="text-preText text-dark-40 ">
+                                                      <tr>
+                                                          <th scope="col" class="px-6 py-3">
+                                                              Name
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3">
+                                                              Collected on
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3">
+                                                              &nbsp;
+                                                          </th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody class="divide-y divide-dark-20">
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                              151253_11.csv
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60">
+                                                              Apr 23, 2023 11:07
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                              </button>
+                                                          </td>
+                                                          
+                                                      </tr>
+                                                      <tr class="bg-white  ">
+                                                          <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                              151253_11.csv
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60">
+                                                              Apr 23, 2023 11:07
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                              </button>
+                                                          </td>
+                                                          
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                              151253_11.csv
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60">
+                                                              Apr 23, 2023 11:07
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                  <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                              </button>
+                                                          </td>
+                                                          
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                  </div>
+                                  <di class="space-y-4">
+                                      <div class="flex items-center justify-between">
+                                          <p class="text-boldBody">Trial Reporting</p>
+                                          <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                      </div>
+                                      <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
+                                          <p class="text-boldBody">Currently participating</p>
+                                          <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                      </div>
+                                          <div class="relative overflow-x-auto">
+                                              <table class="w-full text-left bg-white">
+                                                  <thead class="text-dark-60 ">
+                                                      <tr>
+                                                          <th scope="col" class="px-6 py-3 text-preTextB">
+                                                              Enrolment
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3 text-preText">
+                                                              Allocated
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3 text-preText">
+                                                              Completed
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3 text-preText">
+                                                              Excluded
+                                                          </th>
+                                                          <th scope="col" class="px-6 py-3 text-preText">
+                                                              Abandoned
+                                                          </th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody class="divide-y divide-dark-20">
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              Attempted expe...
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white  ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              Consent
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              Screener
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                              Main task
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                              Group allocation
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              Subject Group: 1
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              Subject Group: 2
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                      <tr class="bg-white ">
+                                                          <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                              No Group
+                                                          </th>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              51
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                              12
+                                                          </td>
+                                                          <td class="px-6 py-4 text-preText text-error text-end">
+                                                              4
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
+                                          </div>
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="border h-10 mx-4 text-dark-30"></div>
+                          <!-- Show tooltip -->
                           <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button">
-                        <img class="w-4 h-4 mr-1" src="./assets/images/user.svg" alt="">
+                            <img class="w-4 h-4 mr-1" src="./assets/images/user.svg" alt="">
                           </button>
                           <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 rounded-md shadow-sm opacity-0 tooltip text-smallText text-white bg-dark-60">
                             <div class="grid grid-flow-col items-center space-x-2">
@@ -495,24 +818,20 @@
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
                           <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                          class="text-white flex bg-blue-primary items-center rounded-md border border-white px-2 py-0.5 text-smallText hover:bg-blue-secondary">Share</button>
-                        <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                          <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
-                            <li class="flex py-4 hover:text-gray-500">
-                              <i class="ri-file-copy-line pr-3"></i>
-                              <a href="#" class="block">Clone and share</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-team-line pr-3"></i>
-                              <a href="#" class="block">Invite to project</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-questionnaire-line pr-3"></i>
-                              <a href="#" class="block">Send to support</a>
-                            </li>
-                          </ul>
-                        </div>
+                            <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                            <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                              <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                                  <li>
+                                      <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-team-line pr-2"></i>Invite to project</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-questionnaire-line pr-2"></i>Send to support</a>
+                                  </li>
+                              </ul>
+                            </div>
                           </div>
                       <!-- Button rounded-list dropdown -->
                           <button id="dropdownRounded-1" data-dropdown-toggle="dropdownDots-1"
@@ -526,51 +845,37 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                          <div id="dropdownDots-1" class="py-2 px-6 z-10 hidden bg-white divide-y divide-dark-20 rounded-md shadow w-max">
-                            <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownRounded-1">
-                              <li class="flex py-4 hover:text-gray-500">
-                                <i class="ri-rocket-2-line pr-3"></i>
-                                <a href="#" class="block">Launch Editor</a>
+                        <div id="dropdownDots-1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-1">
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
                               </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Rename</a>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
                               </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Duplicate</a>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Duplicate</a>
                               </li>
-                            </ul>
-                            <ul class="text-bodyText text-error hover:text-pink-secondary" >
-                              <li class="flex py-4">
-                                <i class="ri-delete-bin-line pr-3"></i>
-                                <a href="#" class="block">Delete</a>
-                              </li>
-                            </ul>
-                          </div>
+                              <li>
+                                <div class="bg-dark-30 h-px my-2 "></div>
+                            </li>
+                              <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-red-200 text-error"><i class="ri-delete-bin-line pr-3"></i>Delete</a>
+                            </li>
+                          </ul>
+                        </div>
                         </div>
                       </div>
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
-                        <div class="grid grid-flow-col justify-start items-center">
-                          <p class="text-preText mr-4 text-dark-40">Collect data</p>
-                          <button type="button"
-                            class="flex items-center mr-1 px-2 py-1.5 border rounded-md text-smallText bg-white hover:bg-dark-20 text-dark-60 border-dark-60">
-                            <i class="ri-file-copy-2-line mr-1"></i>
-                            tstbl.co/609-786
-                          </button>
-                          <button type="button"
-                            class="h-max w-max px-2 py-1.5 border rounded-md text-smallTextBold bg-white text-pink-primary border-pink-primary hover:bg-red-100">
-                            Minds
-                          </button>
+                        <div class="grid grid-flow-col justify-start items-center space-x-4">
+                          <p class="text-preText text-dark-40">Collect data</p>
+                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText space-x-4">
-                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">In
-                            progress</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Tag2</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Another
-                            tag</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">In progress</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Tag2</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Another tag</button>
                           <p class="rounded-full border px-1 py-0.5 text-center text-preTextB border-dark-30">+3</p>
                         </div>
                       </div>
@@ -598,11 +903,305 @@
                           </div>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
-                          <i class="ri-line-chart-line mr-2"></i>
-                          <p class="text-smallText mr-2 text-dark-60">Results</p>
-                          <p class="text-smallTextBold mr-2 text-dark-60">45</p>
-                          <p class="text-preText mr-4 text-dark-40">+4</p>
-                          <div class="border h-10 mr-4 text-dark-30"></div>
+                          <!-- Buttons Modal results -->
+                          <button data-modal-target="modalResults-2" data-modal-toggle="modalResults-2" class="btn btn-secondary-large-borderGray" type="button"><i class="ri-line-chart-line"></i> Results
+                            <span class="text-smallTextBold text-dark-60 ml-2">45</span>
+                            <span class="text-preText text-dark-40">+4</span>
+                                </button>
+                                <!-- Main modal -->
+                                <div id="modalResults-2" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative w-full max-w-4xl max-h-full">
+                                <!-- Modal content -->
+                                <div class="relative bg-white rounded-lg shadow">
+                                    <!-- Modal header -->
+                                    <div class="flex items-start justify-between p-4">
+                                        <p class="text-title3 text-dark-60">Results</p>
+                                        <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="modalResults-2">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- Modal content -->
+                                        <div class="p-6 space-y-10">
+                                        <div class="space-y-4">
+                                            <p class="text-boldBody">Fieldwork Insights</p>
+                                            <div class="flex flex-row flex-wrap justify-between">
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Total</p>
+                                                    <p class="block text-boldBody text-dark-60">4</p>
+                                                    <p class="block text-preText text-dark-40">Participants</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Sampled</p>
+                                                    <p class="block text-boldBody text-dark-60">1</p>
+                                                    <p class="block text-preText text-dark-40">Country</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Completion</p>
+                                                    <p class="block text-boldBody text-dark-60">80%</p>
+                                                    <p class="block text-preText text-dark-40">Rate</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean Duration</p>
+                                                    <p class="block text-boldBody text-dark-60">18s</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean RT</p>
+                                                    <p class="block text-boldBody text-dark-60">1272ms</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean Accuracy</p>
+                                                    <p class="block text-boldBody text-dark-60">20%</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center justify-between">
+                                                <p class="text-boldBody">Result files</p>
+                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                            </div>
+                                                <div class="relative overflow-x-auto">
+                                                    <table class="w-full text-left bg-white">
+                                                        <thead class="text-preText text-dark-40 ">
+                                                            <tr>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    Name
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    Collected on
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    &nbsp;
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="divide-y divide-dark-20">
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr class="bg-white  ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                        </div>
+                                        <di class="space-y-4">
+                                            <div class="flex items-center justify-between">
+                                                <p class="text-boldBody">Trial Reporting</p>
+                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                            </div>
+                                            <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
+                                                <p class="text-boldBody">Currently participating</p>
+                                                <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                            </div>
+                                                <div class="relative overflow-x-auto">
+                                                    <table class="w-full text-left bg-white">
+                                                        <thead class="text-dark-60 ">
+                                                            <tr>
+                                                                <th scope="col" class="px-6 py-3 text-preTextB">
+                                                                    Enrolment
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Allocated
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Completed
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Excluded
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Abandoned
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="divide-y divide-dark-20">
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Attempted expe...
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white  ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Consent
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Screener
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                    Main task
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                    Group allocation
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Subject Group: 1
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Subject Group: 2
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    No Group
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="border h-10 mx-4 text-dark-30"></div>
                       <!-- Show tooltip -->
                       <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button">
                         <img class="w-4 h-4 mr-1" src="./assets/images/user.svg" alt="">
@@ -629,26 +1228,22 @@
                           </div>
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
-                          <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                          class="text-white flex bg-blue-primary items-center rounded-md border border-white px-2 py-0.5 text-smallText hover:bg-blue-secondary">Share</button>
-                        <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                          <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
-                            <li class="flex py-4 hover:text-gray-500">
-                              <i class="ri-file-copy-line pr-3"></i>
-                              <a href="#" class="block">Clone and share</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-team-line pr-3"></i>
-                              <a href="#" class="block">Invite to project</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-questionnaire-line pr-3"></i>
-                              <a href="#" class="block">Send to support</a>
-                            </li>
+                      <div>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-team-line pr-2"></i>Invite to project</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-questionnaire-line pr-2"></i>Send to support</a>
+                              </li>
                           </ul>
                         </div>
-                          </div>
+                      </div>
                       <!-- Button rounded-list dropdown -->
                           <button id="dropdownRounded-2" data-dropdown-toggle="dropdownDots-2"
                         class="inline-flex items-center p-2 text-smallText text-center text-dark-60 rounded-lg hover:text-gray-500"
@@ -661,51 +1256,37 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                          <div id="dropdownDots-2" class="py-2 px-6 z-10 hidden bg-white divide-y divide-dark-20 rounded-md shadow w-max">
-                            <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownRounded-2">
-                              <li class="flex py-4 hover:text-gray-500">
-                                <i class="ri-rocket-2-line pr-3"></i>
-                                <a href="#" class="block">Launch Editor</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Rename</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Duplicate</a>
-                              </li>
-                            </ul>
-                            <ul class="text-bodyText text-error hover:text-pink-secondary" >
-                              <li class="flex py-4">
-                                <i class="ri-delete-bin-line pr-3"></i>
-                                <a href="#" class="block">Delete</a>
-                              </li>
-                            </ul>
-                          </div>
+                      <div id="dropdownDots-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-2">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Duplicate</a>
+                            </li>
+                            <li>
+                              <div class="bg-dark-30 h-px my-2 "></div>
+                          </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-red-200 text-error"><i class="ri-delete-bin-line pr-3"></i>Delete</a>
+                          </li>
+                        </ul>
+                      </div>
                         </div>
                       </div>
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
-                        <div class="grid grid-flow-col justify-start items-center">
-                          <p class="text-preText mr-4 text-dark-40">Collect data</p>
-                          <button type="button"
-                            class="flex items-center mr-1 px-2 py-1.5 border rounded-md text-smallText bg-white hover:bg-dark-20 text-dark-60 border-dark-60">
-                            <i class="ri-file-copy-2-line mr-1"></i>
-                            tstbl.co/609-786
-                          </button>
-                          <button type="button"
-                            class="h-max w-max px-2 py-1.5 border rounded-md text-smallTextBold bg-white text-pink-primary border-pink-primary hover:bg-red-100">
-                            Minds
-                          </button>
+                        <div class="grid grid-flow-col justify-start items-center space-x-4">
+                          <p class="text-preText  text-dark-40">Collect data</p>
+                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText space-x-4">
-                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">In
-                            progress</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Tag2</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Another
-                            tag</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">In progress</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Tag2</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Another tag</button>
                           <p class="rounded-full border px-1 py-0.5 text-center text-preTextB border-dark-30">+3</p>
                         </div>
                       </div>
@@ -733,11 +1314,305 @@
                           </div>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
-                          <i class="ri-line-chart-line mr-2"></i>
-                          <p class="text-smallText mr-2 text-dark-60">Results</p>
-                          <p class="text-smallTextBold mr-2 text-dark-60">45</p>
-                          <p class="text-preText mr-4 text-dark-40">+4</p>
-                          <div class="border h-10 mr-4 text-dark-30"></div>
+                          <!-- Buttons Modal results -->
+                          <button data-modal-target="modalResults-3" data-modal-toggle="modalResults-3" class="btn btn-secondary-large-borderGray" type="button"><i class="ri-line-chart-line"></i> Results
+                            <span class="text-smallTextBold text-dark-60 ml-2">45</span>
+                            <span class="text-preText text-dark-40">+4</span>
+                                </button>
+                                <!-- Main modal -->
+                                <div id="modalResults-3" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                            class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                            <div class="relative w-full max-w-4xl max-h-full">
+                                <!-- Modal content -->
+                                <div class="relative bg-white rounded-lg shadow">
+                                    <!-- Modal header -->
+                                    <div class="flex items-start justify-between p-4">
+                                        <p class="text-title3 text-dark-60">Results</p>
+                                        <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="modalResults-3">
+                                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <!-- Modal content -->
+                                        <div class="p-6 space-y-10">
+                                        <div class="space-y-4">
+                                            <p class="text-boldBody">Fieldwork Insights</p>
+                                            <div class="flex flex-row flex-wrap justify-between">
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Total</p>
+                                                    <p class="block text-boldBody text-dark-60">4</p>
+                                                    <p class="block text-preText text-dark-40">Participants</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Sampled</p>
+                                                    <p class="block text-boldBody text-dark-60">1</p>
+                                                    <p class="block text-preText text-dark-40">Country</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Completion</p>
+                                                    <p class="block text-boldBody text-dark-60">80%</p>
+                                                    <p class="block text-preText text-dark-40">Rate</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean Duration</p>
+                                                    <p class="block text-boldBody text-dark-60">18s</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean RT</p>
+                                                    <p class="block text-boldBody text-dark-60">1272ms</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                                <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                    <p class="block text-preText text-dark-40">Mean Accuracy</p>
+                                                    <p class="block text-boldBody text-dark-60">20%</p>
+                                                    <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center justify-between">
+                                                <p class="text-boldBody">Result files</p>
+                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                            </div>
+                                                <div class="relative overflow-x-auto">
+                                                    <table class="w-full text-left bg-white">
+                                                        <thead class="text-preText text-dark-40 ">
+                                                            <tr>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    Name
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    Collected on
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3">
+                                                                    &nbsp;
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="divide-y divide-dark-20">
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr class="bg-white  ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                    151253_11.csv
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60">
+                                                                    Apr 23, 2023 11:07
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                    </button>
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                        </div>
+                                        <di class="space-y-4">
+                                            <div class="flex items-center justify-between">
+                                                <p class="text-boldBody">Trial Reporting</p>
+                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                            </div>
+                                            <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
+                                                <p class="text-boldBody">Currently participating</p>
+                                                <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                            </div>
+                                                <div class="relative overflow-x-auto">
+                                                    <table class="w-full text-left bg-white">
+                                                        <thead class="text-dark-60 ">
+                                                            <tr>
+                                                                <th scope="col" class="px-6 py-3 text-preTextB">
+                                                                    Enrolment
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Allocated
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Completed
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Excluded
+                                                                </th>
+                                                                <th scope="col" class="px-6 py-3 text-preText">
+                                                                    Abandoned
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="divide-y divide-dark-20">
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Attempted expe...
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white  ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Consent
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Screener
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                    Main task
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                    Group allocation
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Subject Group: 1
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    Subject Group: 2
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="bg-white ">
+                                                                <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                    No Group
+                                                                </th>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    51
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                    12
+                                                                </td>
+                                                                <td class="px-6 py-4 text-preText text-error text-end">
+                                                                    4
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="border h-10 mx-4 text-dark-30"></div>
                       <!-- Show tooltip -->
                       <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button">
                         <img class="w-4 h-4 mr-1" src="./assets/images/user.svg" alt="">
@@ -764,26 +1639,22 @@
                           </div>
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
-                          <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                          class="text-white flex bg-blue-primary items-center rounded-md border border-white px-2 py-0.5 text-smallText hover:bg-blue-secondary">Share</button>
-                        <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                          <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
-                            <li class="flex py-4 hover:text-gray-500">
-                              <i class="ri-file-copy-line pr-3"></i>
-                              <a href="#" class="block">Clone and share</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-team-line pr-3"></i>
-                              <a href="#" class="block">Invite to project</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-questionnaire-line pr-3"></i>
-                              <a href="#" class="block">Send to support</a>
-                            </li>
+                      <div>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-team-line pr-2"></i>Invite to project</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-questionnaire-line pr-2"></i>Send to support</a>
+                              </li>
                           </ul>
                         </div>
-                          </div>
+                      </div>
                       <!-- Button rounded-list dropdown -->
                           <button id="dropdownRounded-3" data-dropdown-toggle="dropdownDots-3"
                         class="inline-flex items-center p-2 text-smallText text-center text-dark-60 rounded-lg hover:text-gray-500"
@@ -796,51 +1667,37 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                          <div id="dropdownDots-3" class="py-2 px-6 z-10 hidden bg-white divide-y divide-dark-20 rounded-md shadow w-max">
-                            <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownRounded-3">
-                              <li class="flex py-4 hover:text-gray-500">
-                                <i class="ri-rocket-2-line pr-3"></i>
-                                <a href="#" class="block">Launch Editor</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Rename</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Duplicate</a>
-                              </li>
-                            </ul>
-                            <ul class="text-bodyText text-error hover:text-pink-secondary" >
-                              <li class="flex py-4">
-                                <i class="ri-delete-bin-line pr-3"></i>
-                                <a href="#" class="block">Delete</a>
-                              </li>
-                            </ul>
-                          </div>
+                      <div id="dropdownDots-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-3">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Duplicate</a>
+                            </li>
+                            <li>
+                              <div class="bg-dark-30 h-px my-2 "></div>
+                          </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-red-200 text-error"><i class="ri-delete-bin-line pr-3"></i>Delete</a>
+                          </li>
+                        </ul>
+                      </div>
                         </div>
                       </div>
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
-                        <div class="grid grid-flow-col justify-start items-center">
-                          <p class="text-preText mr-4 text-dark-40">Collect data</p>
-                          <button type="button"
-                            class="flex items-center mr-1 px-2 py-1.5 border rounded-md text-smallText bg-white hover:bg-dark-20 text-dark-60 border-dark-60">
-                            <i class="ri-file-copy-2-line mr-1"></i>
-                            tstbl.co/609-786
-                          </button>
-                          <button type="button"
-                            class="h-max w-max px-2 py-1.5 border rounded-md text-smallTextBold bg-white text-pink-primary border-pink-primary hover:bg-red-100">
-                            Minds
-                          </button>
+                        <div class="grid grid-flow-col justify-start items-center space-x-4">
+                          <p class="text-preText text-dark-40">Collect data</p>
+                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText space-x-4">
-                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">In
-                            progress</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Tag2</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Another
-                            tag</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">In progress</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Tag2</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Another tag</button>
                           <p class="rounded-full border px-1 py-0.5 text-center text-preTextB border-dark-30">+3</p>
                         </div>
                       </div>
@@ -868,11 +1725,305 @@
                           </div>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
-                          <i class="ri-line-chart-line mr-2"></i>
-                          <p class="text-smallText mr-2 text-dark-60">Results</p>
-                          <p class="text-smallTextBold mr-2 text-dark-60">45</p>
-                          <p class="text-preText mr-4 text-dark-40">+4</p>
-                          <div class="border h-10 mr-4 text-dark-30"></div>
+                         <!-- Buttons Modal results -->
+                         <button data-modal-target="modalResults-4" data-modal-toggle="modalResults-4" class="btn btn-secondary-large-borderGray" type="button"><i class="ri-line-chart-line"></i> Results
+                          <span class="text-smallTextBold text-dark-60 ml-2">45</span>
+                          <span class="text-preText text-dark-40">+4</span>
+                              </button>
+                              <!-- Main modal -->
+                              <div id="modalResults-4" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                          <div class="relative w-full max-w-4xl max-h-full">
+                              <!-- Modal content -->
+                              <div class="relative bg-white rounded-lg shadow">
+                                  <!-- Modal header -->
+                                  <div class="flex items-start justify-between p-4">
+                                      <p class="text-title3 text-dark-60">Results</p>
+                                      <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="modalResults-4">
+                                          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                                  <!-- Modal content -->
+                                      <div class="p-6 space-y-10">
+                                      <div class="space-y-4">
+                                          <p class="text-boldBody">Fieldwork Insights</p>
+                                          <div class="flex flex-row flex-wrap justify-between">
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Total</p>
+                                                  <p class="block text-boldBody text-dark-60">4</p>
+                                                  <p class="block text-preText text-dark-40">Participants</p>
+                                              </div>
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Sampled</p>
+                                                  <p class="block text-boldBody text-dark-60">1</p>
+                                                  <p class="block text-preText text-dark-40">Country</p>
+                                              </div>
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Completion</p>
+                                                  <p class="block text-boldBody text-dark-60">80%</p>
+                                                  <p class="block text-preText text-dark-40">Rate</p>
+                                              </div>
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Mean Duration</p>
+                                                  <p class="block text-boldBody text-dark-60">18s</p>
+                                                  <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                              </div>
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Mean RT</p>
+                                                  <p class="block text-boldBody text-dark-60">1272ms</p>
+                                                  <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                              </div>
+                                              <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                  <p class="block text-preText text-dark-40">Mean Accuracy</p>
+                                                  <p class="block text-boldBody text-dark-60">20%</p>
+                                                  <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div>
+                                          <div class="flex items-center justify-between">
+                                              <p class="text-boldBody">Result files</p>
+                                              <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                          </div>
+                                              <div class="relative overflow-x-auto">
+                                                  <table class="w-full text-left bg-white">
+                                                      <thead class="text-preText text-dark-40 ">
+                                                          <tr>
+                                                              <th scope="col" class="px-6 py-3">
+                                                                  Name
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3">
+                                                                  Collected on
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3">
+                                                                  &nbsp;
+                                                              </th>
+                                                          </tr>
+                                                      </thead>
+                                                      <tbody class="divide-y divide-dark-20">
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                  151253_11.csv
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60">
+                                                                  Apr 23, 2023 11:07
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                  </button>
+                                                              </td>
+                                                              
+                                                          </tr>
+                                                          <tr class="bg-white  ">
+                                                              <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                  151253_11.csv
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60">
+                                                                  Apr 23, 2023 11:07
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                  </button>
+                                                              </td>
+                                                              
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                  151253_11.csv
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60">
+                                                                  Apr 23, 2023 11:07
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                      <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                  </button>
+                                                              </td>
+                                                              
+                                                          </tr>
+                                                      </tbody>
+                                                  </table>
+                                              </div>
+                                      </div>
+                                      <di class="space-y-4">
+                                          <div class="flex items-center justify-between">
+                                              <p class="text-boldBody">Trial Reporting</p>
+                                              <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                          </div>
+                                          <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
+                                              <p class="text-boldBody">Currently participating</p>
+                                              <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                          </div>
+                                              <div class="relative overflow-x-auto">
+                                                  <table class="w-full text-left bg-white">
+                                                      <thead class="text-dark-60 ">
+                                                          <tr>
+                                                              <th scope="col" class="px-6 py-3 text-preTextB">
+                                                                  Enrolment
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3 text-preText">
+                                                                  Allocated
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3 text-preText">
+                                                                  Completed
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3 text-preText">
+                                                                  Excluded
+                                                              </th>
+                                                              <th scope="col" class="px-6 py-3 text-preText">
+                                                                  Abandoned
+                                                              </th>
+                                                          </tr>
+                                                      </thead>
+                                                      <tbody class="divide-y divide-dark-20">
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  Attempted expe...
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white  ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  Consent
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  Screener
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                  Main task
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                  Group allocation
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  Subject Group: 1
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  Subject Group: 2
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                          <tr class="bg-white ">
+                                                              <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                  No Group
+                                                              </th>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  51
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                  12
+                                                              </td>
+                                                              <td class="px-6 py-4 text-preText text-error text-end">
+                                                                  4
+                                                              </td>
+                                                          </tr>
+                                                      </tbody>
+                                                  </table>
+                                              </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                              <div class="border h-10 mx-4 text-dark-30"></div>
                       <!-- Show tooltip -->
                       <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button">
                         <img class="w-4 h-4 mr-1" src="./assets/images/user.svg" alt="">
@@ -899,26 +2050,22 @@
                           </div>
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
-                          <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare"
-                          class="text-white flex bg-blue-primary items-center rounded-md border border-white px-2 py-0.5 text-smallText hover:bg-blue-secondary">Share</button>
-                        <div id="dropdownShare" class="py-2 px-6 z-10 hidden bg-white rounded-lg shadow w-max">
-                          <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
-                            <li class="flex py-4 hover:text-gray-500">
-                              <i class="ri-file-copy-line pr-3"></i>
-                              <a href="#" class="block">Clone and share</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-team-line pr-3"></i>
-                              <a href="#" class="block">Invite to project</a>
-                            </li>
-                            <li class="flex pb-4 hover:text-gray-500">
-                              <i class="ri-questionnaire-line pr-3"></i>
-                              <a href="#" class="block">Send to support</a>
-                            </li>
+                      <div>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-team-line pr-2"></i>Invite to project</a>
+                              </li>
+                              <li>
+                                  <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-questionnaire-line pr-2"></i>Send to support</a>
+                              </li>
                           </ul>
                         </div>
-                          </div>
+                      </div>
                       <!-- Button rounded-list dropdown -->
                           <button id="dropdownRounded-4" data-dropdown-toggle="dropdownDots-4"
                         class="inline-flex items-center p-2 text-smallText text-center text-dark-60 rounded-lg hover:text-gray-500"
@@ -931,51 +2078,37 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                          <div id="dropdownDots-4" class="py-2 px-6 z-10 hidden bg-white divide-y divide-dark-20 rounded-md shadow w-max">
-                            <ul class="text-bodyText text-dark-60" aria-labelledby="dropdownRounded-4">
-                              <li class="flex py-4 hover:text-gray-500">
-                                <i class="ri-rocket-2-line pr-3"></i>
-                                <a href="#" class="block">Launch Editor</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Rename</a>
-                              </li>
-                              <li class="flex pb-4 hover:text-gray-500">
-                                <i class="ri-pencil-line pr-3"></i>
-                                <a href="#" class="block">Duplicate</a>
-                              </li>
-                            </ul>
-                            <ul class="text-bodyText text-error hover:text-pink-secondary" >
-                              <li class="flex py-4">
-                                <i class="ri-delete-bin-line pr-3"></i>
-                                <a href="#" class="block">Delete</a>
-                              </li>
-                            </ul>
-                          </div>
+                      <div id="dropdownDots-4" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
+                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-4">
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i></i>Launch Editor</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Rename</a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-pencil-line pr-2"></i>Duplicate</a>
+                            </li>
+                            <li>
+                              <div class="bg-dark-30 h-px my-2 "></div>
+                          </li>
+                            <li>
+                              <a href="#" class="block px-4 py-2 hover:bg-red-200 text-error"><i class="ri-delete-bin-line pr-3"></i>Delete</a>
+                          </li>
+                        </ul>
+                      </div>
                         </div>
                       </div>
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
-                        <div class="grid grid-flow-col justify-start items-center">
-                          <p class="text-preText mr-4 text-dark-40">Collect data</p>
-                          <button type="button"
-                            class="flex items-center mr-1 px-2 py-1.5 border rounded-md text-smallText bg-white hover:bg-dark-20 text-dark-60 border-dark-60">
-                            <i class="ri-file-copy-2-line mr-1"></i>
-                            tstbl.co/609-786
-                          </button>
-                          <button type="button"
-                            class="h-max w-max px-2 py-1.5 border rounded-md text-smallTextBold bg-white text-pink-primary border-pink-primary hover:bg-red-100">
-                            Minds
-                          </button>
+                        <div class="grid grid-flow-col justify-start items-center space-x-4">
+                          <p class="text-preText text-dark-40">Collect data</p>
+                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText space-x-4">
-                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">In
-                            progress</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Tag2</button>
-                          <button
-                            class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default">Another
-                            tag</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">In progress</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Tag2</button>
+                          <button class="text-dark-60 bg-dark-20 text-center rounded-full my-2 px-2.5 py-1 cursor-default border border-dark-30">Another tag</button>
                           <p class="rounded-full border px-1 py-0.5 text-center text-preTextB border-dark-30">+3</p>
                         </div>
                       </div>
