@@ -1,0 +1,1307 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link rel="icon" href="./assets/images/user-white.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CDN alpinejs -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- CDN flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <!-- CDN remixicon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="mx-auto max-w-w-body px-9 py-3">
+        <div class="border-b border-dark-30">
+            <p class="text-title1 text-blue-primary">Components UI</p>
+        </div>
+    </header>
+
+    <section class="mx-auto max-w-7xl py-10 px-9 space-y-10">
+        <!-- Buttons -->
+        <div class="grid grid-flow-row space-y-10">
+            <p class="text-title2 text-dark-60 space-y-10">Buttons</p>
+            <!-- Primary Buttons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Primary buttons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-small-blue">Button Text</button>
+                            <button type="button" class="btn btn-primary-medium-blue">Minds</button>
+                            <button type="button" class="btn btn-primary-large-blue">Button Text</button>
+                        </div>
+                        <div class="col-end-7 flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-small-pink">Button Text</button>
+                            <button type="button" class="btn btn-primary-medium-pink">Minds</button>
+                            <button type="button" class="btn btn-primary-large-pink">Button Text</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="primary-buttons" data-modal-toggle="primary-buttons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <!-- Main modal -->
+                    <div id="primary-buttons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60"> Primary button</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="primary-buttons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Secondary Buttons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Secondary buttons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn btn-secondary-small-borderGray">Button Text</button>
+                            <button type="button" class="btn btn-secondary-medium-borderGray">Button Text</button>
+                            <button type="button" class="btn btn-secondary-large-borderGray">Button Text</button>
+                        </div>
+                        <div class="col-end-7 flex space-x-4 items-center">
+                            <button type="button" class="btn btn-secondary-small-borderPink ">Button Text</button>
+                            <button type="button" class="btn btn-secondary-medium-borderPink ">Button Text</button>
+                            <button type="button" class="btn btn-secondary-large-borderPink ">Button Text</button>
+                        </div>
+                    </div>
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="secondary-buttons" data-modal-toggle="secondary-buttons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="secondary-buttons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Secondary Buttons</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="secondary-buttons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Secondary Buttons On Dark -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Secondary buttons on dark</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 bg-dark-60">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn btn-secondary-small-dark">Button Text</button>
+                            <button type="button" class="btn btn-secondary-medium-dark">Button Text</button>
+                            <button type="button" class="btn btn-secondary-large-dark">Button Text</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="secondary-buttons-dark" data-modal-toggle="secondary-buttons-dark" class="block text-white text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <!-- Main modal -->
+                    <div id="secondary-buttons-dark" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Secondary Buttons On Dark</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="secondary-buttons-dark">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--  Buttons with leading icons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Buttons with leading icons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-medium-blue">Button Text
+                                <i class="ri-file-copy-2-line ml-2"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary-large-blue">Button Text
+                                <i class="ri-file-copy-2-line ml-2"></i>
+                            </button>
+                        </div>
+                        <div class="col-end-7 flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-medium-pink">Button Text
+                                <i class="ri-file-copy-2-line ml-2"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary-large-pink">Button Text
+                                <i class="ri-file-copy-2-line ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="buttons-with-leading-icons" data-modal-toggle="buttons-with-leading-icons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <!-- Main modal -->
+                    <div id="buttons-with-leading-icons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Buttons with leading icons</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="buttons-with-leading-icons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--  Buttons with trailing icons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Buttons with trailing icons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-medium-blue">
+                                <i class="ri-file-copy-2-line mr-2"></i>Button Text
+                                
+                            </button>
+                            <button type="button" class="btn btn-primary-large-blue ">
+                                <i class="ri-file-copy-2-line mr-2"></i>Button Text
+                                
+                            </button>
+                        </div>
+                        <div class="col-end-7 flex space-x-4 items-center">
+                            <button type="button" class="btn btn-primary-medium-pink">
+                                <i class="ri-file-copy-2-line mr-2"></i>Button Text
+                                
+                            </button>
+                            <button type="button" class="btn btn-primary-large-pink">
+                                <i class="ri-file-copy-2-line mr-2"></i>Button Text
+                                
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="buttons-with-trailing-icons" data-modal-toggle="buttons-with-trailing-icons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="buttons-with-trailing-icons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Buttons with trailing icons</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="buttons-with-trailing-icons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Rounded primary buttons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Rounded primary buttons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn-rounded btn-rounded-small-blue">Button Text</button>
+                            <button type="button" class="btn-rounded btn-rounded-medium-blue">Button Text</button>
+                            <button type="button" class="btn-rounded btn-rounded-large-blue">Button Text</button>
+                        </div>
+                        <div class="col-end-7 flex space-x-4 items-center">
+                            <button type="button" class="btn-rounded btn-rounded-small-pink">Button Text</button>
+                            <button type="button" class="btn-rounded btn-rounded-medium-pink">Button Text</button>
+                            <button type="button" class="btn-rounded btn-rounded-large-pink">Button Text</button>
+                        </div>
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="rounded-primary-buttons" data-modal-toggle="rounded-primary-buttons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+
+                    <!-- Main modal -->
+                    <div id="rounded-primary-buttons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t >
+                                    <h3 class="text-title3 text-dark-60">Rounded primary buttons</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="rounded-primary-buttons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- circular icon buttons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Circular icons buttons</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap md:grid grid-flow-col space-y-10 sm:space-y-0">
+                        <div class="flex space-x-4 items-center">
+                            <button type="button" class="btn-rounded btn-rounded-small"><i class="ri-file-copy-2-line"></i></button>
+                            <button type="button" class="btn-rounded btn-rounded-medium"><i class="ri-file-copy-2-line"></i></button>
+                            <button type="button" class="btn-rounded btn-rounded-large"><i class="ri-file-copy-2-line"></i></button>
+                        </div>
+                    </div>
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="circular-icons-buttons" data-modal-toggle="circular-icons-buttons" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="circular-icons-buttons" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Circular icons buttons</h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                                        data-modal-hide="circular-icons-buttons">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                    <p class="text-base leading-relaxed text-gray-500 ">"Button Default 2"<br/>
+                                        <span class="token tag">
+                                            <span class="token tag">
+                                                <span class="token punctuation">&lt;
+                                                </span>button</span>
+                                            <span class="token attr-name">type</span>
+                                            <span class="token attr-value">
+                                                span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            button<span class="token punctuation">"</span>
+                                        </span>
+                                        <span class="token attr-name">class</span>
+                                        <span class="token attr-value">
+                                            <span class="token punctuation attr-equals">=</span>
+                                            <span class="token punctuation">"</span>
+                                            text-white bg-blue-primary hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 <span
+                                                class="token punctuation">"</span></span><span
+                                            class="token punctuation">&gt;</span></span>
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Dropdown -->
+        <div class="grid grid-flow-row space-y-10">
+            <p class="text-title2 text-dark-60 space-y-10">Dropdown</p>
+            <!-- Dropdown simple -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Dropdown</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex justify-center">
+                    
+                        <div class="flex flex-shrink-0 items-center">
+                            <img class="block h-8 w-auto" src="./assets/images/logo.svg" alt="Your Company">
+                        </div>
+                        <div>
+                            <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper" class="text-boldBody text-dark-60 bg-white px-4 hover:text-gray-500 text-center inline-flex items-center" type="button">Testable <i class="ri-arrow-down-s-line ml-2"></i></button>
+                            <!-- Dropdown menu -->
+                            <div id="dropdownHelper"
+                                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max ">
+                                <ul class="p-3 space-y-1 " aria-labelledby="dropdownHelperButton">
+                                    <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100 ">
+                                            <div class="flex items-center h-5">
+                                                <img src="./assets/images/mini-logo.svg" alt="">
+                                            </div>
+                                            <div class="ml-2 text-sm">
+                                                <a href="#" class="text-boldBody text-dark-60">Testable</a>
+                                                <p class="text-smallText text-dark-60">Build experiments</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100 ">
+                                            <div class="flex items-center h-5">
+                                                <img src="./assets/images/minds-img.svg" alt="">
+                                            </div>
+                                            <div class="ml-2 text-sm">
+                                                <a href="./minds.html" class="text-boldBody text-dark-60">Minds</a>
+                                                <p class="text-smallText text-dark-60">Recruit participants</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex p-2 rounded hover:bg-gray-100 ">
+                                            <div class="flex items-center h-5">
+                                                <img src="./assets/images/mini-logo-b.svg" alt="">
+                                            </div>
+                                            <div class="ml-2 text-sm">
+                                                <a href="#" class="text-boldBody text-dark-60">Class</a>
+                                                <p class="text-smallText text-dark-60">Delight students</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-preText text-dark-40 pl-4">Premium</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="dropdownCode" data-modal-toggle="dropdownCode" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="dropdownCode" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Dropdown</h3>
+                                    <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="dropdownCode">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Dropdown Code"<br/>
+                                        
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Dropdown Divider -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Dropdown Divider</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex justify-center">                    
+                        <button id="dropdownDividerButton" data-dropdown-toggle="dropdownDivider"
+                            class="btn btn-primary-large-blue text-center inline-flex items-center"
+                            type="button">Dropdown divider <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                    
+                        <!-- Dropdown menu -->
+                        <div id="dropdownDivider"
+                            class="z-10 hidden bg-white divide-y divide-dark-30 rounded-md shadow w-44">
+                            <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownDividerButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-dark-20">Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-dark-20">Settings</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-dark-20">Earnings</a>
+                                </li>
+                            </ul>
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-dark-20">Separated
+                                    link</a>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="dropdownDivider" data-modal-toggle="dropdownDivider" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="dropdownDivider" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t ">
+                                    <h3 class="text-title3 text-dark-60">Dropdown divider</h3>
+                                    <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="dropdownDivider">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Dropdown Code"<br/>
+                                        
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Dropdown Checkbox -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Dropdown checkbox</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons -->
+                    <div class="flex justify-center">
+                    
+                        <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom"
+                            class="btn btn-secondary-large-borderGray hover:bg-dark-20 inline-flex items-center"
+                            type="button">Filter by <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg></button>
+                    
+                        <!-- Dropdown menu -->
+                        <div id="dropdownSearch" class="z-10 hidden bg-white rounded-md shadow w-60 ">
+                            <div class="p-3">
+                                <label for="input-group-search" class="sr-only">Search</label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </div>
+                                    <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-bodyText text-dark-60 border border-dark-30 rounded-md bg-dark-20" placeholder="Search">
+                                </div>
+                            </div>
+                            <ul class="h-max px-3 pb-3 overflow-y-auto text-bodyText text-dark-60"
+                                aria-labelledby="dropdownSearchButton">
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                                        <input id="checkbox-item-1" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                                        <label for="checkbox-item-1"
+                                            class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">October</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                                        <input checked id="checkbox-item-2" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                                        <label for="checkbox-item-2"
+                                            class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">English only</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="flex items-center pl-2 rounded hover:bg-dark-20">
+                                        <input checked id="checkbox-item-3" type="checkbox" value=""
+                                            class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
+                                        <label for="checkbox-item-3"
+                                            class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">Completed</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                    
+                    
+                    </div>
+
+
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="dropdownCheckbox" data-modal-toggle="dropdownCheckbox" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="dropdownCheckbox" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t">
+                                    <h3 class="text-title3 text-dark-60">Dropdown checkbox</h3>
+                                    <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="dropdownCheckbox">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Dropdown Code"<br/>
+                                        
+                                            
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="grid grid-flow-row space-y-10">
+            <p class="text-title2 text-dark-60 space-y-10">Modals</p>
+            <!-- Primary Buttons -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Modal</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10 ">
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="modalResults" data-modal-toggle="modalResults" class="btn btn-secondary-large-borderGray" type="button"><i class="ri-line-chart-line"></i> Results
+                        <span class="text-smallTextBold text-dark-60 ml-2">45</span>
+                        <span class="text-preText text-dark-40">+4</span>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="modalResults" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-4xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4">
+                                    <p class="text-title3 text-dark-60">Results</p>
+                                    <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="modalResults">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal content -->
+                                    <div class="p-6 space-y-10">
+                                    <div class="space-y-4">
+                                        <p class="text-boldBody">Fieldwork Insights</p>
+                                        <div class="flex flex-row flex-wrap justify-between">
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Total</p>
+                                                <p class="block text-boldBody text-dark-60">4</p>
+                                                <p class="block text-preText text-dark-40">Participants</p>
+                                            </div>
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Sampled</p>
+                                                <p class="block text-boldBody text-dark-60">1</p>
+                                                <p class="block text-preText text-dark-40">Country</p>
+                                            </div>
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Completion</p>
+                                                <p class="block text-boldBody text-dark-60">80%</p>
+                                                <p class="block text-preText text-dark-40">Rate</p>
+                                            </div>
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Mean Duration</p>
+                                                <p class="block text-boldBody text-dark-60">18s</p>
+                                                <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                            </div>
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Mean RT</p>
+                                                <p class="block text-boldBody text-dark-60">1272ms</p>
+                                                <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                            </div>
+                                            <div class="flex flex-col justify-center items-center border border-dark-30 btn py-4 px-6">
+                                                <p class="block text-preText text-dark-40">Mean Accuracy</p>
+                                                <p class="block text-boldBody text-dark-60">20%</p>
+                                                <p class="block text-boldBody text-dark-60">&nbsp;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-boldBody">Result files</p>
+                                            <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                        </div>
+                                            <div class="relative overflow-x-auto">
+                                                <table class="w-full text-left bg-white">
+                                                    <thead class="text-preText text-dark-40 ">
+                                                        <tr>
+                                                            <th scope="col" class="px-6 py-3">
+                                                                Name
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3">
+                                                                Collected on
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3">
+                                                                &nbsp;
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-dark-20">
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                151253_11.csv
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60">
+                                                                Apr 23, 2023 11:07
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                </button>
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr class="bg-white  ">
+                                                            <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                151253_11.csv
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60">
+                                                                Apr 23, 2023 11:07
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                </button>
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-smallText text-dark-60 whitespace-nowrap ">
+                                                                151253_11.csv
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60">
+                                                                Apr 23, 2023 11:07
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-smallText text-center text-dark-40 bg-white rounded-md hover:bg-dark-20" type="button"> 
+                                                                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+                                                                </button>
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </div>
+                                    <di class="space-y-4">
+                                        <div class="flex items-center justify-between">
+                                            <p class="text-boldBody">Trial Reporting</p>
+                                            <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                        </div>
+                                        <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
+                                            <p class="text-boldBody">Currently participating</p>
+                                            <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                        </div>
+                                            <div class="relative overflow-x-auto">
+                                                <table class="w-full text-left bg-white">
+                                                    <thead class="text-dark-60 ">
+                                                        <tr>
+                                                            <th scope="col" class="px-6 py-3 text-preTextB">
+                                                                Enrolment
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3 text-preText">
+                                                                Allocated
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3 text-preText">
+                                                                Completed
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3 text-preText">
+                                                                Excluded
+                                                            </th>
+                                                            <th scope="col" class="px-6 py-3 text-preText">
+                                                                Abandoned
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="divide-y divide-dark-20">
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                Attempted expe...
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white  ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                Consent
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                Screener
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                Main task
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preTextB text-dark-60 whitespace-nowrap ">
+                                                                Group allocation
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                Subject Group: 1
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                Subject Group: 2
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="bg-white ">
+                                                            <th scope="row" class="px-6 py-4 text-preText text-dark-60 whitespace-nowrap ">
+                                                                No Group
+                                                            </th>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                51
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-green-primary text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-dark-60 text-end">
+                                                                12
+                                                            </td>
+                                                            <td class="px-6 py-4 text-preText text-error text-end">
+                                                                4
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+
+</html>
