@@ -367,31 +367,29 @@
                             clip-rule="evenodd"></path>
                         </svg>
                       </div>
-                      <input type="text" id="input-group-search"
-                        class="block w-full p-2 pl-10 text-bodyText text-dark-60 border border-dark-30 rounded-md bg-dark-20"
-                        placeholder="Search">
+                      <input type="text" id="input-group-search" class="block w-full p-2 pl-10 text-smallText text-dark-60 border border-dark-30 rounded-md bg-dark-20" placeholder="Search">
                     </div>
                   </div>
-                  <ul class="h-max px-3 pb-3 overflow-y-auto text-bodyText text-dark-60" aria-labelledby="dropdownSearchButton">
+                  <ul class="h-max px-3 pb-3 overflow-y-auto text-smallText text-dark-60" aria-labelledby="dropdownSearchButton">
                     <li>
                       <div class="flex items-center pl-2 rounded hover:bg-dark-20">
                         <input id="checkbox-item-1" type="checkbox" value=""
                           class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
-                        <label for="checkbox-item-1" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">October</label>
+                        <label for="checkbox-item-1" class="w-full py-2 ml-2 text-smallText text-dark-60 rounded">October</label>
                       </div>
                     </li>
                     <li>
                       <div class="flex items-center pl-2 rounded hover:bg-dark-20">
                         <input checked id="checkbox-item-2" type="checkbox" value=""
                           class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
-                        <label for="checkbox-item-2" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">English only</label>
+                        <label for="checkbox-item-2" class="w-full py-2 ml-2 text-smallText text-dark-60 rounded">English only</label>
                       </div>
                     </li>
                     <li>
                       <div class="flex items-center pl-2 rounded hover:bg-dark-20">
                         <input checked id="checkbox-item-3" type="checkbox" value=""
                           class="w-4 h-4 text-blue-primary bg-dark-20 border-dark-30 rounded">
-                        <label for="checkbox-item-3" class="w-full py-2 ml-2 text-bodyText text-dark-60 rounded">Completed</label>
+                        <label for="checkbox-item-3" class="w-full py-2 ml-2 text-smallText text-dark-60 rounded">Completed</label>
                       </div>
                     </li>
                   </ul>
@@ -407,20 +405,19 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                   </svg></button>
                 <!-- Dropdown menu -->
-                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                  <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownDefaultButton">
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
+                  <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownDefaultButton">
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Dashboard</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Allocated</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Settings</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Completed</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Earnings</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Excluded</a>
                     </li>
                     <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Sign
-                        out</a>
+                      <a href="#" class="block px-4 py-2 hover:bg-dark-20">Abandoned</a>
                     </li>
                   </ul>
                 </div>
@@ -835,21 +832,19 @@
                           </button>
                           <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 rounded-md shadow-sm opacity-0 tooltip text-smallText text-white bg-dark-60">
                             <div class="grid grid-flow-col items-center space-x-2">
-                              <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>2</p>
-                                <p>Viewers</p>
+                              <div class="grid grid-flow-col justify-start space-x-1 ">
+                                <i class="ri-eye-line"></i>
+                                <p class="text-smallText">Viewers</p>
                               </div>
-                              <i class="ri-eye-line grid justify-end"></i>
+                              <p class="text-smallText grid justify-end">2</p>
                             </div>
                             <div class="grid grid-flow-col items-center">
                               <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>3</p>
-                                <p>Editors</p>
-                              </div>
-                              <div class="grid justify-end">
-
                                 <img class="w-max h-4" src="./assets/images/user-white.svg" alt="">
+                                <p class="text-smallText">Editors</p>
                               </div>
+                              
+                              <p class="text-smallText grid justify-end">3</p>
                             </div>
                             <div class="tooltip-arrow" data-popper-arrow></div>
                           </div>
@@ -858,7 +853,7 @@
                           <div>
                             <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
                             <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                              <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                              <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                                   <li>
                                       <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
                                   </li>
@@ -883,8 +878,8 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                        <div id="dropdownDots-1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-1">
+                        <div id="dropdownDots-1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
+                          <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownRounded-1">
                               <li>
                                   <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                               </li>
@@ -1246,21 +1241,19 @@
                           </button>
                           <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 rounded-md shadow-sm opacity-0 tooltip text-smallText text-white bg-dark-60">
                             <div class="grid grid-flow-col items-center space-x-2">
-                              <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>2</p>
-                                <p>Viewers</p>
+                              <div class="grid grid-flow-col justify-start space-x-1 ">
+                                <i class="ri-eye-line"></i>
+                                <p class="text-smallText">Viewers</p>
                               </div>
-                              <i class="ri-eye-line grid justify-end"></i>
+                              <p class="text-smallText grid justify-end">2</p>
                             </div>
                             <div class="grid grid-flow-col items-center">
                               <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>3</p>
-                                <p>Editors</p>
-                              </div>
-                              <div class="grid justify-end">
-
                                 <img class="w-max h-4" src="./assets/images/user-white.svg" alt="">
+                                <p class="text-smallText">Editors</p>
                               </div>
+                              
+                              <p class="text-smallText grid justify-end">3</p>
                             </div>
                             <div class="tooltip-arrow" data-popper-arrow></div>
                           </div>
@@ -1269,7 +1262,7 @@
                       <div>
                         <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                          <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
                                   <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
                               </li>
@@ -1294,8 +1287,8 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                      <div id="dropdownDots-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-2">
+                      <div id="dropdownDots-2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
+                        <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownRounded-2">
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
@@ -1657,21 +1650,19 @@
                           </button>
                           <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 rounded-md shadow-sm opacity-0 tooltip text-smallText text-white bg-dark-60">
                             <div class="grid grid-flow-col items-center space-x-2">
-                              <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>2</p>
-                                <p>Viewers</p>
+                              <div class="grid grid-flow-col justify-start space-x-1 ">
+                                <i class="ri-eye-line"></i>
+                                <p class="text-smallText">Viewers</p>
                               </div>
-                              <i class="ri-eye-line grid justify-end"></i>
+                              <p class="text-smallText grid justify-end">2</p>
                             </div>
                             <div class="grid grid-flow-col items-center">
                               <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>3</p>
-                                <p>Editors</p>
-                              </div>
-                              <div class="grid justify-end">
-
                                 <img class="w-max h-4" src="./assets/images/user-white.svg" alt="">
+                                <p class="text-smallText">Editors</p>
                               </div>
+                              
+                              <p class="text-smallText grid justify-end">3</p>
                             </div>
                             <div class="tooltip-arrow" data-popper-arrow></div>
                           </div>
@@ -1680,7 +1671,7 @@
                       <div>
                         <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                          <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
                                   <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
                               </li>
@@ -1705,8 +1696,8 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                      <div id="dropdownDots-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-3">
+                      <div id="dropdownDots-3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
+                        <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownRounded-3">
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
@@ -2068,21 +2059,19 @@
                           </button>
                           <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 rounded-md shadow-sm opacity-0 tooltip text-smallText text-white bg-dark-60">
                             <div class="grid grid-flow-col items-center space-x-2">
-                              <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>2</p>
-                                <p>Viewers</p>
+                              <div class="grid grid-flow-col justify-start space-x-1 ">
+                                <i class="ri-eye-line"></i>
+                                <p class="text-smallText">Viewers</p>
                               </div>
-                              <i class="ri-eye-line grid justify-end"></i>
+                              <p class="text-smallText grid justify-end">2</p>
                             </div>
                             <div class="grid grid-flow-col items-center">
                               <div class="grid grid-flow-col justify-start space-x-1">
-                                <p>3</p>
-                                <p>Editors</p>
-                              </div>
-                              <div class="grid justify-end">
-
                                 <img class="w-max h-4" src="./assets/images/user-white.svg" alt="">
+                                <p class="text-smallText">Editors</p>
                               </div>
+                              
+                              <p class="text-smallText grid justify-end">3</p>
                             </div>
                             <div class="tooltip-arrow" data-popper-arrow></div>
                           </div>
@@ -2091,7 +2080,7 @@
                       <div>
                         <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                          <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownShareButton">
+                          <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
                                   <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-file-copy-line pr-2"></i>Clone and share</a>
                               </li>
@@ -2116,8 +2105,8 @@
                         </svg>
                           </button>
                       <!-- Dropdown menu -->
-                      <div id="dropdownDots-4" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
-                        <ul class="py-2 text-bodyText text-dark-60" aria-labelledby="dropdownRounded-4">
+                      <div id="dropdownDots-4" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
+                        <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownRounded-4">
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-dark-20"><i class="ri-rocket-2-line pr-2"></i>Launch Editor</a>
                             </li>
