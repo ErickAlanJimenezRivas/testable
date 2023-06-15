@@ -870,7 +870,7 @@
                 </div>
             </div>
         </div>
-        <!-- Modal -->
+        <!-- tooltip -->
         <div class="grid grid-flow-row space-y-10">
             <p class="text-title2 text-dark-60 space-y-10">Tooltip</p>
             <!-- Primary Buttons -->
@@ -933,6 +933,107 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- tags / badges -->
+        <div class="grid grid-flow-row space-y-10">
+            <p class="text-title2 text-dark-60 space-y-10">Tags/Badges</p>
+            <!-- simple tags -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Simple Tags/Badges</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10">
+                    <div class="flex justify-center space-x-3">
+                        <div class="space-x-3">
+                            <span class="bg-white text-dark-60 text-preText px-3 py-2 rounded-full border border-dark-60">Default</span>
+                            <span class="bg-dark-20 text-dark-60 text-preText px-2.5 py-1 rounded-full border border-dark-30">Default</span>
+                            <span class="bg-blue-100 text-blue-800 text-preText px-2.5 py-0.5 rounded-full">Default</span>
+                        </div>
+                    </div>
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="simpleTag" data-modal-toggle="simpleTag" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="simpleTag" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t">
+                                    <h3 class="text-title3 text-dark-60">Simple Tags/Badges</h3>
+                                    <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="simpleTag">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Simple Tags/Badges Code"<br/>
+                                        
+                                            
+                                    </p>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div>
+            <!--  dismissable badges -->
+            <div class="space-y-10">
+                <div>
+                    <p class="text-subtitle text-dark-60">Dismiss Tags/Badges</p>
+                </div>
+                <div class="border border-dark-30 rounded-md p-10">
+                    <div class="flex justify-center">
+                        <div>
+                            <span id="badge-dismiss-default" class="inline-flex items-center px-2 py-1 mr-2 text-smallText text-dark-60 bg-tag-dismiss rounded-md">Default
+                                <button type="button" class="inline-flex items-center p-0.5 ml-2  text-dark-60 bg-transparent rounded-sm hover:bg-tag-dismiss hover:text-blue-primary" data-dismiss-target="#badge-dismiss-default" aria-label="Remove">
+                                    <svg aria-hidden="true" class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                    <span class="sr-only">Remove badge</span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Buttons Modal Text Code -->
+                    <button data-modal-target="dismissTag" data-modal-toggle="dismissTag" class="block text-dark-60 text-smallTextBold pt-10 underline hover:decoration-blue-primary underline-offset-2 hover:text-blue-primary" type="button"> Code
+                        <i class="ri-arrow-right-line"></i>
+                    </button>
+                    <!-- Main modal -->
+                    <div id="dismissTag" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow ">
+                                <!-- Modal header -->
+                                <div class="flex items-start justify-between p-4 border-b rounded-t">
+                                    <h3 class="text-title3 text-dark-60">Dismiss Tags/Badges</h3>
+                                    <button type="button" class="text-gray-400 bg-transparent rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="dismissTag">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Modal Code -->
+                                <div class="p-6 space-y-6">
+                                    <p class="text-base leading-relaxed text-gray-500">"Dismiss Tags/Badges Code"<br/>
+                                        
+                                            
+                                    </p>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
                 </div>
 
             </div>

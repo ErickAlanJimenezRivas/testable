@@ -49,6 +49,7 @@ module.exports = {
       'pink-secondary': '#FF7168',
       'yellow-primary': '#FFA466',
       'purple-primary': '#6445F1',
+      'tag-dismiss': 'rgba(53, 83, 239, 0.11)',
     },
     maxWidth: {
       'w-body': '90rem',
