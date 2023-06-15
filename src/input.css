@@ -116,5 +116,5 @@
 }
 
 .btn-rounded-small{
-    @apply bg-white border border-dark-30 py-0.5 px-1.5;
+    @apply bg-white border border-dark-30 py-0.5 px-1;
 }
