@@ -20,7 +20,7 @@
 
 <body>
   <nav class="bg-white font-Inter">
-    <div class="mx-auto max-w-w-body px-9 py-3 flex flex-wrap md:flex-nowrap items-center justify-between">
+    <div class="mx-auto max-w-w-body px-9 py-3 flex flex-wrap justify-between sm:grid sm:grid-flow-col sm:place-content-stretch items-center">
       <!-- Testable -->
       <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex flex-shrink-0 items-center">
@@ -73,7 +73,7 @@
       </div>
       </div>
       <!-- Button help, notification & profile -->
-      <div class="contents inset-y-0 right-0 sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 order-2 md:order-last">
+      <div class="justify-end contents inset-y-0 right-0 sm:flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 order-2 md:order-last">
         <!-- Help dropdown -->
         <div>
           <button id="dropdownHelpButton" data-dropdown-toggle="dropdownHelp" class="hidden sm:block text-bodyText text-dark-60 bg-white px-4 hover:text-gray-500 text-center items-center" type="button">Help
@@ -187,10 +187,9 @@
         </div>
       </div>
       <!-- Button Mobile & mode Mobile -->
-      <div class="items-center justify-between hidden w-full md:flex md:w-auto order-last md:order-1" id="navbar-cta">
-      <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white lg:ml-40 space-y-2 md:space-y-0">
+      <div class="justify-end items-center hidden w-full md:flex md:w-auto order-last md:order-1" id="navbar-cta">
+      <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white space-y-2 md:space-y-0">
         <li>
-          <!-- <a href="#" class="border border-blue-primary text-blue-primary block rounded-full px-3 py-1 text-bodyText">Dashboard</a> -->
           <button type="button" class="btn-rounded btn-rounded-large-blue">Dashboard</button>
         </li>
         <li class="px-0 md:px-2.5">

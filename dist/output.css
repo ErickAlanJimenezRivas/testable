@@ -2078,8 +2078,20 @@ video {
     display: flex;
   }
 
+  .sm\:grid {
+    display: grid;
+  }
+
   .sm\:hidden {
     display: none;
+  }
+
+  .sm\:grid-flow-col {
+    grid-auto-flow: column;
+  }
+
+  .sm\:place-content-stretch {
+    place-content: stretch;
   }
 
   .sm\:items-stretch {
