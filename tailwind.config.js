@@ -51,6 +51,7 @@ module.exports = {
       'purple-primary': '#6445F1',
       'green-primary': '#15A326',
       'tag-dismiss': 'rgba(53, 83, 239, 0.11)',
+      'bg-btn-blue': 'rgba(29, 109, 236, 0.1)',
     },
     maxWidth: {
       'w-body': '90rem',

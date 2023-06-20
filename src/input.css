@@ -130,3 +130,7 @@
 .tag-small{
     @apply bg-blue-primary text-white text-preText px-2.5 py-0.5 rounded-full mr-2;
 }
+
+.btn-active{
+    @apply bg-bg-btn-blue border border-blue-primary text-blue-primary;
+}
