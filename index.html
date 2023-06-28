@@ -96,8 +96,6 @@
         </div>
         <!-- Dropdown Notification menu -->
         <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="inline-flex items-center text-dark-60 hover:text-dark-40" type="button">
-          <!-- <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
-          </svg> -->
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -155,14 +153,17 @@
           <!-- Dropdown menu -->
           <div id="dropdownProfile" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-40">
             <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownProfileButton">
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-dark-20 text-smallTextBold"><i class="ri-database-2-line pr-2"></i>750mb free</a>
+              <li class="px-4 py-2 hover:bg-dark-20 grid grid-flow-col text-smallTextBold">
+                <a href="#" class="block text-start">750mb free</a>
+                <i class="ri-database-2-line text-end"></i>
               </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-dark-20 text-smallTextBold"><i class="ri-coin-line pr-2"></i>310 credits</a>
+              <li class="px-4 py-2 hover:bg-dark-20 grid grid-flow-col text-smallTextBold">
+                <a href="#" class="block text-start">310 credits</a>
+                <i class="ri-coin-line text-end"></i>
               </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-dark-20 text-smallTextBold"><i class="ri-wallet-line pr-2"></i>$10.00</a>
+              <li class="px-4 py-2 hover:bg-dark-20 grid grid-flow-col text-smallTextBold">
+                <a href="#" class="block text-start">$10.00</a>
+                <i class="ri-wallet-line text-end"></i>
               </li>
               <li>
                 <div class="bg-dark-30 h-px my-2 "></div>
@@ -190,13 +191,13 @@
       <div class="justify-end items-center hidden w-full md:flex md:w-auto order-last md:order-1" id="navbar-cta">
       <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md bg-gray-50 md:flex-row  md:mt-0 md:border-0 md:bg-white space-y-2 md:space-y-0">
         <li>
-          <button type="button" class="btn-rounded btn-rounded-large-blue">Dashboard</button>
+          <button type="button" class="btn-rounded btn-large btn-outline-primary">Dashboard</button>
         </li>
         <li class="px-0 md:px-2.5">
-          <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30">Community</button>
+          <button type="button" class="btn-rounded btn-large btn-outline hover:border-dark-30">Community</button>
         </li>
         <li>
-          <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30">Templates</button>
+          <button type="button" class="btn-rounded btn-large btn-outline hover:border-dark-30">Templates</button>
         </li>
         <li>
           <div>
@@ -238,7 +239,7 @@
             <h3 class="text-white text-title3">Let's Get started</h3>
           </div>
         <!-- Button show/Hide -->
-          <div x-data="{ state: false }" class="btn btn-secondary-medium-dark">
+          <div x-data="{ state: false }" class="btn btn-dark btn-medium">
             <button x-text="state ? 'Show' : 'Hide'" x-on:click="state = !state" id="accordion-started-heading-1" type="button" class="mr-1 p-0 text-preText text-white" 
             data-accordion-target="#accordion-started-body-1" aria-expanded="true" aria-controls="accordion-started-body-1">
             </button>
@@ -247,61 +248,72 @@
         <!-- cards show/Hide -->
         <div id="accordion-started-body-1" class="hidden" aria-labelledby="accordion-started-heading-1">
           <div class=" pb-10 flex flex-wrap justify-center md:justify-between">
-            <div class="w-max rounded-md bg-white overflow-hidden mb-4 transition transform hover:translate-x-1">
-              <div class="h-max px-4 py-6 bg-blue-secondary">
-                <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg" alt="Scratch">
-              </div>
-              <div class="flex justify-between p-6">
-                <p class="text-bodyText text-dark-60 ">From Scratch</p>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="w-max rounded-md bg-white overflow-hidden mb-4 transition transform hover:translate-x-1">
-              <div class="h-max px-4 py-6 bg-pink-secondary">
-                <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
-              </div>
-              <div class="flex justify-between p-6">
-                <p class="text-bodyText text-dark-60">Natural Language</p>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="w-max rounded-md bg-white overflow-hidden mb-4 transition transform hover:translate-x-1">
-              <div class="h-max px-4 py-6 bg-yellow-primary">
-                <img class="w-full object-cover" src="./assets/images/card-img-template.svg" alt="Scratch">
-              </div>
-              <div class="flex justify-between p-6">
-                <p class="text-bodyText text-dark-60">Template from Library</p>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="w-max rounded-md bg-white overflow-hidden mb-4 transition transform hover:translate-x-1">
-              <div class="h-max px-4 py-6 bg-purple-primary">
-                <img class="w-full object-cover" src="./assets/images/card-img-community.svg" alt="Scratch">
-              </div>
-              <div class="flex justify-between p-6">
-                <p class="text-bodyText text-dark-60">Community templates</p>
-                <button>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
-                </button>
-              </div>
-            </div>
+              <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                  <div class="h-max px-4 py-6 bg-blue-secondary">
+                      <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg"
+                          alt="Scratch">
+                  </div>
+                  <div class="flex justify-between p-6">
+                      <p class="text-bodyText text-dark-60 ">From Scratch</p>
+                      <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                              stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
+                      </button>
+                  </div>
+              </a>
+              <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                  <div class="h-max px-4 py-6 bg-pink-secondary">
+                      <img class="w-full object-cover" src="./assets/images/card-img-natural.svg"
+                          alt="Scratch">
+                  </div>
+                  <div class="flex justify-between p-6">
+                      <p class="text-bodyText text-dark-60">Natural Language</p>
+                      <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                              stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
+                      </button>
+                  </div>
+              </a>
+              <a href="" class=" group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                  <div class="h-max px-4 py-6 bg-yellow-primary">
+                      <img class="w-full object-cover" src="./assets/images/card-img-template.svg"
+                          alt="Scratch">
+                  </div>
+                  <div class="flex justify-between p-6">
+                      <p class="text-bodyText text-dark-60">Template from Library</p>
+                      <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                              stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
+                      </button>
+                  </div>
+              </a>
+              <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                  <div class="h-max px-4 py-6 bg-purple-primary">
+                      <img class="w-full object-cover" src="./assets/images/card-img-community.svg"
+                          alt="Scratch">
+                  </div>
+                  <div class="flex justify-between p-6 ">
+                      <p class="text-bodyText text-dark-60">Community templates</p>
+                      <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                              stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                          </svg>
+                      </button>
+                  </div>
+              </a>
           </div>
-        </div>
+      </div>
       </div>
     </div>
   </section>
@@ -324,9 +336,9 @@
           <!-- Projects buttons -->
           <div class="lg:grid-rows-1 grid grid-cols-3 py-7 space-y-2 sm:space-y-0">
             <div class="col-span-5 md:space-x-1 ">
-              <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20">Select all</button>
-              <button type="button" class="btn btn-secondary-large-borderGray hover:bg-dark-20"><i class="ri-stack-line"></i></button>
-              <button type="button" class="btn btn-secondary-large-error hover:bg-red-200"><i class="ri-delete-bin-line"></i></button>
+              <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20">Select all</button>
+              <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-stack-line"></i></button>
+              <button type="button" class="btn btn-large btn-outline-secondary hover:bg-red-200"><i class="ri-delete-bin-line"></i></button>
             </div>
             <div class="flex flex-wrap md:col-end-7 space-y-2 sm:space-y-0">
               <form class="mr-2">
@@ -343,7 +355,7 @@
               <!-- Filter dropdown -->
               <div class="mr-2">
                 <button id="dropdownSearchButton" data-dropdown-toggle="dropdownSearch" data-dropdown-placement="bottom"
-                  class="btn btn-secondary-large-borderGray hover:bg-dark-20 inline-flex items-center" type="button">Filter by <svg
+                  class="btn btn-large btn-outline-light hover:bg-dark-20 inline-flex items-center" type="button">Filter by <svg
                     class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -394,7 +406,7 @@
               <!-- Sort by dropdown -->
               <div class="mr-2">
                 <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
-                  class="btn btn-secondary-large-borderGray hover:bg-dark-20 inline-flex items-center" type="button">Sort by<svg
+                  class="btn btn-large btn-outline-light hover:bg-dark-20 inline-flex items-center" type="button">Sort by<svg
                     class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -419,7 +431,7 @@
               </div>
               <!-- Button Modal Create Project -->
               <div class="block space-y-4 md:flex md:space-y-0 md:space-x-4">
-                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" type="button" class="btn btn-primary-large-blue hover:bg-blue-secondary">Create project</button>
+                <button data-modal-target="createProject-modal" data-modal-toggle="createProject-modal" type="button" class="btn btn-large btn-primary hover:bg-blue-secondary">Create project</button>
               </div>
               <!-- Modal Create Project -->
               <div id="createProject-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -438,60 +450,78 @@
                         <!-- Modal body -->
                         <div class="grid grid-flow-row md:grid-flow-col sm:space-x-4">
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-4 py-6 bg-blue-secondary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg" alt="Scratch">
-                            </div>
-                            <div class="flex justify-between p-6 ">
-                              <p class="text-bodyText text-dark-60 ">From Scratch</p>
-                              <button class="transition transform hover:translate-x-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                                </svg>
-                              </button>
-                            </div>
+                            <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                              <div class="h-max px-4 py-6 bg-blue-secondary">
+                                  <img class="w-full object-cover" src="./assets/images/card-img-scratch.svg"
+                                      alt="Scratch">
+                              </div>
+                              <div class="flex justify-between p-6">
+                                  <p class="text-bodyText text-dark-60 ">From Scratch</p>
+                                  <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                      </svg>
+                                  </button>
+                              </div>
+                            </a>
                           </div>
+
+
                           <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-4 py-6 bg-pink-secondary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-natural.svg" alt="Scratch">
-                            </div>
-                            <div class="flex justify-between p-6">
-                              <p class="text-bodyText text-dark-60">Natural Language</p>
-                              <button class="transition transform hover:translate-x-1 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                                </svg>
-                              </button>
-                            </div>
+                            <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                              <div class="h-max px-4 py-6 bg-pink-secondary">
+                                  <img class="w-full object-cover" src="./assets/images/card-img-natural.svg"
+                                      alt="Scratch">
+                              </div>
+                              <div class="flex justify-between p-6">
+                                  <p class="text-bodyText text-dark-60">Natural Language</p>
+                                  <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                      </svg>
+                                  </button>
+                              </div>
+                            </a>
                           </div>
-                          <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-4 py-6 bg-yellow-primary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-template.svg" alt="Scratch">
-                            </div>
-                            <div class="flex justify-between p-6">
-                              <p class="text-bodyText text-dark-60">Template from Library</p>
-                              <button class="transition transform hover:translate-x-1 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                                </svg>
-                              </button>
-                            </div>
+                          <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30 ">
+                            <a href="" class=" group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                              <div class="h-max px-4 py-6 bg-yellow-primary">
+                                  <img class="w-full object-cover" src="./assets/images/card-img-template.svg"
+                                      alt="Scratch">
+                              </div>
+                              <div class="flex justify-between p-6">
+                                  <p class="text-bodyText text-dark-60">Template from Library</p>
+                                  <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                      </svg>
+                                  </button>
+                              </div>
+                            </a>
                           </div>
-                          <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30">
-                            <div class="h-max px-4 py-6 bg-purple-primary">
-                              <img class="w-full object-cover" src="./assets/images/card-img-community.svg" alt="Scratch">
-                            </div>
-                            <div class="flex justify-between p-6">
-                              <p class="text-bodyText text-dark-60">Community templates</p>
-                              <button class="transition transform hover:translate-x-1 ">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor" class="w-6 h-6">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                                </svg>
-                              </button>
-                            </div>
+                          <div class="max-w-w-modalCard rounded-md bg-white overflow-hidden mb-4 shadow shadow-dark-30 ">
+                            <a href="" class="group cursor-pointer w-max rounded-md bg-white overflow-hidden mb-4">
+                              <div class="h-max px-4 py-6 bg-purple-primary">
+                                  <img class="w-full object-cover" src="./assets/images/card-img-community.svg"
+                                      alt="Scratch">
+                              </div>
+                              <div class="flex justify-between p-6 ">
+                                  <p class="text-bodyText text-dark-60">Community templates</p>
+                                  <button class="group-hover:transition group-hover:transform group-hover:translate-x-1">
+                                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                          <path stroke-linecap="round" stroke-linejoin="round"
+                                              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                                      </svg>
+                                  </button>
+                              </div>
+                          </a>
                           </div>
                         </div>
                     </div>
@@ -501,15 +531,15 @@
             </div>
           </div>
           <!-- Projects tags -->
-          <div class="flex flex-wrap items-center space-x-3 pb-7">
+          <div class="text-smallText flex flex-wrap items-center space-x-3 pb-7">
             <p class="text-smallText text-dark-40">Active Filters:</p>
-            <span id="badge-dismiss-1" class="inline-flex items-center px-2 py-1 mr-2 text-smallText text-dark-60 bg-tag-dismiss rounded-md">English only
-              <button type="button" class="inline-flex items-center p-0.5 ml-2  text-dark-60 bg-transparent rounded-sm hover:bg-tag-dismiss hover:text-blue-primary" data-dismiss-target="#badge-dismiss-1" aria-label="Remove">
+            <span id="badge-dismiss-1" class="inline-flex items-center btn tag-medium tag-outline-secondary">English only
+              <button type="button" class="inline-flex items-center p-0.5 ml-2  text-dark-60 bg-transparent rounded-sm hover:bg-light-purple hover:text-blue-primary" data-dismiss-target="#badge-dismiss-1" aria-label="Remove">
                   <svg aria-hidden="true" class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                   <span class="sr-only">Remove badge</span>
               </button>
             </span>
-            <span id="badge-dismiss-2" class="inline-flex items-center px-2 py-1 mr-2 text-smallText text-dark-60 bg-tag-dismiss rounded-md">October
+            <span id="badge-dismiss-2" class="inline-flex items-center btn tag-medium tag-outline-secondary">October
               <button type="button" class="inline-flex items-center p-0.5 ml-2  text-dark-60 bg-transparent rounded-sm hover:bg-tag-dismiss hover:text-blue-primary" data-dismiss-target="#badge-dismiss-2" aria-label="Remove">
                 <svg aria-hidden="true" class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 <span class="sr-only">Remove badge</span>
@@ -521,14 +551,14 @@
             <li>
               <div class="grid ">
                 <input id="check-option-testable-1" type="checkbox" value="" class="peer ml-5 mt-10 w-4 h-4 absolute text-blue-600 bg-gray-100 border-gray-300 rounded">
-                <label for="check-option-testable-1" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md cursor-pointer peer-checked:border-blue-primary hover:bg-dark-20 ">                           
+                <span for="check-option-testable-1" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md peer-checked:border-blue-primary hover:bg-dark-20 ">                           
                     <div class="w-full divide-y divide-dark-30">
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pl-3 pb-4">
                         <div class="grid grid-flow-col justify-start items-center">
                           <img class="px-4" src="./assets/images/project-img-1.svg" alt="">
                           <div class="flex flex-col justify-center">
                             <div class="flex ">
-                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer">Reading the Mind in the Eyes </a>
+                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer cursor-pointer">Reading the Mind in the Eyes </a>
                               <i class="ri-pencil-line hidden peer-hover:block text-dark-40 ml-1"></i>
                             </div>
                             <div class="flex">
@@ -539,7 +569,7 @@
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
                           <!-- Buttons Modal results -->
-                          <button data-modal-target="modalResults-1" data-modal-toggle="modalResults-1" class="btn btn-secondary-large-borderGray hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
+                          <button data-modal-target="modalResults-1" data-modal-toggle="modalResults-1" class="btn btn-large btn-outline-light hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
                             <span class="text-smallTextBold text-dark-60 ml-2">45</span>
                             <span class="text-preText text-dark-40">+4</span>
                           </button>
@@ -595,7 +625,7 @@
                                   <div class="pb-2">
                                       <div class="flex items-center justify-between">
                                           <p class="text-boldBody">Result files</p>
-                                          <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                          <button class="btn btn-medium btn-outline-light">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
                                       </div>
                                           <div class="relative overflow-x-auto">
                                               <table class="w-full text-left bg-white">
@@ -662,11 +692,11 @@
                                   <di class="space-y-4">
                                       <div class="flex items-center justify-between">
                                           <p class="text-boldBody">Trial Reporting</p>
-                                          <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                          <button class="btn btn-medium btn-outline-light">Download<i class="ri-download-cloud-line ml-2"></i></button>
                                       </div>
                                       <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
                                           <p class="text-boldBody">Currently participating</p>
-                                          <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                          <button class="btn btn-medium btn-outline-light">0</i></button>
                                       </div>
                                           <div class="relative overflow-x-auto">
                                               <table class="w-full text-left bg-white">
@@ -859,7 +889,7 @@
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
                           <div>
-                            <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                            <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-small btn-primary hover:bg-blue-secondary">Share</button>
                             <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                               <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                                   <li>
@@ -910,58 +940,60 @@
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
                         <div class="grid grid-flow-col justify-start items-center space-x-4">
                           <p class="text-preText text-dark-40">Collect data</p>
-                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
-                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
+                          <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-medium btn-outline-secondary hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText">
-                          <span class="tag-medium">In progress</span>
-                          <span class="tag-medium">Tag2</span>
-                          <span class="tag-medium">Another tag</span>
-                          <!-- Button Modal Tags -->
-                          <button data-modal-target="tagCard-1" data-modal-toggle="tagCard-1"type="button" class="btn-rounded btn-rounded-small text-preTextB">+3</button>
-                          <!-- Main modal -->
-                          <div id="tagCard-1" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                            <div class="relative w-max max-w-full max-h-full">
-                              <!-- Modal content -->
-                              <div class="relative bg-white rounded-md shadow p-10">
-                                <!-- Modal header -->
-                                <div class="flex items-start justify-between mb-10">
-                                  <p class="text-title3 text-dark-60">All tags</p>
-                                  <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="tagCard-1">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                    </svg>
-                                  </button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="flex flex-wrap">
-                                    <span class="tag-medium">In progress</span>
-                                    <span class="tag-medium">Tag2</span>
-                                    <span class="tag-medium">Another tag</span>
-                                    <span class="tag-medium">In progress</span>
-                                    <span class="tag-medium">Tag2</span>
-                                    <span class="tag-medium">Another tag</span>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="space-x-2">
+                            <span class="btn-rounded btn-small tag-outline-primary">In progress</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Tag2</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Another tag</span>
+                            <!-- Button dropdown Tags -->
+                            <button id="dropdownTag-1" data-dropdown-toggle="addTag-1" data-dropdown-placement="bottom" type="button" class="text-preTextB btn-rounded btn-small btn-outline-light"><strong>+3</strong></button>
                           </div>
+                          <!-- Dropdown tag content -->
+                          <div id="addTag-1" class="z-10 hidden bg-white rounded-md shadow w-max">
+                            <div x-data="{tags: [], newTag: '', inputName: 'foo' }" class="w-max h-max m-6">
+                              <!-- button add tag -->
+                                <div class="flex space-x-2 mb-6">
+                                    <input placeholder="Tag" @keydown.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag" class="border border-dark-30 rounded-md w-40 py-2 px-3 text-dark-40 text-smallText focus:outline-none focus:ring focus:ring-blue-primary">
+                                    <button type="button" class="btn btn-primary btn-large" @click.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag">Add Tag</button>
+                                </div>
+                                <div class="w-max">
+                                    <div class="flex flex-col">
+                                        <template x-for="tag in tags" :key="tag">
+                                            <label class="grid grid-flow-col items-center w-60">
+                                              <!-- tag -->
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" class="border border-dark-30 rounded text-blue-primary text-smallText mr-2"/>
+                                                    <span class="text-smallText text-start" x-text="tag"></span>
+                                                </div>
+                                                <button type="button" class="gird place-self-end text-dark-60 border border-white hover:text-error hover:border-error hover:rounded-md hover:bg-red-200" @click="tags = tags.filter(i => i !== tag)"><svg class="w-6 h-6 fill-current mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill-rule="evenodd" d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" />
+                                                </svg></button>
+                                            </label>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                       </div>
                     </div>
-                </label>
+                </span>
               </div>
             </li>
             <li>
               <div class="grid ">
                 <input id="check-option-testable-2" type="checkbox" value="" class="peer ml-5 mt-10 w-4 h-4 absolute text-blue-600 bg-gray-100 border-gray-300 rounded">
-                <label for="check-option-testable-2" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md cursor-pointer peer-checked:border-blue-primary hover:bg-dark-20 ">                           
+                <span for="check-option-testable-2" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md peer-checked:border-blue-primary hover:bg-dark-20 ">                           
                     <div class="w-full divide-y divide-dark-30">
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pl-3 pb-4">
                         <div class="grid grid-flow-col justify-start items-center">
                           <img class="px-4" src="./assets/images/project-img-2.svg" alt="">
                           <div class="flex flex-col justify-center">
                             <div class="flex ">
-                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer">Reading the Mind in the Eyes </a>
+                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer cursor-pointer">Reading the Mind in the Eyes </a>
                               <i class="ri-pencil-line hidden peer-hover:block text-dark-40 ml-1"></i>
                             </div>
                             <div class="flex">
@@ -972,7 +1004,7 @@
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
                           <!-- Buttons Modal results -->
-                          <button data-modal-target="modalResults-2" data-modal-toggle="modalResults-2" class="btn btn-secondary-large-borderGray hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
+                          <button data-modal-target="modalResults-2" data-modal-toggle="modalResults-2" class="btn btn-large btn-outline-light hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
                             <span class="text-smallTextBold text-dark-60 ml-2">45</span>
                             <span class="text-preText text-dark-40">+4</span>
                                 </button>
@@ -1031,7 +1063,7 @@
                                         <div class="pb-2">
                                             <div class="flex items-center justify-between">
                                                 <p class="text-boldBody">Result files</p>
-                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                                <button class="btn btn-medium btn-outline-light">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
                                             </div>
                                                 <div class="relative overflow-x-auto">
                                                     <table class="w-full text-left bg-white">
@@ -1098,11 +1130,11 @@
                                         <di class="space-y-4">
                                             <div class="flex items-center justify-between">
                                                 <p class="text-boldBody">Trial Reporting</p>
-                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                                <button class="btn btn-medium btn-outline-light">Download<i class="ri-download-cloud-line ml-2"></i></button>
                                             </div>
                                             <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
                                                 <p class="text-boldBody">Currently participating</p>
-                                                <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                                <button class="btn btn-medium btn-outline-light">0</i></button>
                                             </div>
                                                 <div class="relative overflow-x-auto">
                                                     <table class="w-full text-left bg-white">
@@ -1295,7 +1327,7 @@
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
                       <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-small btn-primary hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                           <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
@@ -1346,55 +1378,60 @@
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
                         <div class="grid grid-flow-col justify-start items-center space-x-4">
                           <p class="text-preText  text-dark-40">Collect data</p>
-                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
-                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
+                          <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-medium btn-outline-secondary hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText">
-                          <span class="tag-medium">In progress</span>
-                          <span class="tag-medium">Tag2</span>
-                          <span class="tag-medium">Another tag</span>
-                          <!-- Button Modal Tags -->
-                          <button data-modal-target="tagCard-2" data-modal-toggle="tagCard-2"type="button" class="btn-rounded btn-rounded-small text-preTextB">+3</button>
-                          <!-- Main modal -->
-                          <div id="tagCard-2" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                            <div class="relative w-max max-w-full max-h-full">
-                              <!-- Modal content -->
-                              <div class="relative bg-white rounded-md shadow p-10">
-                                <!-- Modal header -->
-                                <div class="flex items-start justify-between mb-10">
-                                  <p class="text-title3 text-dark-60">All tags</p>
-                                  <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="tagCard-2">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                    </svg>
-                                  </button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="flex flex-wrap">
-                                  <span class="tag-medium">In progress</span>
-                                  <span class="tag-medium">Tag2</span>
-                                  <span class="tag-medium">Another tag</span>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="space-x-2">
+                            <span class="btn-rounded btn-small tag-outline-primary">In progress</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Tag2</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Another tag</span>
+                            <!-- Button dropdown Tags -->
+                            <button id="dropdownTag-2" data-dropdown-toggle="addTag-2" data-dropdown-placement="bottom" type="button" class="text-preTextB btn-rounded btn-small btn-outline-light"><strong>+3</strong></button>
                           </div>
+                          <!-- Dropdown tag content -->
+                          <div id="addTag-2" class="z-10 hidden bg-white rounded-md shadow w-max">
+                            <div x-data="{tags: [], newTag: '', inputName: 'foo' }" class="w-max h-max m-6">
+                              <!-- button add tag -->
+                                <div class="flex space-x-2 mb-6">
+                                    <input placeholder="Tag" @keydown.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag" class="border border-dark-30 rounded-md w-40 py-2 px-3 text-dark-40 text-smallText focus:outline-none focus:ring focus:ring-blue-primary">
+                                    <button type="button" class="btn btn-primary btn-large" @click.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag">Add Tag</button>
+                                </div>
+                                <div class="w-max">
+                                    <div class="flex flex-col">
+                                        <template x-for="tag in tags" :key="tag">
+                                            <label class="grid grid-flow-col items-center w-60">
+                                              <!-- tag -->
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" class="border border-dark-30 rounded text-blue-primary text-smallText mr-2"/>
+                                                    <span class="text-smallText text-start" x-text="tag"></span>
+                                                </div>
+                                                <button type="button" class="gird place-self-end text-dark-60 border border-white hover:text-error hover:border-error hover:rounded-md hover:bg-red-200" @click="tags = tags.filter(i => i !== tag)"><svg class="w-6 h-6 fill-current mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill-rule="evenodd" d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" />
+                                                </svg></button>
+                                            </label>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                       </div>
                     </div>
-                </label>
+                </span>
               </div>
             </li>
             <li>
               <div class="grid ">
                 <input id="check-option-testable-3" type="checkbox" value="" class="peer ml-5 mt-10 w-4 h-4 absolute text-blue-600 bg-gray-100 border-gray-300 rounded">
-                <label for="check-option-testable-3" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md cursor-pointer peer-checked:border-blue-primary hover:bg-dark-20 ">                           
+                <span for="check-option-testable-3" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md peer-checked:border-blue-primary hover:bg-dark-20 ">                           
                     <div class="w-full divide-y divide-dark-30">
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pl-3 pb-4">
                         <div class="grid grid-flow-col justify-start items-center">
                           <img class="px-4" src="./assets/images/project-img-3.svg" alt="">
                           <div class="flex flex-col justify-center">
                             <div class="flex ">
-                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer">Reading the Mind in the Eyes </a>
+                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer cursor-pointer">Reading the Mind in the Eyes </a>
                               <i class="ri-pencil-line hidden peer-hover:block text-dark-40 ml-1"></i>
                             </div>
                             <div class="flex">
@@ -1405,7 +1442,7 @@
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
                           <!-- Buttons Modal results -->
-                          <button data-modal-target="modalResults-3" data-modal-toggle="modalResults-3" class="btn btn-secondary-large-borderGray hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
+                          <button data-modal-target="modalResults-3" data-modal-toggle="modalResults-3" class="btn btn-large btn-outline-light hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
                             <span class="text-smallTextBold text-dark-60 ml-2">45</span>
                             <span class="text-preText text-dark-40">+4</span>
                                 </button>
@@ -1464,7 +1501,7 @@
                                         <div class="pb-2">
                                             <div class="flex items-center justify-between">
                                                 <p class="text-boldBody">Result files</p>
-                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                                <button class="btn btn-medium btn-outline-light">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
                                             </div>
                                                 <div class="relative overflow-x-auto">
                                                     <table class="w-full text-left bg-white">
@@ -1531,11 +1568,11 @@
                                         <di class="space-y-4">
                                             <div class="flex items-center justify-between">
                                                 <p class="text-boldBody">Trial Reporting</p>
-                                                <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                                <button class="btn btn-medium btn-outline-light">Download<i class="ri-download-cloud-line ml-2"></i></button>
                                             </div>
                                             <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
                                                 <p class="text-boldBody">Currently participating</p>
-                                                <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                                <button class="btn btn-medium btn-outline-light">0</i></button>
                                             </div>
                                                 <div class="relative overflow-x-auto">
                                                     <table class="w-full text-left bg-white">
@@ -1728,7 +1765,7 @@
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
                       <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-small btn-primary hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                           <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
@@ -1779,55 +1816,60 @@
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
                         <div class="grid grid-flow-col justify-start items-center space-x-4">
                           <p class="text-preText text-dark-40">Collect data</p>
-                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
-                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
+                          <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-medium btn-outline-secondary hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText">
-                          <span class="tag-medium">In progress</span>
-                          <span class="tag-medium">Tag2</span>
-                          <span class="tag-medium">Another tag</span>
-                          <!-- Button Modal Tags -->
-                          <button data-modal-target="tagCard-3" data-modal-toggle="tagCard-3"type="button" class="btn-rounded btn-rounded-small text-preTextB">+3</button>
-                          <!-- Main modal -->
-                          <div id="tagCard-3" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                            <div class="relative w-max max-w-full max-h-full">
-                              <!-- Modal content -->
-                              <div class="relative bg-white rounded-md shadow p-10">
-                                <!-- Modal header -->
-                                <div class="flex items-start justify-between mb-10">
-                                  <p class="text-title3 text-dark-60">All tags</p>
-                                  <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="tagCard-3">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                    </svg>
-                                  </button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="flex flex-wrap">
-                                  <span class="tag-medium">In progress</span>
-                                  <span class="tag-medium">Tag2</span>
-                                  <span class="tag-medium">Another tag</span>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="space-x-2">
+                            <span class="btn-rounded btn-small tag-outline-primary">In progress</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Tag2</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Another tag</span>
+                            <!-- Button dropdown Tags -->
+                            <button id="dropdownTag-3" data-dropdown-toggle="addTag-3" data-dropdown-placement="bottom" type="button" class="text-preTextB btn-rounded btn-small btn-outline-light"><strong>+3</strong></button>
                           </div>
+                          <!-- Dropdown tag content -->
+                          <div id="addTag-3" class="z-10 hidden bg-white rounded-md shadow w-max">
+                            <div x-data="{tags: [], newTag: '', inputName: 'foo' }" class="w-max h-max m-6">
+                              <!-- button add tag -->
+                                <div class="flex space-x-2 mb-6">
+                                    <input placeholder="Tag" @keydown.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag" class="border border-dark-30 rounded-md w-40 py-2 px-3 text-dark-40 text-smallText focus:outline-none focus:ring focus:ring-blue-primary">
+                                    <button type="button" class="btn btn-primary btn-large" @click.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag">Add Tag</button>
+                                </div>
+                                <div class="w-max">
+                                    <div class="flex flex-col">
+                                        <template x-for="tag in tags" :key="tag">
+                                            <label class="grid grid-flow-col items-center w-60">
+                                              <!-- tag -->
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" class="border border-dark-30 rounded text-blue-primary text-smallText mr-2"/>
+                                                    <span class="text-smallText text-start" x-text="tag"></span>
+                                                </div>
+                                                <button type="button" class="gird place-self-end text-dark-60 border border-white hover:text-error hover:border-error hover:rounded-md hover:bg-red-200" @click="tags = tags.filter(i => i !== tag)"><svg class="w-6 h-6 fill-current mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill-rule="evenodd" d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" />
+                                                </svg></button>
+                                            </label>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                       </div>
                     </div>
-                </label>
+                </span>
               </div>
             </li>
             <li>
               <div class="grid ">
                 <input id="check-option-testable-4" type="checkbox" value="" class="peer ml-5 mt-10 w-4 h-4 absolute text-blue-600 bg-gray-100 border-gray-300 rounded">
-                <label for="check-option-testable-4" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md cursor-pointer peer-checked:border-blue-primary hover:bg-dark-20 ">                           
+                <span for="check-option-testable-4" class="inline-flex items-center justify-between w-full p-5 bg-white border border-dark-20 rounded-md peer-checked:border-blue-primary hover:bg-dark-20 ">                           
                     <div class="w-full divide-y divide-dark-30">
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pl-3 pb-4">
                         <div class="grid grid-flow-col justify-start items-center">
                           <img class="px-4" src="./assets/images/project-img-4.svg" alt="">
                           <div class="flex flex-col justify-center">
                             <div class="flex ">
-                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 peer">Reading the Mind in the Eyes </a>
+                              <a class="text-boldBody hover:underline underline-offset-4 text-dark-60 cursor-pointer peer">Reading the Mind in the Eyes </a>
                               <i class="ri-pencil-line hidden peer-hover:block text-dark-40 ml-1"></i>
                             </div>
                             <div class="flex">
@@ -1838,7 +1880,7 @@
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7">
                         <!-- Buttons Modal results -->
-                        <button data-modal-target="modalResults-4" data-modal-toggle="modalResults-4" class="btn btn-secondary-large-borderGray hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
+                        <button data-modal-target="modalResults-4" data-modal-toggle="modalResults-4" class="btn btn-large btn-outline-light hover:bg-dark-20" type="button"><i class="ri-line-chart-line"></i> Results
                           <span class="text-smallTextBold text-dark-60 ml-2">45</span>
                           <span class="text-preText text-dark-40">+4</span>
                               </button>
@@ -1897,7 +1939,7 @@
                                       <div class="pb-2">
                                           <div class="flex items-center justify-between">
                                               <p class="text-boldBody">Result files</p>
-                                              <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
+                                              <button class="btn btn-medium btn-outline-light">Download<i class="ri-arrow-down-s-fill ml-2"></i></button>
                                           </div>
                                               <div class="relative overflow-x-auto">
                                                   <table class="w-full text-left bg-white">
@@ -1964,11 +2006,11 @@
                                       <di class="space-y-4">
                                           <div class="flex items-center justify-between">
                                               <p class="text-boldBody">Trial Reporting</p>
-                                              <button class="btn btn-secondary-medium-borderGray">Download<i class="ri-download-cloud-line ml-2"></i></button>
+                                              <button class="btn btn-medium btn-outline-light">Download<i class="ri-download-cloud-line ml-2"></i></button>
                                           </div>
                                           <div class="flex items-center justify-between py-2 px-4 rounded-md bg-dark-20">
                                               <p class="text-boldBody">Currently participating</p>
-                                              <button class="btn btn-secondary-medium-borderGray">0</i></button>
+                                              <button class="btn btn-medium btn-outline-light">0</i></button>
                                           </div>
                                               <div class="relative overflow-x-auto">
                                                   <table class="w-full text-left bg-white">
@@ -2161,7 +2203,7 @@
                           <p class="text-smallTextBold mr-2">5</p>
                       <!-- Share Dropdown -->
                       <div>
-                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-primary-small-blue hover:bg-blue-secondary">Share</button>
+                        <button id="dropdownShareButton" data-dropdown-toggle="dropdownShare" type="button" class="btn btn-small btn-primary hover:bg-blue-secondary">Share</button>
                         <div id="dropdownShare" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-md shadow w-max">
                           <ul class="py-2 text-smallText text-dark-60" aria-labelledby="dropdownShareButton">
                               <li>
@@ -2212,44 +2254,47 @@
                       <div class="flex flex-wrap md:grid md:grid-cols-1 pt-4">
                         <div class="grid grid-flow-col justify-start items-center space-x-4">
                           <p class="text-preText text-dark-40">Collect data</p>
-                          <button type="button" class="btn btn-secondary-medium-borderGray hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
-                          <button type="button" class="btn btn-secondary-medium-borderPink hover:bg-red-200">Minds</button>
+                          <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-file-copy-2-line mr-2"></i>tstbl.co/609-786</button>
+                          <button type="button" class="btn btn-medium btn-outline-secondary hover:bg-red-200">Minds</button>
                         </div>
                         <div class="grid grid-flow-col items-center col-end-7 text-preText">
-                          <span class="tag-medium">In progress</span>
-                          <span class="tag-medium">Tag2</span>
-                          <span class="tag-medium">Another tag</span>
-                          <!-- Button Modal Tags -->
-                          <button data-modal-target="tagCard-4" data-modal-toggle="tagCard-4"type="button" class="btn-rounded btn-rounded-small text-preTextB">+3</button>
-                          <!-- Main modal -->
-                          <div id="tagCard-4" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                            <div class="relative w-max max-w-full max-h-full">
-                              <!-- Modal content -->
-                              <div class="relative bg-white rounded-md shadow p-10">
-                                <!-- Modal header -->
-                                <div class="flex items-start justify-between mb-10">
-                                  <p class="text-title3 text-dark-60">All tags</p>
-                                  <button type="button" class="text-dark-60 bg-transparent rounded-md text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="tagCard-4">
-                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                        clip-rule="evenodd"></path>
-                                    </svg>
-                                  </button>
-                                </div>
-                                <!-- Modal body -->
-                                <div class="flex flex-wrap space-x-4">
-                                  <span class="tag-medium">In progress</span>
-                                  <span class="tag-medium">Tag2</span>
-                                  <span class="tag-medium">Another tag</span>
-                                  <span class="tag-medium">Tag2</span>
-                                  <span class="tag-medium">Another tag</span>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="space-x-2">
+                            <span class="btn-rounded btn-small tag-outline-primary">In progress</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Tag2</span>
+                            <span class="btn-rounded btn-small tag-outline-primary">Another tag</span>
+                            <!-- Button dropdown Tags -->
+                            <button id="dropdownTag-4" data-dropdown-toggle="addTag-4" data-dropdown-placement="bottom" type="button" class="text-preTextB btn-rounded btn-small btn-outline-light"><strong>+3</strong></button>
                           </div>
+                          <!-- Dropdown tag content -->
+                          <div id="addTag-4" class="z-10 hidden bg-white rounded-md shadow w-max">
+                            <div x-data="{tags: [], newTag: '', inputName: 'foo' }" class="w-max h-max m-6">
+                              <!-- button add tag -->
+                                <div class="flex space-x-2 mb-6">
+                                    <input placeholder="Tag" @keydown.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag" class="border border-dark-30 rounded-md w-40 py-2 px-3 text-dark-40 text-smallText focus:outline-none focus:ring focus:ring-blue-primary">
+                                    <button type="button" class="btn btn-primary btn-large" @click.enter.prevent="if (newTag.trim() !== '') tags.push(newTag.trim()); newTag = ''" x-model="newTag">Add Tag</button>
+                                </div>
+                                <div class="w-max">
+                                    <div class="flex flex-col">
+                                        <template x-for="tag in tags" :key="tag">
+                                            <label class="grid grid-flow-col items-center w-60">
+                                              <!-- tag -->
+                                                <div class="flex items-center">
+                                                    <input type="checkbox" class="border border-dark-30 rounded text-blue-primary text-smallText mr-2"/>
+                                                    <span class="text-smallText text-start" x-text="tag"></span>
+                                                </div>
+                                                <button type="button" class="gird place-self-end text-dark-60 border border-white hover:text-error hover:border-error hover:rounded-md hover:bg-red-200" @click="tags = tags.filter(i => i !== tag)"><svg class="w-6 h-6 fill-current mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <path fill-rule="evenodd" d="M15.78 14.36a1 1 0 0 1-1.42 1.42l-2.82-2.83-2.83 2.83a1 1 0 1 1-1.42-1.42l2.83-2.82L7.3 8.7a1 1 0 0 1 1.42-1.42l2.83 2.83 2.82-2.83a1 1 0 0 1 1.42 1.42l-2.83 2.83 2.83 2.82z" />
+                                                </svg></button>
+                                            </label>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                       </div>
                     </div>
-                </label>
+                </span>
               </div>
             </li>
           </ul>
@@ -2276,26 +2321,44 @@
         </div>
         <div class="border rounded-md my-6 p-4 border-dark-30 bg-white">
           <p class="mb-4 text-boldBody">Live studies</p>
-          <div class="flex mb-2">
-            <p class="w-5/6 text-smallTextBold">TYSKS-01</p>
-            <p class="w-1/6 text-smallText text-dark-40">28/50</p>
+          <div class="mb-6">
+            <div class="flex mb-2">
+              <p class="w-5/6 text-smallTextBold">TYSKS-01</p>
+              <p class="w-1/6 text-smallText text-dark-40">28/50</p>
+            </div>
+            <div class="mb-2 pr-8 rounded-full h-1.5 bg-dark-20">
+              <div class="h-1.5 rounded-full w-2/5 bg-blue-primary"></div>
+            </div>
+            <div class="grid grid-flow-col items-center ">
+              <p class=" justify-start text-preText text-dark-40">Expires in 21 days</p>
+              <a class=" text-end hover:underline underline-offset-2 text-preText text-dark-60 cursor-pointer">Collect more<i class="ri-arrow-go-back-fill ml-1"></i></a>
+            </div>
           </div>
-          <div class="mb-6 pr-8 rounded-full h-1.5 bg-dark-20">
-            <div class="h-1.5 rounded-full w-2/5 bg-blue-primary"></div>
+          <div class="mb-6">
+            <div class="flex mb-2">
+              <p class="w-5/6 text-smallTextBold">TYSFS-02</p>
+              <p class="w-1/6 text-smallText text-dark-40">35/50</p>
+            </div>
+            <div class="mb-2 pr-8 rounded-full h-1.5 bg-dark-20">
+              <div class="h-1.5 rounded-full w-3/5 bg-blue-primary"></div>
+            </div>
+            <div class="grid grid-flow-col items-center ">
+              <p class=" justify-start text-preText text-dark-40">Expires in 2 hours</p>
+              <a class=" text-end hover:underline underline-offset-2 text-preText text-dark-60 cursor-pointer">Collect more<i class="ri-arrow-go-back-fill ml-1"></i></a>
+            </div>
           </div>
-          <div class="flex mb-2">
-            <p class="w-5/6 text-smallTextBold">TYSFS-02</p>
-            <p class="w-1/6 text-smallText text-dark-40">35/50</p>
-          </div>
-          <div class="mb-6 pr-8 rounded-full h-1.5 bg-dark-20">
-            <div class="h-1.5 rounded-full w-3/5 bg-blue-primary"></div>
-          </div>
-          <div class="flex mb-2">
-            <p class="w-5/6 text-smallTextBold">ARER3-01</p>
-            <p class="w-1/6 text-smallText text-dark-40">13/50</p>
-          </div>
-          <div class="mb-6 pr-8 rounded-full h-1.5 bg-dark-20">
-            <div class="h-1.5 rounded-full w-1/5 bg-blue-primary"></div>
+          <div class="mb-6">
+            <div class="flex mb-2">
+              <p class="w-5/6 text-smallTextBold">ARER3-01</p>
+              <p class="w-1/6 text-smallText text-dark-40">13/50</p>
+            </div>
+            <div class="mb-2 pr-8 rounded-full h-1.5 bg-dark-20">
+              <div class="h-1.5 rounded-full w-1/5 bg-blue-primary"></div>
+            </div>
+            <div class="grid grid-flow-col items-center ">
+              <p class="justify-start text-preText text-dark-40">Expires in 21 hours</p>
+              <a class="text-end hover:underline underline-offset-2 text-preText text-dark-60 cursor-pointer">Collect more<i class="ri-arrow-go-back-fill ml-1"></i></a>
+            </div>
           </div>
           <a href="#"
             class="flex justify-center text-boldBody hover:underline underline-offset-2 text-blue-primary">View all

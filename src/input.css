@@ -7,130 +7,58 @@
     @apply rounded-md h-max w-max;
 }
 
-.btn-rounded-large-borderWhite{
-    @apply text-smallText text-dark-60 bg-white border border-white py-2.5 px-3.5;
+.btn-primary{
+    @apply text-white bg-blue-primary;
 }
 
-.btn-rounded-large-borderGray{
-    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-2.5 px-3.5;
+.btn-secondary{
+    @apply text-white bg-pink-primary;
 }
 
-.btn-primary-large-blue{
-    @apply text-smallText text-white bg-blue-primary py-2.5 px-3.5;
+.btn-dark{
+    @apply text-white bg-dark-60 border border-dark-30;
 }
 
-.btn-primary-medium-blue{
-    @apply text-smallText text-white bg-blue-primary py-1.5 px-2.5;
+.btn-outline{
+    @apply text-dark-60 bg-white border border-white;
 }
 
-.btn-primary-small-blue{
-    @apply text-preText text-white bg-blue-primary py-1 px-2;
+.btn-outline-primary{
+    @apply text-blue-primary bg-white border border-blue-primary;
 }
 
-.btn-primary-large-pink{
-    @apply text-smallText text-white bg-pink-primary py-2.5 px-3.5;
+.btn-outline-secondary{
+    @apply text-pink-primary bg-white border border-pink-primary;
 }
 
-.btn-primary-medium-pink{
-    @apply text-smallText text-white bg-pink-primary py-1.5 px-2.5;
+.btn-outline-light{
+    @apply text-dark-60 bg-white border border-dark-30;
 }
 
-.btn-primary-small-pink{
-    @apply text-preText text-white bg-pink-primary py-1 px-2;
+.btn-small{
+    @apply text-preText py-1 px-2;
 }
 
-.btn-secondary-large-borderGray{
-    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-2.5 px-3.5;
+.btn-medium{
+    @apply text-smallText py-1.5 px-2.5;
 }
 
-.btn-secondary-large-error{
-    @apply text-smallText text-error bg-white border border-error py-2.5 px-3.5;
-}
-
-.btn-secondary-medium-borderGray{
-    @apply text-smallText text-dark-60 bg-white border border-dark-30 py-1.5 px-2.5;
-}
-
-.btn-secondary-small-borderGray{
-    @apply text-preText text-dark-60 bg-white border border-dark-30 py-1 px-2;
-}
-
-.btn-secondary-large-borderPink{
-    @apply text-smallText text-pink-primary bg-white border border-pink-primary py-2.5 px-3.5;
-}
-
-.btn-secondary-medium-borderPink{
-    @apply text-smallText text-pink-primary bg-white border border-pink-primary py-1.5 px-2.5;
-}
-
-.btn-secondary-small-borderPink{
-    @apply text-preText text-pink-primary bg-white border border-pink-primary py-1 px-2;
-}
-
-.btn-secondary-large-dark{
-    @apply text-smallText text-white bg-dark-60 border border-dark-30  py-2.5 px-3.5;
-}
-
-.btn-secondary-medium-dark{
-    @apply text-smallText text-white bg-dark-60 border border-dark-30  py-1.5 px-2.5;
-}
-
-.btn-secondary-small-dark{
-    @apply text-preText text-white bg-dark-60 border border-dark-30  py-1 px-2;
+.btn-large{
+    @apply text-smallText py-2.5 px-3.5;
 }
 
 .btn-rounded{
     @apply rounded-full h-max w-max;
 }
 
-.btn-rounded-large-blue{
-    @apply text-smallText text-blue-primary bg-white border border-blue-primary py-2.5 px-3.5;
-}
-
-.btn-rounded-medium-blue{
-    @apply text-smallText text-blue-primary bg-white border border-blue-primary py-1.5 px-2.5;
-}
-
-.btn-rounded-small-blue{
-    @apply text-preText text-blue-primary bg-white border border-blue-primary py-1 px-2;
-}
-
-.btn-rounded-large-pink{
-    @apply text-smallText text-pink-primary bg-white border border-pink-primary  py-2.5 px-3.5;
-}
-
-.btn-rounded-medium-pink{
-    @apply text-smallText text-pink-primary bg-white border border-pink-primary  py-1.5 px-2.5;
-}
-
-.btn-rounded-small-pink{
-    @apply text-preText text-pink-primary bg-white border border-pink-primary  py-1 px-2;
-}
-
-.btn-rounded-large{
-    @apply bg-white border border-dark-30 py-2 px-3;
-}
-
-.btn-rounded-medium{
-    @apply bg-white border border-dark-30 py-1 px-2;
-}
-
-.btn-rounded-small{
-    @apply bg-white border border-dark-30 py-0.5 px-1;
-}
-
-.tag-large{
-    @apply bg-white text-dark-60 text-preText px-3 py-2 rounded-full border border-dark-60 mr-2;
-}
-
 .tag-medium{
-    @apply bg-dark-20 text-dark-60 text-preText px-2.5 py-1 rounded-full border border-dark-30 mr-2;
+   @apply text-smallText px-2 py-1;
 }
 
-.tag-small{
-    @apply bg-blue-primary text-white text-preText px-2.5 py-0.5 rounded-full mr-2;
+.tag-outline-primary{
+    @apply border border-dark-30 bg-dark-20 text-dark-60;
 }
 
-.btn-active{
-    @apply bg-bg-btn-blue border border-blue-primary text-blue-primary;
+.tag-outline-secondary{
+    @apply bg-light-purple text-dark-60;
 }
