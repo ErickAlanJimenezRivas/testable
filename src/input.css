@@ -62,3 +62,7 @@
 .tag-outline-secondary{
     @apply bg-light-purple text-dark-60;
 }
+
+.active{
+    @apply bg-blue-primary text-white;
+}
