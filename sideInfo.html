@@ -20,7 +20,7 @@
 
 <body>
     <nav class="bg-white font-Inter">
-        <div class="mx-auto  px-9 py-3 flex flex-wrap justify-between sm:grid sm:grid-flow-col sm:place-content-stretch items-center">
+        <div class="mx-auto px-9 py-3 flex flex-wrap justify-between sm:grid sm:grid-flow-col sm:place-content-stretch items-center">
         <!-- Testname -->
             <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex flex-shrink-0 items-center">
@@ -74,7 +74,7 @@
             </div>
         <!-- Button -->
             <div class="justify-end flex items-center order-2 md:order-last">
-                <button type="button" class="btn btn-primary-large-blue">
+                <button type="button" class="btn btn-large btn-primary hover:bg-blue-secondary">
                     Publish changes
                 </button>
                 <button class="inline-flex items-center p-2 text-smallText text-center text-dark-60 rounded-lg hover:text-gray-500" type="button">
@@ -87,14 +87,13 @@
             <div class="justify-end hidden md:flex md:w-auto order-last md:order-1" id="navbar-cta">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-md md:flex-row  md:mt-0 md:border-0 space-y-2 md:space-y-0">
                 <li>
-                <!-- <a href="#" class="border border-blue-primary text-blue-primary block rounded-full px-3 py-1 text-bodyText">Dashboard</a> -->
-                    <button type="button" class="btn-rounded btn-rounded-large-blue"><i class="ri-edit-line mr-2"></i>Edit</button>
+                    <button type="button" class="btn-rounded btn-large btn-outline-primary"><i class="ri-edit-line mr-2"></i>Edit</button>
                 </li>
                 <li class="px-0 md:px-2.5">
-                    <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30"><i class="ri-settings-4-line mr-2"></i>Settings</button>
+                    <button type="button" class="btn-rounded btn-large btn-outline hover:border-dark-30"><i class="ri-settings-4-line mr-2"></i>Settings</button>
                 </li>
                 <li>
-                    <button type="button" class="btn-rounded btn-rounded-large-borderWhite hover:border-dark-30"><i class="ri-group-line mr-2"></i>Recruit participants</button>
+                    <button type="button" class="btn-rounded btn-large btn-outline hover:border-dark-30"><i class="ri-group-line mr-2"></i>Recruit participants</button>
                 </li>
                 </ul>
             </div>
@@ -109,13 +108,23 @@
     </nav>
 
     <section class="bg-white font-Inter border-t border-dark-30">
-        <div class="grid grid-flow-col mx-auto max-w-full">
+        <div class="flex">
             <!-- Content -->
-            <div>
-                <p class="text-title1 text-indigo-800 pt-14">This is a new page for a test, i'm build some for the principal page.
-                </p>
-            
-                <div class="relative overflow-x-auto pt-10">
+            <div class="max-w-full flex-auto">
+                <!-- buttons -->
+                <div class="mx-auto px-9 py-3 grid grid-flow-col">
+                    <div class="text-start">
+                        <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-arrow-go-back-line"></i></button>
+                        <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-arrow-go-forward-line"></i></button>
+                    </div>
+                    <div class="text-end">
+                        <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-search-line"></i></i></button>
+                        <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-questionnaire-line"></i></button>
+                        <button type="button" class="btn btn-large btn-outline-light hover:bg-dark-20"><i class="ri-download-2-line"></i></button>
+                    </div>
+                </div>
+                <!-- Content table -->
+                <div class="relative overflow-x-auto">
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-indigo-400 ">
                             <tr>
@@ -179,31 +188,485 @@
                         </tbody>
                     </table>
                 </div>
-
+                <!-- content dashboard -->
+                <div class="relative flex flex-col justify-center items-center h-80 z-10">
+                    <p class="text-title3 text-dark-60 py-3">[Testname] requires fullscreen mode</p>
+                        <button type="button" class="btn btn-large btn-primary hover:bg-blue-secondary py-3">
+                        <i class="ri-share-box-line mr-2"></i>Start fullscreen
+                    </button>
+                    <p class="text-preText text-dark-60 py-3">Press enter<i class="ri-corner-down-left-line ml-1"></i></p>
+                </div>
             </div>
             <!-- Buttons sidebar -->
             <div id="myTab" data-tabs-toggle="#myTabContent" role="tablist" x-data="{ open: false }" class="grid grid-flow-col justify-end" >
-                <div class="px-2 pt-4 bg-dark-20 border-x border-dark-30 h-screen w-max flex flex-col space-y-4">
-                    <button @click="open = true" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" class="btn-rounded btn-rounded-medium hover:text-dark-40"  ><i class="ri-file-copy-2-line":class="{ 'text-dark-60': !open }"></i></button>
-                    <button @click="open = true" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false" class="btn-rounded btn-rounded-medium hover:text-dark-40"  ><i class="ri-file-copy-2-line" :class="{ 'text-dark-60': !open }"></i></button>
-                    <button @click="open = true" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false" class="btn-rounded btn-rounded-medium hover:text-dark-40"><i class="ri-file-copy-2-line" :class="{ 'text-dark-60': !open }"></i></button>
+                <div class="px-2 pt-4 bg-dark-20 border-x border-dark-30 h-[calc(100vh_-_4.25rem)] w-max flex flex-col space-y-4">
+                    <button @click="open = true" d="profile-tab" data-tabs-target="#profile" type="radio" role="tab" aria-controls="profile" aria-selected="false" 
+                    class="btn-rounded btn-large hover:text-dark-40 hover:border hover:border-dark-30":class="{ 'text-dark-60 && border && border-white': !open }" >
+                        <i class="ri-book-line"></i></button>
+                    <button @click="open = true" id="dashboard-tab" data-tabs-target="#dashboard" type="radio" role="tab" aria-controls="dashboard" aria-selected="false" 
+                    class="btn-rounded btn-large hover:text-dark-40 hover:border hover:border-dark-30":class="{ 'text-dark-60 && border && border-white': !open }" >
+                    <i class="ri-sticky-note-line"></i></button>
+                    
+                    <button @click="open = true" id="settings-tab" data-tabs-target="#settings" type="radio" role="tab" aria-controls="settings" aria-selected="false" 
+                    class="btn-rounded btn-large hover:text-dark-40 hover:border hover:border-dark-30" :class="{ 'text-dark-60 && border && border-white': !open }">
+                    <i class="ri-line-chart-line"></i></button>
                 </div>
                 <!-- Content sideBar -->
                 <div x-show="open" >
-                    
                     <!-- Content option -->
                     <div class="grid grid-flow-col">
                         <div id="myTabContent">
-                            <!-- Content 1 -->
-                            <div id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <div class="grid grid-flow-col px-5 w-96 py-4">
-                                    <p class="text-bodyText text-dark-60 text-start">Stimuli Library</p>
-                                    <i @click="open = ! open" class="ri-close-line cursor-pointer text-end"></i>
+                            <!-- Content library -->
+                            <div id="profile" role="tabpanel" aria-labelledby="profile-tab" class="flex flex-col justify-between h-[calc(100vh_-_4.25rem)]">
+                                <div class="sticky">
+                                    <div class="grid grid-flow-col px-5 w-96 py-4">
+                                        <p class="text-subtitle text-dark-60 text-start">Stimuli Library</p>
+                                        <i @click="open = ! open" class="ri-close-line cursor-pointer text-subtitle text-end"></i>
+                                    </div>
+                                    <!-- divide -->
+                                    <div class="bg-dark-30 h-px"></div>
+                                    <!-- content -->
+                                    <div class="static p-4 space-y-6 ">
+                                        <div class="grid grid-flow-col items-center">
+                                            <div class="text-start">
+                                                <p class="text-bodyText text-dark-60 ">93 files</p>
+                                            </div>
+                                            <div class="grid grid-flow-col justify-end space-x-4">
+                                                <div>
+                                                    <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-search-line"></i></button>
+                                                <button type="button" class="btn btn-medium btn-outline-light hover:bg-dark-20"><i class="ri-upload-cloud-line"></i></button>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn btn-medium btn-primary hover:bg-blue-secondary"><i class="ri-list-check"></i></button>
+                                                    <button type="button" class="btn btn-medium tag-outline-primary hover:bg-white"><i class="ri-grid-fill"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-flow-col">
+                                            <div class="flex items-center">
+                                                <input id="checkbox-file" onclick= 'checkUncheck(this)' type="checkbox" value="" class="w-4 h-4 border-dark-30 rounded">
+                                                <label for="checkbox-file"  class="ml-2 text-preText text-dark-30 cursor-pointer">File</label>
+                                            </div>
+                                            <p class="text-preText text-dark-30 text-end">Date</p>
+                                        </div>
+                                        <!-- files -->
+                                        <div class="z-10 h-[calc(100vh_-_20.25rem)] divide-y divide-dark-30 overflow-y-auto ">
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-1" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-1" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-2" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-2" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-3" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-3" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-4" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-4" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-5" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-5" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-6" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-6" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-7" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-7" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-8" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-8" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-9" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-9" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-10" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-10" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-11" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-11" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-12" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-12" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-13" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-13" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-14" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-14" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-15" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-15" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-16" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-16" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-17" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-17" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-18" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-18" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-19" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-19" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-20" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-20" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-21" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-21" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-21" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-21" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-22" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-22" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-23" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-23" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-24" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-24" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-25" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-25" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-26" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-26" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/project-img-1.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-27" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-27" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-28" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-28" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-29" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-29" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-30" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-30" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-31" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-31" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-32" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-32" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-33" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-33" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-34" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-34" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-35" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-35" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-3" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-3" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-4" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-4" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-5" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-5" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/stimuli-library.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                            <div class="py-4 grid grid-flow-col items-center">
+                                                <div class="flex items-center">
+                                                    <input id="checkbox-file-6" type="checkbox" name="files" class="w-4 h-4 border-dark-30 rounded">
+                                                    <label for="checkbox-file-6" class="flex items-center ml-2 text-smallText text-dark-60 cursor-pointer">
+                                                        <img src="./assets/images/project-img-1.svg" alt="" class="rounded-md mr-2">
+                                                        Image1.jpg
+                                                    </label>
+                                                </div>
+                                                <p class="text-preText text-dark-40 text-end">Feb 09, 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <!-- divide -->
-                                <div class="bg-dark-30 h-px"></div>
-                                <div class="p-4 rounded-lg bg-gray-50 " >
-                                    <p class="text-sm text-gray-500 ">This is some placeholder content 1 </p>
+                                <div class=" bg-blue-900 h-12 grid grid-flow-col z-0">
+                                    <div class="grid grid-flow-col items-center px-4">
+                                        <div class="flex items-center">
+                                            <span id="selected" class="text-preText text-white"></span>
+                                            <p id="result" class="ml-2 text-preText text-white ">selected item(s)</p>
+                                        </div>
+                                        <div class="text-end space-x-2 text-white">
+                                            <i class="ri-delete-bin-line"></i>
+                                            <i class="ri-download-2-line"></i>
+                                            <i class="ri-close-line"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- Content 2 -->
@@ -215,7 +678,13 @@
                                 <!-- divide -->
                                 <div class="bg-dark-30 h-px"></div>
                                 <div class=" p-4 rounded-lg bg-gray-50 " >
-                                    <p class="text-sm text-gray-500 ">This is some placeholder content 2</p>
+                                    <div x-data="checkboxes">
+                                        <input class="item-select-input" type="checkbox" value="001" x-model="itemsCard">
+                                        <input class="item-select-input" type="checkbox" value="002" x-model="itemsCard">
+                                        <input class="item-select-input" type="checkbox" value="003" x-model="itemsCard">
+                                    </div>
+                                    <input class="form-check-input" type="checkbox" x-on:click="selectAllCheckboxes">
+                                    
                                 </div>
                             </div>
                             <!-- Content 3 -->
@@ -235,12 +704,9 @@
                     </div>
                 </div>
             </div>
-            
-            
         </div>
     </section>
-
-
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+<script src="./countFiles.js"></script>
 </html>
