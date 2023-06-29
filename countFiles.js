@@ -29,7 +29,7 @@ var i;
 // List View
 function listView() {
     for (i = 0; i < elements.length; i++) {
-        elements[i].style.width = "98%";
+        elements[i].style.width = "100%";
         elements[i].style.gridTemplateColumns = "repeat(2, minmax(0, 1fr))";
         center[i].style.textAlign = "end";
     }
